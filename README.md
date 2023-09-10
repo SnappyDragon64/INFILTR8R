@@ -8,6 +8,7 @@
 - Press/hold [left click] or [controller RB] to shoot bullets.
 - Press [right click] or [controller LB] to fire a laser.
 - Press [space] or [controller RT] to dash.
+- Hold [shift] or [controller X/Square] to sneak (move at half speed).
 - Press [tab] or [controller start] to pause/respawn.
 
 ## Mechanics
