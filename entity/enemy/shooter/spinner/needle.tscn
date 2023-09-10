@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=3 uid="uid://u2p0qnkpk7bf"]
+
+[ext_resource type="Script" path="res://entity/enemy/shooter/spinner/spinner.gd" id="1_ukup2"]
+
+[node name="needle" type="StaticBody2D" groups=["enemy"]]
+collision_layer = 5
+script = ExtResource("1_ukup2")
+pattern = Array[int]([2])
+
+[node name="polygon" type="Polygon2D" parent="."]
+color = Color(0.501961, 0, 0, 1)
+polygon = PackedVector2Array(0, -48, 12, 0, 0, 48, -12, 0)
+
+[node name="hitbox" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-12, 0, 0, -48, 12, 0, 0, 48)
+
+[node name="audio_player" type="AudioStreamPlayer2D" parent="."]
+
+[node name="shoot_timer" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[node name="turrets" type="Node2D" parent="."]
+
+[node name="0" type="Marker2D" parent="turrets"]
+position = Vector2(0, -80)
+
+[node name="1" type="Marker2D" parent="turrets"]
+position = Vector2(0, 80)
+rotation = 3.14159
+
+[connection signal="timeout" from="shoot_timer" to="." method="_on_shoot_timer_timeout"]

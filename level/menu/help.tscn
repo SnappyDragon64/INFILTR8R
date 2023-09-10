@@ -1,0 +1,548 @@
+[gd_scene load_steps=17 format=3 uid="uid://cb6pqdfcut5me"]
+
+[ext_resource type="Script" path="res://level/menu/help.gd" id="1_edl8c"]
+[ext_resource type="TileSet" uid="uid://dq8de0dncuy7c" path="res://tileset/node0.tres" id="1_qe1v8"]
+[ext_resource type="PackedScene" uid="uid://bf6qu7jghwn2d" path="res://entity/gizmo/switch.tscn" id="2_bm8t5"]
+[ext_resource type="PackedScene" uid="uid://cjro518ay7p65" path="res://entity/enemy/shooter/shooter.tscn" id="4_cdpgf"]
+[ext_resource type="PackedScene" uid="uid://dc8invs07iqlf" path="res://entity/enemy/shooter/invincible_shooter.tscn" id="5_2k07p"]
+[ext_resource type="PackedScene" uid="uid://bjkc56oqtekk5" path="res://entity/gizmo/scaffold.tscn" id="6_c1lvg"]
+[ext_resource type="PackedScene" uid="uid://bhwxefp8bdpdk" path="res://entity/enemy/cactus.tscn" id="7_g1h61"]
+[ext_resource type="PackedScene" uid="uid://irexbaeixrbd" path="res://entity/gizmo/power_brick.tscn" id="8_1uk34"]
+[ext_resource type="Script" path="res://entity/gizmo/trigger.gd" id="9_f3vdp"]
+[ext_resource type="Script" path="res://entity/gizmo/camera_anchor.gd" id="11_g5v7v"]
+[ext_resource type="PackedScene" uid="uid://d2esp7gfhndop" path="res://entity/enemy/big_brick.tscn" id="12_j48s6"]
+[ext_resource type="PackedScene" uid="uid://b0ruelrr7mdby" path="res://entity/gizmo/label.tscn" id="12_xpuax"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8l5ka"]
+size = Vector2(128, 128)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_co1wm"]
+size = Vector2(128, 256)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a1c1y"]
+size = Vector2(127.258, 128)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xvm4d"]
+size = Vector2(270.423, 128)
+
+[node name="help" type="Node2D"]
+script = ExtResource("1_edl8c")
+
+[node name="tilemap" type="TileMap" parent="."]
+tile_set = ExtResource("1_qe1v8")
+cell_quadrant_size = 64
+format = 2
+layer_0/z_index = 100
+layer_0/tile_data = PackedInt32Array(-196612, 0, 1, -196611, 0, 1, -196610, 0, 1, -131076, 0, 1, -65540, 0, 1, -4, 0, 1, 65532, 0, 1, 131068, 0, 1, 196604, 0, 1, 262140, 0, 1, 196611, 0, 1, -262141, 0, 1, -196605, 0, 1, -131069, 0, 1, -65533, 0, 1, 3, 0, 1, 65539, 0, 1, 131075, 0, 1, -262143, 0, 1, -262142, 0, 1, -1376258, 0, 1, -1310722, 0, 1, -1245186, 0, 1, -1179650, 0, 1, -1114114, 0, 1, -1048578, 0, 1, -983042, 0, 1, -917506, 0, 1, -851970, 0, 1, -786434, 0, 1, -720898, 0, 1, -655362, 0, 1, -589826, 0, 1, -524290, 0, 1, -458754, 0, 1, -393218, 0, 1, -327682, 0, 1, -262146, 0, 1, -1376257, 0, 1, -1441792, 0, 1, -1441791, 0, 1, -1441790, 0, 1, -1441789, 0, 1, -1441788, 0, 1, -1441787, 0, 1, -1441786, 0, 1, -1441785, 0, 1, -1441784, 0, 1, -1441783, 0, 1, -1441782, 0, 1, -1441781, 0, 1, -1441780, 0, 1, -1441779, 0, 1, -1441778, 0, 1, -1441777, 0, 1, -1441776, 0, 1, -1441775, 0, 1, -1441774, 0, 1, -1441773, 0, 1, -1441772, 0, 1, -1441771, 0, 1, -1441770, 0, 1, -1441769, 0, 1, -1441768, 0, 1, -1441767, 0, 1, -1441766, 0, 1, -1441765, 0, 1, -1441764, 0, 1, -1638369, 0, 1, -1572833, 0, 1, -1507297, 0, 1, -1441761, 0, 1, -1376225, 0, 1, -1310689, 0, 1, -1245153, 0, 1, -1245183, 0, 1, -1245182, 0, 1, -1245181, 0, 1, -1245180, 0, 1, -1245179, 0, 1, -1245178, 0, 1, -1245177, 0, 1, -1245176, 0, 1, -1245175, 0, 1, -1245174, 0, 1, -1245173, 0, 1, -1245172, 0, 1, -1245171, 0, 1, -1245170, 0, 1, -1245169, 0, 1, -1245168, 0, 1, -1245167, 0, 1, -1245166, 0, 1, -1245165, 0, 1, -1245164, 0, 1, -1245163, 0, 1, -1245162, 0, 1, -1245161, 0, 1, -1245160, 0, 1, -1245159, 0, 1, -1245158, 0, 1, -1245157, 0, 1, -1245156, 0, 1, -1245155, 0, 1, -1245154, 0, 1, -1179647, 0, 1, -1114111, 0, 1, -1048575, 0, 1, -983039, 0, 1, -917503, 0, 1, -851967, 0, 1, -786431, 0, 1, -720895, 0, 1, -655359, 0, 1, -589823, 0, 1, -524287, 0, 1, -458751, 0, 1, -393215, 0, 1, -327679, 0, 1, -1638372, 0, 1, -1572836, 0, 1, -1507300, 0, 1, -1638376, 0, 1, -1638375, 0, 1, -1638374, 0, 1, -1638373, 0, 1, -2228200, 0, 1, -2162664, 0, 1, -2097128, 0, 1, -2031592, 0, 1, -1966056, 0, 1, -1900520, 0, 1, -1834984, 0, 1, -1769448, 0, 1, -1703912, 0, 1, -2228199, 0, 1, -2228198, 0, 1, -2228197, 0, 1, -2228196, 0, 1, -2228193, 0, 1, -2228192, 0, 1, -2228191, 0, 1, -2228190, 0, 1, -2228189, 0, 1, -2162653, 0, 1, -2097117, 0, 1, -2031581, 0, 1, -1966045, 0, 1, -1900509, 0, 1, -1834973, 0, 1, -1769437, 0, 1, -1703901, 0, 1, -1638365, 0, 1, -1638368, 0, 1, -1638367, 0, 1, -1638366, 0, 1, -2883556, 0, 1, -2818020, 0, 1, -2752484, 0, 1, -2686948, 0, 1, -2621412, 0, 1, -2555876, 0, 1, -2490340, 0, 1, -2424804, 0, 1, -2359268, 0, 1, -2293732, 0, 1, -2883553, 0, 1, -2818017, 0, 1, -2752481, 0, 1, -2686945, 0, 1, -2621409, 0, 1, -2555873, 0, 1, -2490337, 0, 1, -2424801, 0, 1, -2359265, 0, 1, -2293729, 0, 1, -2883580, 0, 1, -2883581, 0, 1, -2818045, 0, 1, -2686980, 0, 1, -2686979, 0, 1, -2686978, 0, 1, -2686977, 0, 1, -2752512, 0, 1, -2752511, 0, 1, -2752510, 0, 1, -2752509, 0, 1, -3145732, 0, 1, -3080196, 0, 1, -3014660, 0, 1, -2949124, 0, 1, -2883588, 0, 1, -2818052, 0, 1, -2752516, 0, 1, -3145731, 0, 1, -3145730, 0, 1, -3145729, 0, 1, -3211264, 0, 1, -3211263, 0, 1, -3211262, 0, 1, -3211261, 0, 1, -3145725, 0, 1, -3080189, 0, 1, -3080188, 0, 1, -3080164, 0, 1, -3080163, 0, 1, -3080162, 0, 1, -3080161, 0, 1, -3080160, 0, 1, -3080159, 0, 1, -3080158, 0, 1, -3080157, 0, 1, -2883552, 0, 1, -2883551, 0, 1, -2883550, 0, 1, -2883549, 0, 1, -2883548, 0, 1, -2883547, 0, 1, -2883546, 0, 1, -2883545, 0, 1, -2883544, 0, 1, -2883543, 0, 1, -2883542, 0, 1, -2883541, 0, 1, -2883540, 0, 1, -2883539, 0, 1, -2883538, 0, 1, -3080156, 0, 1, -3080155, 0, 1, -3080154, 0, 1, -3080153, 0, 1, -3080152, 0, 1, -3080151, 0, 1, -3080150, 0, 1, -3080149, 0, 1, -3080148, 0, 1, -3080147, 0, 1, -3080146, 0, 1, -3276754, 0, 1, -3211218, 0, 1, -3145682, 0, 1, -3276753, 0, 1, -3276752, 0, 1, -3276751, 0, 1, -2818002, 0, 1, -2752466, 0, 1, -2686930, 0, 1, -2686929, 0, 1, -2686928, 0, 1, -2686927, 0, 1, -2686926, 0, 1, -2686925, 0, 1, -2686924, 0, 1, -2686923, 0, 1, -2686922, 0, 1, -2686921, 0, 1, -2883529, 0, 1, -2817993, 0, 1, -2752457, 0, 1, -3276745, 0, 1, -3211209, 0, 1, -3145673, 0, 1, -3080137, 0, 1, -3276748, 0, 1, -3276747, 0, 1, -3276746, 0, 1, -2817979, 0, 1, -2883515, 0, 1, -2883528, 0, 1, -2883527, 0, 1, -2883526, 0, 1, -2883525, 0, 1, -2883524, 0, 1, -2883523, 0, 1, -2883522, 0, 1, -2883521, 0, 1, -2883520, 0, 1, -3080136, 0, 1, -3080135, 0, 1, -3080134, 0, 1, -3080133, 0, 1, -3080132, 0, 1, -3080131, 0, 1, -3080130, 0, 1, -3080129, 0, 1, -3080128, 0, 1, -3080123, 0, 1, -3145659, 0, 1, -4259788, 0, 1, -4194252, 0, 1, -4128716, 0, 1, -4063180, 0, 1, -3997644, 0, 1, -3932108, 0, 1, -3866572, 0, 1, -3801036, 0, 1, -3735500, 0, 1, -3669964, 0, 1, -3604428, 0, 1, -3538892, 0, 1, -3473356, 0, 1, -3407820, 0, 1, -3342284, 0, 1, -4259787, 0, 1, -4259786, 0, 1, -4259792, 0, 1, -4259791, 0, 1, -4194255, 0, 1, -4128719, 0, 1, -4063183, 0, 1, -3997647, 0, 1, -3932111, 0, 1, -3866575, 0, 1, -3801039, 0, 1, -3735503, 0, 1, -3669967, 0, 1, -3604431, 0, 1, -3538895, 0, 1, -3473359, 0, 1, -3407823, 0, 1, -3342287, 0, 1, -4718545, 0, 1, -4653009, 0, 1, -4587473, 0, 1, -4521937, 0, 1, -4456401, 0, 1, -4390865, 0, 1, -4325329, 0, 1, -4259793, 0, 1, -4718544, 0, 1, -4718543, 0, 1, -4718542, 0, 1, -4718541, 0, 1, -4718540, 0, 1, -4718539, 0, 1, -4718538, 0, 1, -4653002, 0, 1, -4587466, 0, 1, -4521930, 0, 1, -4456394, 0, 1, -4390858, 0, 1, -4325322, 0, 1, -2883579, 0, 1, -2818043, 0, 1, -2818042, 0, 1, -2818041, 0, 1, -2818040, 0, 1, -2818039, 0, 1, -2883575, 0, 1, -2883574, 0, 1, -2883573, 0, 1, -2818037, 0, 1, -2818036, 0, 1, -2818035, 0, 1, -2818034, 0, 1, -2818033, 0, 1, -2883569, 0, 1, -2883568, 0, 1, -2883567, 0, 1, -2818031, 0, 1, -2818030, 0, 1, -2818029, 0, 1, -2818028, 0, 1, -2818027, 0, 1, -2883563, 0, 1, -2883562, 0, 1, -2883561, 0, 1, -2818025, 0, 1, -2818024, 0, 1, -2818023, 0, 1, -2818022, 0, 1, -2883557, 0, 1, -2818021, 0, 1, -3080165, 0, 1, -3145701, 0, 1, -3145705, 0, 1, -3145704, 0, 1, -3145703, 0, 1, -3145702, 0, 1, -3080171, 0, 1, -3080170, 0, 1, -3080169, 0, 1, -3145711, 0, 1, -3145710, 0, 1, -3145709, 0, 1, -3145708, 0, 1, -3145707, 0, 1, -3080175, 0, 1, -3080177, 0, 1, -3080176, 0, 1, -3145717, 0, 1, -3145716, 0, 1, -3145715, 0, 1, -3145714, 0, 1, -3145713, 0, 1, -3080183, 0, 1, -3080182, 0, 1, -3080181, 0, 1, -3145723, 0, 1, -3145722, 0, 1, -3145721, 0, 1, -3145720, 0, 1, -3145719, 0, 1, -3080187, 0, 1, -3145664, 0, 1, -3145663, 0, 1, -3145662, 0, 1, -3145661, 0, 1, -3145660, 0, 1, -2817984, 0, 1, -2817983, 0, 1, -2817982, 0, 1, -2817981, 0, 1, -2817980, 0, 1, -3014587, 0, 1, -2949051, 0, 1, 327676, 0, 1, 262147, 0, 1, 393212, 0, 1, 393213, 0, 1, 393214, 0, 1, 393215, 0, 1, 327680, 0, 1, 327681, 0, 1, 327682, 0, 1, 327683, 0, 1)
+layer_1/name = ""
+layer_1/enabled = true
+layer_1/modulate = Color(1, 1, 1, 1)
+layer_1/y_sort_enabled = false
+layer_1/y_sort_origin = 0
+layer_1/z_index = -100
+layer_1/tile_data = PackedInt32Array(65533, 0, 0, 131069, 0, 0, 196605, 0, 0, -131074, 0, 0, -65538, 0, 0, -2, 0, 0, 65534, 0, 0, 131070, 0, 0, 196606, 0, 0, -131073, 0, 0, -65537, 0, 0, -1, 0, 0, 65535, 0, 0, 131071, 0, 0, 196607, 0, 0, -196608, 0, 0, -131072, 0, 0, -65536, 0, 0, 0, 0, 0, 65536, 0, 0, 131072, 0, 0, -196607, 0, 0, -131071, 0, 0, -65535, 0, 0, 1, 0, 0, 65537, 0, 0, 131073, 0, 0, -196606, 0, 0, -131070, 0, 0, -65534, 0, 0, 2, 0, 0, 65538, 0, 0, 131074, 0, 0, -393217, 0, 0, -327681, 0, 0, -262145, 0, 0, -196609, 0, 0, -458752, 0, 0, -393216, 0, 0, -327680, 0, 0, -262144, 0, 0, -655361, 0, 0, -589825, 0, 0, -524289, 0, 0, -458753, 0, 0, -720896, 0, 0, -655360, 0, 0, -589824, 0, 0, -524288, 0, 0, -917505, 0, 0, -851969, 0, 0, -786433, 0, 0, -720897, 0, 0, -983040, 0, 0, -917504, 0, 0, -851968, 0, 0, -786432, 0, 0, -1179649, 0, 0, -1114113, 0, 0, -1048577, 0, 0, -983041, 0, 0, -1245184, 0, 0, -1179648, 0, 0, -1114112, 0, 0, -1048576, 0, 0, -1310721, 0, 0, -1245185, 0, 0, -1376256, 0, 0, -1310720, 0, 0, -1376255, 0, 0, -1310719, 0, 0, -1376254, 0, 0, -1310718, 0, 0, -1376253, 0, 0, -1310717, 0, 0, -1376252, 0, 0, -1310716, 0, 0, -1376251, 0, 0, -1310715, 0, 0, -1376250, 0, 0, -1310714, 0, 0, -1376249, 0, 0, -1310713, 0, 0, -1376248, 0, 0, -1310712, 0, 0, -1376247, 0, 0, -1310711, 0, 0, -1376246, 0, 0, -1310710, 0, 0, -1376245, 0, 0, -1310709, 0, 0, -1376244, 0, 0, -1310708, 0, 0, -1376243, 0, 0, -1310707, 0, 0, -1376242, 0, 0, -1310706, 0, 0, -1376241, 0, 0, -1310705, 0, 0, -1376240, 0, 0, -1310704, 0, 0, -1376235, 0, 0, -1310699, 0, 0, -1376234, 0, 0, -1310698, 0, 0, -1376233, 0, 0, -1310697, 0, 0, -1376232, 0, 0, -1310696, 0, 0, -1376227, 0, 0, -1310691, 0, 0, -1376226, 0, 0, -1310690, 0, 0, -1376239, 0, 0, -1310703, 0, 0, -1376238, 0, 0, -1310702, 0, 0, -1376237, 0, 0, -1310701, 0, 0, -1376236, 0, 0, -1310700, 0, 0, -1376231, 0, 0, -1310695, 0, 0, -1376230, 0, 0, -1310694, 0, 0, -1376229, 0, 0, -1310693, 0, 0, -1376228, 0, 0, -1310692, 0, 0, -2031588, 0, 0, -1966052, 0, 0, -1900516, 0, 0, -1834980, 0, 0, -1769444, 0, 0, -1703908, 0, 0, -2031587, 0, 0, -1966051, 0, 0, -1900515, 0, 0, -1834979, 0, 0, -1769443, 0, 0, -1703907, 0, 0, -2031586, 0, 0, -1966050, 0, 0, -1900514, 0, 0, -1834978, 0, 0, -1769442, 0, 0, -1703906, 0, 0, -2031585, 0, 0, -1966049, 0, 0, -1900513, 0, 0, -1834977, 0, 0, -1769441, 0, 0, -1703905, 0, 0, -2031584, 0, 0, -1966048, 0, 0, -1900512, 0, 0, -1834976, 0, 0, -1769440, 0, 0, -1703904, 0, 0, -2031583, 0, 0, -1966047, 0, 0, -1900511, 0, 0, -1834975, 0, 0, -1769439, 0, 0, -1703903, 0, 0, -2031582, 0, 0, -1966046, 0, 0, -1900510, 0, 0, -1834974, 0, 0, -1769438, 0, 0, -1703902, 0, 0, -2097125, 0, 0, -2031589, 0, 0, -1966053, 0, 0, -1900517, 0, 0, -1834981, 0, 0, -1769445, 0, 0, -1703909, 0, 0, -2097124, 0, 0, -2097123, 0, 0, -2097122, 0, 0, -2097121, 0, 0, -2097120, 0, 0, -2097119, 0, 0, -2097118, 0, 0, -2162657, 0, 0, -2162656, 0, 0, -2162661, 0, 0, -2162660, 0, 0, -2162659, 0, 0, -2162658, 0, 0, -2162655, 0, 0, -2162654, 0, 0, -2949121, 0, 0, -2883585, 0, 0, -3014656, 0, 0, -2949120, 0, 0, -3014655, 0, 0, -2949119, 0, 0, -3014654, 0, 0, -2949118, 0, 0, -3014653, 0, 0, -2949117, 0, 0, -3014652, 0, 0, -2949116, 0, 0, -3014628, 0, 0, -2949092, 0, 0, -3014627, 0, 0, -2949091, 0, 0, -3014626, 0, 0, -2949090, 0, 0, -2883555, 0, 0, -2818019, 0, 0, -2752483, 0, 0, -2686947, 0, 0, -2621411, 0, 0, -2555875, 0, 0, -2490339, 0, 0, -2424803, 0, 0, -2359267, 0, 0, -2293731, 0, 0, -2228195, 0, 0, -2883554, 0, 0, -2818018, 0, 0, -2752482, 0, 0, -2686946, 0, 0, -2621410, 0, 0, -2555874, 0, 0, -2490338, 0, 0, -2424802, 0, 0, -2359266, 0, 0, -2293730, 0, 0, -2228194, 0, 0, -2162663, 0, 0, -2097127, 0, 0, -2031591, 0, 0, -1966055, 0, 0, -1900519, 0, 0, -1834983, 0, 0, -1769447, 0, 0, -1703911, 0, 0, -2162662, 0, 0, -2097126, 0, 0, -2031590, 0, 0, -1966054, 0, 0, -1900518, 0, 0, -1834982, 0, 0, -1769446, 0, 0, -1703910, 0, 0, -1638371, 0, 0, -1572835, 0, 0, -1507299, 0, 0, -1441763, 0, 0, -1638370, 0, 0, -1572834, 0, 0, -1507298, 0, 0, -1441762, 0, 0, -3080195, 0, 0, -3014659, 0, 0, -2949123, 0, 0, -2883587, 0, 0, -2818051, 0, 0, -2752515, 0, 0, -3080194, 0, 0, -3014658, 0, 0, -2949122, 0, 0, -2883586, 0, 0, -2818050, 0, 0, -2752514, 0, 0, -3080193, 0, 0, -3014657, 0, 0, -2818049, 0, 0, -2752513, 0, 0, -3145728, 0, 0, -3080192, 0, 0, -2883584, 0, 0, -2818048, 0, 0, -3145727, 0, 0, -3080191, 0, 0, -2883583, 0, 0, -2818047, 0, 0, -3145726, 0, 0, -3080190, 0, 0, -2883582, 0, 0, -2818046, 0, 0, -3014625, 0, 0, -2949089, 0, 0, -3014624, 0, 0, -2949088, 0, 0, -3014623, 0, 0, -2949087, 0, 0, -3014622, 0, 0, -2949086, 0, 0, -3014621, 0, 0, -2949085, 0, 0, -3014620, 0, 0, -2949084, 0, 0, -3014619, 0, 0, -2949083, 0, 0, -3014618, 0, 0, -2949082, 0, 0, -3014617, 0, 0, -2949081, 0, 0, -3014616, 0, 0, -2949080, 0, 0, -3014615, 0, 0, -2949079, 0, 0, -3014614, 0, 0, -2949078, 0, 0, -3014613, 0, 0, -2949077, 0, 0, -3014612, 0, 0, -2949076, 0, 0, -3014611, 0, 0, -2949075, 0, 0, -3014610, 0, 0, -2949074, 0, 0, -3014609, 0, 0, -2949073, 0, 0, -3014608, 0, 0, -2949072, 0, 0, -3014607, 0, 0, -2949071, 0, 0, -3014606, 0, 0, -2949070, 0, 0, -3211217, 0, 0, -3145681, 0, 0, -3080145, 0, 0, -2883537, 0, 0, -2818001, 0, 0, -2752465, 0, 0, -3211216, 0, 0, -3145680, 0, 0, -3080144, 0, 0, -2883536, 0, 0, -2818000, 0, 0, -2752464, 0, 0, -3211215, 0, 0, -3145679, 0, 0, -3080143, 0, 0, -2883535, 0, 0, -2817999, 0, 0, -2752463, 0, 0, -3211214, 0, 0, -3145678, 0, 0, -3080142, 0, 0, -2883534, 0, 0, -2817998, 0, 0, -2752462, 0, 0, -3211213, 0, 0, -3145677, 0, 0, -3080141, 0, 0, -3014605, 0, 0, -2949069, 0, 0, -2883533, 0, 0, -2817997, 0, 0, -2752461, 0, 0, -3211212, 0, 0, -3145676, 0, 0, -3080140, 0, 0, -3014604, 0, 0, -2949068, 0, 0, -2883532, 0, 0, -2817996, 0, 0, -2752460, 0, 0, -3211211, 0, 0, -3145675, 0, 0, -3080139, 0, 0, -3014603, 0, 0, -2949067, 0, 0, -2883531, 0, 0, -2817995, 0, 0, -2752459, 0, 0, -3211210, 0, 0, -3145674, 0, 0, -3080138, 0, 0, -3014602, 0, 0, -2949066, 0, 0, -2883530, 0, 0, -2817994, 0, 0, -2752458, 0, 0, -3014601, 0, 0, -2949065, 0, 0, -3014600, 0, 0, -2949064, 0, 0, -3014599, 0, 0, -2949063, 0, 0, -3014598, 0, 0, -2949062, 0, 0, -3014597, 0, 0, -2949061, 0, 0, -3014596, 0, 0, -2949060, 0, 0, -3014595, 0, 0, -2949059, 0, 0, -3014594, 0, 0, -2949058, 0, 0, -3014593, 0, 0, -2949057, 0, 0, -3014592, 0, 0, -2949056, 0, 0, -3014591, 0, 0, -2949055, 0, 0, -3014590, 0, 0, -2949054, 0, 0, -3014589, 0, 0, -2949053, 0, 0, -3014588, 0, 0, -2949052, 0, 0, -3473358, 0, 0, -3407822, 0, 0, -3342286, 0, 0, -3276750, 0, 0, -3473357, 0, 0, -3407821, 0, 0, -3342285, 0, 0, -3276749, 0, 0, -3735502, 0, 0, -3669966, 0, 0, -3604430, 0, 0, -3538894, 0, 0, -3735501, 0, 0, -3669965, 0, 0, -3604429, 0, 0, -3538893, 0, 0, -3997646, 0, 0, -3932110, 0, 0, -3866574, 0, 0, -3801038, 0, 0, -3997645, 0, 0, -3932109, 0, 0, -3866573, 0, 0, -3801037, 0, 0, -4259790, 0, 0, -4194254, 0, 0, -4128718, 0, 0, -4063182, 0, 0, -4259789, 0, 0, -4194253, 0, 0, -4128717, 0, 0, -4063181, 0, 0, -4653008, 0, 0, -4587472, 0, 0, -4521936, 0, 0, -4456400, 0, 0, -4390864, 0, 0, -4325328, 0, 0, -4653007, 0, 0, -4587471, 0, 0, -4521935, 0, 0, -4456399, 0, 0, -4390863, 0, 0, -4325327, 0, 0, -4653006, 0, 0, -4587470, 0, 0, -4521934, 0, 0, -4456398, 0, 0, -4390862, 0, 0, -4325326, 0, 0, -4653005, 0, 0, -4587469, 0, 0, -4521933, 0, 0, -4456397, 0, 0, -4390861, 0, 0, -4325325, 0, 0, -4653004, 0, 0, -4587468, 0, 0, -4521932, 0, 0, -4456396, 0, 0, -4390860, 0, 0, -4325324, 0, 0, -4653003, 0, 0, -4587467, 0, 0, -4521931, 0, 0, -4456395, 0, 0, -4390859, 0, 0, -4325323, 0, 0, -3014651, 0, 0, -2949115, 0, 0, -3014650, 0, 0, -2949114, 0, 0, -3014649, 0, 0, -2949113, 0, 0, -3014648, 0, 0, -2949112, 0, 0, -3014647, 0, 0, -2949111, 0, 0, -3014646, 0, 0, -2949110, 0, 0, -3014645, 0, 0, -2949109, 0, 0, -3014641, 0, 0, -2949105, 0, 0, -3014640, 0, 0, -2949104, 0, 0, -3014639, 0, 0, -2949103, 0, 0, -3014638, 0, 0, -2949102, 0, 0, -3014637, 0, 0, -2949101, 0, 0, -3014636, 0, 0, -2949100, 0, 0, -3014634, 0, 0, -2949098, 0, 0, -3014633, 0, 0, -2949097, 0, 0, -3014632, 0, 0, -2949096, 0, 0, -3014631, 0, 0, -2949095, 0, 0, -3014630, 0, 0, -2949094, 0, 0, -3014629, 0, 0, -2949093, 0, 0, -3080168, 0, 0, -2883560, 0, 0, -3080167, 0, 0, -2883559, 0, 0, -3080166, 0, 0, -2883558, 0, 0, -3080174, 0, 0, -2883566, 0, 0, -3080173, 0, 0, -2883565, 0, 0, -3080172, 0, 0, -2883564, 0, 0, -3014635, 0, 0, -2949099, 0, 0, -3080180, 0, 0, -3014644, 0, 0, -2949108, 0, 0, -2883572, 0, 0, -3080179, 0, 0, -3014643, 0, 0, -2949107, 0, 0, -2883571, 0, 0, -3080178, 0, 0, -3014642, 0, 0, -2949106, 0, 0, -2883570, 0, 0, -3080186, 0, 0, -2883578, 0, 0, -3080185, 0, 0, -2883577, 0, 0, -3080184, 0, 0, -2883576, 0, 0, -3080127, 0, 0, -2883519, 0, 0, -3080126, 0, 0, -2883518, 0, 0, -3080125, 0, 0, -2883517, 0, 0, -3080124, 0, 0, -2883516, 0, 0, 196609, 0, 0, 196610, 0, 0, 262146, 0, 0, 262145, 0, 0, 262144, 0, 0, 327679, 0, 0, 262142, 0, 0, 262141, 0, 0, 327677, 0, 0, 327678, 0, 0, 196608, 0, 0, 262143, 0, 0, -131075, 0, 0, -65539, 0, 0, -3, 0, 0)
+
+[node name="switch" parent="." instance=ExtResource("2_bm8t5")]
+position = Vector2(0, 128)
+event = 1
+
+[node name="shooter" parent="." instance=ExtResource("4_cdpgf")]
+position = Vector2(2208, -1760)
+rotation = -1.5708
+
+[node name="shooter2" parent="." instance=ExtResource("4_cdpgf")]
+position = Vector2(2208, -1888)
+rotation = -1.5708
+
+[node name="shooter3" parent="." instance=ExtResource("4_cdpgf")]
+position = Vector2(1632, -1824)
+rotation = 1.5708
+
+[node name="shooter4" parent="." instance=ExtResource("4_cdpgf")]
+position = Vector2(1632, -1952)
+rotation = 1.5708
+
+[node name="invincible_shooter" parent="." instance=ExtResource("5_2k07p")]
+position = Vector2(416, -2784)
+pattern = Array[int]([3])
+
+[node name="invincible_shooter2" parent="." instance=ExtResource("5_2k07p")]
+position = Vector2(480, -2784)
+pattern = Array[int]([3])
+
+[node name="invincible_shooter3" parent="." instance=ExtResource("5_2k07p")]
+position = Vector2(544, -2784)
+pattern = Array[int]([3])
+
+[node name="invincible_shooter4" parent="." instance=ExtResource("5_2k07p")]
+position = Vector2(800, -2784)
+pattern = Array[int]([3])
+
+[node name="invincible_shooter5" parent="." instance=ExtResource("5_2k07p")]
+position = Vector2(864, -2784)
+pattern = Array[int]([3])
+
+[node name="invincible_shooter6" parent="." instance=ExtResource("5_2k07p")]
+position = Vector2(928, -2784)
+pattern = Array[int]([3])
+
+[node name="invincible_shooter7" parent="." instance=ExtResource("5_2k07p")]
+position = Vector2(1248, -2784)
+pattern = Array[int]([3])
+
+[node name="invincible_shooter8" parent="." instance=ExtResource("5_2k07p")]
+position = Vector2(1184, -2784)
+pattern = Array[int]([3])
+
+[node name="invincible_shooter9" parent="." instance=ExtResource("5_2k07p")]
+position = Vector2(1312, -2784)
+pattern = Array[int]([3])
+
+[node name="invincible_shooter10" parent="." instance=ExtResource("5_2k07p")]
+position = Vector2(1568, -2784)
+pattern = Array[int]([3])
+
+[node name="invincible_shooter11" parent="." instance=ExtResource("5_2k07p")]
+position = Vector2(1632, -2784)
+pattern = Array[int]([3])
+
+[node name="invincible_shooter12" parent="." instance=ExtResource("5_2k07p")]
+position = Vector2(1696, -2784)
+pattern = Array[int]([3])
+
+[node name="invincible_shooter13" parent="." instance=ExtResource("5_2k07p")]
+position = Vector2(416, -2976)
+rotation = 3.14159
+pattern = Array[int]([3])
+
+[node name="invincible_shooter14" parent="." instance=ExtResource("5_2k07p")]
+position = Vector2(480, -2976)
+rotation = 3.14159
+pattern = Array[int]([3])
+
+[node name="invincible_shooter15" parent="." instance=ExtResource("5_2k07p")]
+position = Vector2(544, -2976)
+rotation = 3.14159
+pattern = Array[int]([3])
+
+[node name="invincible_shooter16" parent="." instance=ExtResource("5_2k07p")]
+position = Vector2(800, -2976)
+rotation = 3.14159
+pattern = Array[int]([3])
+
+[node name="invincible_shooter17" parent="." instance=ExtResource("5_2k07p")]
+position = Vector2(864, -2976)
+rotation = 3.14159
+pattern = Array[int]([3])
+
+[node name="invincible_shooter18" parent="." instance=ExtResource("5_2k07p")]
+position = Vector2(928, -2976)
+rotation = 3.14159
+pattern = Array[int]([3])
+
+[node name="invincible_shooter19" parent="." instance=ExtResource("5_2k07p")]
+position = Vector2(1248, -2976)
+rotation = 3.14159
+pattern = Array[int]([3])
+
+[node name="invincible_shooter20" parent="." instance=ExtResource("5_2k07p")]
+position = Vector2(1184, -2976)
+rotation = 3.14159
+pattern = Array[int]([3])
+
+[node name="invincible_shooter21" parent="." instance=ExtResource("5_2k07p")]
+position = Vector2(1312, -2976)
+rotation = 3.14159
+pattern = Array[int]([3])
+
+[node name="invincible_shooter22" parent="." instance=ExtResource("5_2k07p")]
+position = Vector2(1568, -2976)
+rotation = 3.14159
+pattern = Array[int]([3])
+
+[node name="invincible_shooter23" parent="." instance=ExtResource("5_2k07p")]
+position = Vector2(1632, -2976)
+rotation = 3.14159
+pattern = Array[int]([3])
+
+[node name="invincible_shooter24" parent="." instance=ExtResource("5_2k07p")]
+position = Vector2(1696, -2976)
+rotation = 3.14159
+pattern = Array[int]([3])
+
+[node name="switch2" parent="." instance=ExtResource("2_bm8t5")]
+position = Vector2(0, -2880)
+event = 2
+
+[node name="scaffold" parent="." instance=ExtResource("6_c1lvg")]
+position = Vector2(2016, -2912)
+event = 2
+
+[node name="scaffold2" parent="." instance=ExtResource("6_c1lvg")]
+position = Vector2(2016, -2848)
+event = 2
+
+[node name="cactus" parent="." instance=ExtResource("7_g1h61")]
+position = Vector2(3488, -2928)
+
+[node name="cactus2" parent="." instance=ExtResource("7_g1h61")]
+position = Vector2(3488, -2832)
+
+[node name="power_brick" parent="." instance=ExtResource("8_1uk34")]
+position = Vector2(4288, -2880)
+event = 3
+
+[node name="scaffold4" parent="." instance=ExtResource("6_c1lvg")]
+position = Vector2(3232, -3168)
+event = 3
+
+[node name="scaffold5" parent="." instance=ExtResource("6_c1lvg")]
+position = Vector2(3296, -3168)
+event = 3
+
+[node name="trigger" type="Area2D" parent="." groups=["gizmo"]]
+position = Vector2(3264, -4352)
+collision_layer = 5
+collision_mask = 5
+script = ExtResource("9_f3vdp")
+event = 4
+
+[node name="hitbox" type="CollisionShape2D" parent="trigger"]
+shape = SubResource("RectangleShape2D_8l5ka")
+
+[node name="camera_anchor" type="Area2D" parent="." groups=["gizmo"]]
+script = ExtResource("11_g5v7v")
+
+[node name="hitbox" type="CollisionShape2D" parent="camera_anchor"]
+position = Vector2(1.81198e-05, -64)
+scale = Vector2(1.00583, 1)
+shape = SubResource("RectangleShape2D_co1wm")
+
+[node name="start" type="Marker2D" parent="camera_anchor"]
+
+[node name="end" type="Marker2D" parent="camera_anchor"]
+
+[node name="camera_anchor2" type="Area2D" parent="." groups=["gizmo"]]
+position = Vector2(0, -256)
+script = ExtResource("11_g5v7v")
+
+[node name="hitbox" type="CollisionShape2D" parent="camera_anchor2"]
+position = Vector2(0, -64)
+scale = Vector2(1.00583, 1)
+shape = SubResource("RectangleShape2D_a1c1y")
+
+[node name="start" type="Marker2D" parent="camera_anchor2"]
+position = Vector2(0, 256)
+
+[node name="end" type="Marker2D" parent="camera_anchor2"]
+position = Vector2(0, -1024)
+
+[node name="hitbox2" type="CollisionShape2D" parent="camera_anchor2"]
+position = Vector2(0, -896)
+scale = Vector2(1.00583, 1)
+shape = SubResource("RectangleShape2D_a1c1y")
+
+[node name="camera_anchor3" type="Area2D" parent="." groups=["gizmo"]]
+position = Vector2(128, -1280)
+script = ExtResource("11_g5v7v")
+
+[node name="hitbox" type="CollisionShape2D" parent="camera_anchor3"]
+scale = Vector2(1.00583, 1)
+shape = SubResource("RectangleShape2D_a1c1y")
+
+[node name="start" type="Marker2D" parent="camera_anchor3"]
+position = Vector2(-128, 0)
+
+[node name="end" type="Marker2D" parent="camera_anchor3"]
+position = Vector2(1792, 0)
+
+[node name="hitbox2" type="CollisionShape2D" parent="camera_anchor3"]
+position = Vector2(1664, 0)
+scale = Vector2(1.00583, 1)
+shape = SubResource("RectangleShape2D_a1c1y")
+
+[node name="camera_anchor4" type="Area2D" parent="." groups=["gizmo"]]
+position = Vector2(1920, -1472)
+script = ExtResource("11_g5v7v")
+
+[node name="hitbox" type="CollisionShape2D" parent="camera_anchor4"]
+scale = Vector2(1.00583, 1)
+shape = SubResource("RectangleShape2D_a1c1y")
+
+[node name="start" type="Marker2D" parent="camera_anchor4"]
+position = Vector2(0, -384)
+
+[node name="end" type="Marker2D" parent="camera_anchor4"]
+position = Vector2(0, -384)
+
+[node name="hitbox2" type="CollisionShape2D" parent="camera_anchor4"]
+position = Vector2(0, -640)
+scale = Vector2(1.00583, 1)
+shape = SubResource("RectangleShape2D_a1c1y")
+
+[node name="camera_anchor5" type="Area2D" parent="." groups=["gizmo"]]
+position = Vector2(1920, -2368)
+script = ExtResource("11_g5v7v")
+
+[node name="hitbox" type="CollisionShape2D" parent="camera_anchor5"]
+position = Vector2(0, 64)
+scale = Vector2(1.00583, 1)
+shape = SubResource("RectangleShape2D_a1c1y")
+
+[node name="start" type="Marker2D" parent="camera_anchor5"]
+
+[node name="end" type="Marker2D" parent="camera_anchor5"]
+position = Vector2(0, -512)
+
+[node name="camera_anchor6" type="Area2D" parent="." groups=["gizmo"]]
+position = Vector2(1920, -2880)
+script = ExtResource("11_g5v7v")
+
+[node name="hitbox" type="CollisionShape2D" parent="camera_anchor6"]
+scale = Vector2(1.00583, 1)
+shape = SubResource("RectangleShape2D_a1c1y")
+
+[node name="start" type="Marker2D" parent="camera_anchor6"]
+position = Vector2(-1920, 0)
+
+[node name="end" type="Marker2D" parent="camera_anchor6"]
+position = Vector2(1344, 0)
+
+[node name="hitbox2" type="CollisionShape2D" parent="camera_anchor6"]
+position = Vector2(-1600, 0)
+scale = Vector2(1.00583, 1)
+shape = SubResource("RectangleShape2D_a1c1y")
+
+[node name="hitbox3" type="CollisionShape2D" parent="camera_anchor6"]
+position = Vector2(960, 0)
+scale = Vector2(1.00583, 1)
+shape = SubResource("RectangleShape2D_a1c1y")
+
+[node name="camera_anchor7" type="Area2D" parent="." groups=["gizmo"]]
+position = Vector2(128, -2880)
+script = ExtResource("11_g5v7v")
+
+[node name="hitbox" type="CollisionShape2D" parent="camera_anchor7"]
+scale = Vector2(1.00583, 1)
+shape = SubResource("RectangleShape2D_a1c1y")
+
+[node name="start" type="Marker2D" parent="camera_anchor7"]
+position = Vector2(-128, 0)
+
+[node name="end" type="Marker2D" parent="camera_anchor7"]
+position = Vector2(-128, 0)
+
+[node name="camera_anchor8" type="Area2D" parent="." groups=["gizmo"]]
+position = Vector2(3072, -2880)
+script = ExtResource("11_g5v7v")
+
+[node name="hitbox" type="CollisionShape2D" parent="camera_anchor8"]
+scale = Vector2(1.00583, 1)
+shape = SubResource("RectangleShape2D_a1c1y")
+
+[node name="start" type="Marker2D" parent="camera_anchor8"]
+position = Vector2(640, 0)
+
+[node name="end" type="Marker2D" parent="camera_anchor8"]
+position = Vector2(640, 0)
+
+[node name="hitbox2" type="CollisionShape2D" parent="camera_anchor8"]
+position = Vector2(192, -192)
+scale = Vector2(1.00583, 1)
+shape = SubResource("RectangleShape2D_a1c1y")
+
+[node name="camera_anchor9" type="Area2D" parent="." groups=["gizmo"]]
+position = Vector2(3264, -3264)
+script = ExtResource("11_g5v7v")
+
+[node name="hitbox" type="CollisionShape2D" parent="camera_anchor9"]
+scale = Vector2(1.00583, 1)
+shape = SubResource("RectangleShape2D_a1c1y")
+
+[node name="start" type="Marker2D" parent="camera_anchor9"]
+position = Vector2(0, 384)
+
+[node name="end" type="Marker2D" parent="camera_anchor9"]
+position = Vector2(0, -1088)
+
+[node name="hitbox2" type="CollisionShape2D" parent="camera_anchor9"]
+position = Vector2(0, -768)
+scale = Vector2(1.00583, 1)
+shape = SubResource("RectangleShape2D_a1c1y")
+
+[node name="camera_anchor10" type="Area2D" parent="." groups=["gizmo"]]
+position = Vector2(3264, -4224)
+script = ExtResource("11_g5v7v")
+
+[node name="hitbox" type="CollisionShape2D" parent="camera_anchor10"]
+position = Vector2(0, 32)
+scale = Vector2(1.00583, 1)
+shape = SubResource("RectangleShape2D_xvm4d")
+
+[node name="start" type="Marker2D" parent="camera_anchor10"]
+position = Vector2(0, -128)
+
+[node name="end" type="Marker2D" parent="camera_anchor10"]
+position = Vector2(0, -128)
+
+[node name="label" parent="." instance=ExtResource("12_xpuax")]
+offset_top = 192.0
+offset_bottom = 326.0
+text = "r[E]turn"
+
+[node name="label2" parent="." instance=ExtResource("12_xpuax")]
+offset_left = -736.0
+offset_top = -832.0
+offset_right = -268.0
+offset_bottom = -698.0
+text = "[RIGHT-CLICK]
+to shoot"
+
+[node name="label3" parent="." instance=ExtResource("12_xpuax")]
+offset_left = 192.0
+offset_top = -1088.0
+offset_right = 576.0
+offset_bottom = -954.0
+text = "dark red objects
+can be destroyed"
+
+[node name="label4" parent="." instance=ExtResource("12_xpuax")]
+offset_left = -64.0
+offset_top = -1600.0
+offset_right = 836.0
+offset_bottom = -1466.0
+text = "[LEFT-CLICK] to use laser"
+
+[node name="label5" parent="." instance=ExtResource("12_xpuax")]
+offset_left = 960.0
+offset_top = -2048.0
+offset_right = 1464.0
+offset_bottom = -1664.0
+text = "yellow
+bullets
+can be
+destroyed"
+
+[node name="label6" parent="." instance=ExtResource("12_xpuax")]
+offset_left = 1856.0
+offset_top = -3200.0
+offset_right = 2240.0
+offset_bottom = -3066.0
+text = "activate the switch
+to destroy scaffold"
+
+[node name="label7" parent="." instance=ExtResource("12_xpuax")]
+offset_left = 384.0
+offset_top = -3264.0
+offset_right = 1760.0
+offset_bottom = -3130.0
+text = "bright red objects cannot be destroyed
+and will hurt on contact"
+
+[node name="label8" parent="." instance=ExtResource("12_xpuax")]
+offset_left = 1184.0
+offset_top = -2624.0
+offset_right = 1724.0
+offset_bottom = -2490.0
+text = "[SPACE] to dash"
+
+[node name="label9" parent="." instance=ExtResource("12_xpuax")]
+offset_left = 320.0
+offset_top = -2624.0
+offset_right = 704.0
+offset_bottom = -2490.0
+text = "dark yellow bullets
+cannot be destroyed"
+
+[node name="label10" parent="." instance=ExtResource("12_xpuax")]
+offset_left = -864.0
+offset_top = -3008.0
+offset_right = -324.0
+offset_bottom = -2740.0
+text = "[E] to power
+the switch
+you already
+know that"
+
+[node name="label11" parent="." instance=ExtResource("12_xpuax")]
+offset_left = 3584.0
+offset_top = -3264.0
+offset_right = 4096.0
+offset_bottom = -3063.0
+text = "power bricks
+can be
+charged"
+
+[node name="label12" parent="." instance=ExtResource("12_xpuax")]
+offset_left = 3584.0
+offset_top = -2752.0
+offset_right = 4096.0
+offset_bottom = -2551.0
+text = "fire a laser"
+
+[node name="label13" parent="." instance=ExtResource("12_xpuax")]
+offset_left = 3008.0
+offset_top = -4768.0
+offset_right = 3520.0
+offset_bottom = -4634.0
+text = "that's all"
+
+[node name="label14" parent="." instance=ExtResource("12_xpuax")]
+offset_left = -768.0
+offset_right = -384.0
+text = "[TAB]
+to pause"
+
+[node name="label15" parent="." instance=ExtResource("12_xpuax")]
+offset_left = 320.0
+offset_top = -128.0
+offset_right = 860.0
+offset_bottom = 73.0
+text = "[W] [A] [S] [D]
+to move
+(of course)"
+
+[node name="big_brick" parent="." instance=ExtResource("12_j48s6")]
+position = Vector2(0, -896)
+
+[node name="big_brick2" parent="." instance=ExtResource("12_j48s6")]
+position = Vector2(384, -1280)
+
+[node name="big_brick3" parent="." instance=ExtResource("12_j48s6")]
+position = Vector2(1536, -1280)
+
+[node name="big_brick4" parent="." instance=ExtResource("12_j48s6")]
+position = Vector2(512, -1280)
+
+[node name="big_brick5" parent="." instance=ExtResource("12_j48s6")]
+position = Vector2(640, -1280)
+
+[node name="big_brick6" parent="." instance=ExtResource("12_j48s6")]
+position = Vector2(768, -1280)
+
+[node name="big_brick7" parent="." instance=ExtResource("12_j48s6")]
+position = Vector2(896, -1280)
+
+[node name="big_brick8" parent="." instance=ExtResource("12_j48s6")]
+position = Vector2(1024, -1280)
+
+[node name="big_brick9" parent="." instance=ExtResource("12_j48s6")]
+position = Vector2(1152, -1280)
+
+[node name="big_brick10" parent="." instance=ExtResource("12_j48s6")]
+position = Vector2(1280, -1280)
+
+[node name="big_brick11" parent="." instance=ExtResource("12_j48s6")]
+position = Vector2(1408, -1280)
+
+[connection signal="body_entered" from="trigger" to="trigger" method="_on_body_entered" flags=18]
+[connection signal="area_entered" from="camera_anchor" to="camera_anchor" method="_on_area_entered" flags=18]
+[connection signal="area_entered" from="camera_anchor2" to="camera_anchor2" method="_on_area_entered" flags=18]
+[connection signal="area_entered" from="camera_anchor3" to="camera_anchor3" method="_on_area_entered" flags=18]
+[connection signal="area_entered" from="camera_anchor4" to="camera_anchor4" method="_on_area_entered" flags=18]
+[connection signal="area_entered" from="camera_anchor5" to="camera_anchor5" method="_on_area_entered" flags=18]
+[connection signal="area_entered" from="camera_anchor6" to="camera_anchor6" method="_on_area_entered" flags=18]
+[connection signal="area_entered" from="camera_anchor7" to="camera_anchor7" method="_on_area_entered" flags=18]
+[connection signal="area_entered" from="camera_anchor8" to="camera_anchor8" method="_on_area_entered" flags=18]
+[connection signal="area_entered" from="camera_anchor9" to="camera_anchor9" method="_on_area_entered" flags=18]
+[connection signal="area_entered" from="camera_anchor10" to="camera_anchor10" method="_on_area_entered" flags=18]

@@ -1,0 +1,108 @@
+[gd_scene load_steps=3 format=3 uid="uid://dtyofg8prc2qt"]
+
+[ext_resource type="Script" path="res://game/hud.gd" id="1_fjjfb"]
+[ext_resource type="Theme" uid="uid://dwi00a30p6ts0" path="res://asset/theme/toolbar.tres" id="1_u76by"]
+
+[node name="hud" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fjjfb")
+
+[node name="bar" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 64.0
+grow_horizontal = 2
+color = Color(0.752941, 0.752941, 0.752941, 1)
+
+[node name="stat_container" type="HBoxContainer" parent="."]
+clip_contents = true
+layout_mode = 1
+offset_left = 9.0
+offset_right = 461.0
+offset_bottom = 67.0
+
+[node name="hp_label" type="Label" parent="stat_container"]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+theme = ExtResource("1_u76by")
+text = "HP"
+vertical_alignment = 1
+
+[node name="hp_value" type="Label" parent="stat_container"]
+custom_minimum_size = Vector2(144, 0)
+layout_mode = 2
+size_flags_vertical = 1
+theme = ExtResource("1_u76by")
+text = "100%"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="spacing" type="VSeparator" parent="stat_container"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="mp_label" type="Label" parent="stat_container"]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+theme = ExtResource("1_u76by")
+text = "MP"
+vertical_alignment = 1
+
+[node name="mp_value" type="Label" parent="stat_container"]
+custom_minimum_size = Vector2(144, 0)
+layout_mode = 2
+theme = ExtResource("1_u76by")
+text = "100%"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="level_container" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -300.0
+offset_bottom = 67.0
+grow_horizontal = 0
+alignment = 2
+
+[node name="lv_label" type="Label" parent="level_container"]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+theme = ExtResource("1_u76by")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="notification_container" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="label" type="Label" parent="notification_container"]
+layout_mode = 2
+theme = ExtResource("1_u76by")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 128
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="reset_hp_value_color" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[node name="reset_mp_value_color" type="Timer" parent="."]
+wait_time = 0.2
+one_shot = true
+
+[connection signal="timeout" from="reset_hp_value_color" to="." method="_on_reset_hp_value_color_timeout"]
+[connection signal="timeout" from="reset_mp_value_color" to="." method="_on_reset_mp_value_color_timeout"]

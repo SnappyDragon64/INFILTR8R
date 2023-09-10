@@ -1,0 +1,58 @@
+[gd_scene load_steps=8 format=3 uid="uid://de82jnl422bip"]
+
+[ext_resource type="Script" path="res://game/level.gd" id="1_5muey"]
+[ext_resource type="PackedScene" uid="uid://dtyofg8prc2qt" path="res://game/hud.tscn" id="2_kf7o0"]
+[ext_resource type="Shader" path="res://asset/shader/pixelate.gdshader" id="3_dsp34"]
+[ext_resource type="Shader" path="res://asset/shader/chromatic_aberration.gdshader" id="4_cabgy"]
+[ext_resource type="PackedScene" uid="uid://r1lncflk6w46" path="res://game/glitch_effect.tscn" id="5_brfv3"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kbvnx"]
+shader = ExtResource("3_dsp34")
+shader_parameter/x = 480
+shader_parameter/y = 270
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5k0ox"]
+shader = ExtResource("4_cabgy")
+shader_parameter/r_displacement = Vector2(3, 0)
+shader_parameter/g_displacement = Vector2(0, 0)
+shader_parameter/b_displacement = Vector2(-3, 0)
+
+[node name="game" type="Node2D"]
+
+[node name="level" type="Node2D" parent="."]
+script = ExtResource("1_5muey")
+
+[node name="pixelate_layer" type="CanvasLayer" parent="."]
+
+[node name="pixelate" type="ColorRect" parent="pixelate_layer"]
+material = SubResource("ShaderMaterial_kbvnx")
+use_parent_material = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="aberration_layer" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="chromatic_aberration" type="ColorRect" parent="aberration_layer"]
+material = SubResource("ShaderMaterial_5k0ox")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="glitch_layer" type="CanvasLayer" parent="."]
+layer = 3
+
+[node name="glitch_effect" parent="glitch_layer" instance=ExtResource("5_brfv3")]
+
+[node name="hud_layer" type="CanvasLayer" parent="."]
+layer = 4
+
+[node name="hud" parent="hud_layer" instance=ExtResource("2_kf7o0")]

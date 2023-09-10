@@ -1,0 +1,48 @@
+[gd_scene load_steps=3 format=3 uid="uid://i4totug8yu12"]
+
+[ext_resource type="Script" path="res://entity/enemy/shooter/spinner/spinner.gd" id="1_651w6"]
+[ext_resource type="Script" path="res://entity/enemy/spikes.gd" id="2_oxmpb"]
+
+[node name="invincible_shuriken" type="StaticBody2D"]
+collision_layer = 7
+script = ExtResource("1_651w6")
+pattern = Array[int]([2])
+
+[node name="polygon" type="Polygon2D" parent="."]
+color = Color(1, 0, 0, 1)
+polygon = PackedVector2Array(0, -48, 12, -12, 48, 0, 12, 12, 0, 48, -12, 12, -48, 0, -12, -12)
+
+[node name="hitbox" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-48, 0, -12, -12, 0, -48, 12, -12, 48, 0, 12, 12, 0, 48, -12, 12)
+
+[node name="audio_player" type="AudioStreamPlayer2D" parent="."]
+
+[node name="shoot_timer" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[node name="turrets" type="Node2D" parent="."]
+
+[node name="0" type="Marker2D" parent="turrets"]
+position = Vector2(0, -80)
+
+[node name="1" type="Marker2D" parent="turrets"]
+position = Vector2(80, 0)
+rotation = 1.5708
+
+[node name="2" type="Marker2D" parent="turrets"]
+position = Vector2(0, 80)
+rotation = 3.14159
+
+[node name="3" type="Marker2D" parent="turrets"]
+position = Vector2(-80, 0)
+rotation = 4.71239
+
+[node name="spikes" type="Area2D" parent="."]
+script = ExtResource("2_oxmpb")
+
+[node name="hurtbox" type="CollisionPolygon2D" parent="spikes"]
+polygon = PackedVector2Array(50, 0, 13, 13, 0, 50, -13, 13, -50, 0, -13, -13, 0, -50, 13, -13)
+
+[connection signal="timeout" from="shoot_timer" to="." method="_on_shoot_timer_timeout"]
+[connection signal="body_entered" from="spikes" to="spikes" method="_on_body_entered"]

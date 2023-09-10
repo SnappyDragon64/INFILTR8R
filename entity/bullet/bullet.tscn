@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://c7koyau2c5cha"]
+
+[ext_resource type="Script" path="res://entity/bullet/transient_bullet.gd" id="1_cb6ii"]
+[ext_resource type="Shader" path="res://asset/shader/invert.gdshader" id="2_20u8m"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xwlgb"]
+shader = ExtResource("2_20u8m")
+
+[node name="bullet" type="Area2D" groups=["player_bullet"]]
+script = ExtResource("1_cb6ii")
+will_hurt = "enemy"
+ignores = Array[String](["player_bullet", "gizmo"])
+
+[node name="polygon" type="Polygon2D" parent="."]
+z_index = -1
+z_as_relative = false
+material = SubResource("ShaderMaterial_xwlgb")
+polygon = PackedVector2Array(0, 24, 0, 24, -12, 0, 0, -24, 12, 0)
+
+[node name="hitbox" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-12, 0, 0, -24, 12, 0, 0, 24, -12, 0, -12, 0)
+
+[node name="lifetime" type="Timer" parent="."]
+wait_time = 0.8
+autostart = true
+
+[connection signal="area_entered" from="." to="." method="_on_hit"]
+[connection signal="body_entered" from="." to="." method="_on_hit"]
+[connection signal="timeout" from="lifetime" to="." method="_on_lifetime_timeout"]

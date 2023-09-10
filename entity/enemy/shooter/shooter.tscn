@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://cjro518ay7p65"]
+
+[ext_resource type="Script" path="res://entity/enemy/shooter/shooter.gd" id="1_27lex"]
+
+[node name="shooter" type="StaticBody2D" groups=["enemy"]]
+collision_layer = 5
+script = ExtResource("1_27lex")
+pattern = Array[int]([2])
+
+[node name="polygon" type="Polygon2D" parent="."]
+color = Color(0.501961, 0, 0, 1)
+polygon = PackedVector2Array(-24, 24, 24, 24, 0, -24)
+
+[node name="hitbox" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(0, -24, -24, 24, 24, 24)
+
+[node name="shoot_timer" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[node name="turrets" type="Node2D" parent="."]
+
+[node name="0" type="Marker2D" parent="turrets"]
+position = Vector2(0, -56)
+
+[connection signal="timeout" from="shoot_timer" to="." method="_on_shoot_timer_timeout"]

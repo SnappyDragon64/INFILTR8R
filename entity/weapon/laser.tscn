@@ -1,0 +1,48 @@
+[gd_scene load_steps=4 format=3 uid="uid://cgw1j2qxbykgs"]
+
+[ext_resource type="Script" path="res://entity/weapon/laser.gd" id="1_qhdcp"]
+[ext_resource type="Material" uid="uid://1du44ui3ob4a" path="res://asset/shader/material/invert.tres" id="2_es416"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8shn7"]
+size = Vector2(40, 0)
+
+[node name="laser" type="Area2D" groups=["player_bullet"]]
+position = Vector2(0, -84)
+script = ExtResource("1_qhdcp")
+
+[node name="raycast" type="RayCast2D" parent="."]
+scale = Vector2(1, -1)
+target_position = Vector2(0, 1e+06)
+collision_mask = 2
+hit_from_inside = true
+
+[node name="line" type="Line2D" parent="."]
+material = ExtResource("2_es416")
+scale = Vector2(1, -1)
+width = 0.0
+begin_cap_mode = 2
+end_cap_mode = 2
+round_precision = 2
+
+[node name="duration" type="Timer" parent="."]
+wait_time = 0.2
+one_shot = true
+
+[node name="hitbox_enable" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
+[node name="hitbox_disable" type="Timer" parent="."]
+wait_time = 0.05
+one_shot = true
+
+[node name="hitbox" type="CollisionShape2D" parent="."]
+scale = Vector2(1, -1)
+shape = SubResource("RectangleShape2D_8shn7")
+disabled = true
+
+[connection signal="area_entered" from="." to="." method="_on_hit"]
+[connection signal="body_entered" from="." to="." method="_on_hit"]
+[connection signal="timeout" from="duration" to="." method="_on_duration_timeout"]
+[connection signal="timeout" from="hitbox_enable" to="." method="_on_hitbox_enable_timeout"]
+[connection signal="timeout" from="hitbox_disable" to="." method="_on_hitbox_disable_timeout"]

@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=3 uid="uid://bc34cxx0yn2ne"]
+
+[ext_resource type="Script" path="res://entity/enemy/shooter/spinner/spinner.gd" id="1_gtca3"]
+[ext_resource type="Script" path="res://entity/enemy/spikes.gd" id="2_1fs6e"]
+
+[node name="tristar" type="StaticBody2D"]
+collision_layer = 7
+script = ExtResource("1_gtca3")
+pattern = Array[int]([2])
+
+[node name="polygon" type="Polygon2D" parent="."]
+color = Color(1, 0, 0, 1)
+polygon = PackedVector2Array(0, -48, 10.392, -6, 41.569, 24, 0, 12, -41.569, 24, -10.392, -6)
+
+[node name="hitbox" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(0, -48, 10.392, -6, 41.569, 24, 0, 12, -41.569, 24, -10.392, -6)
+
+[node name="audio_player" type="AudioStreamPlayer2D" parent="."]
+
+[node name="shoot_timer" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[node name="turrets" type="Node2D" parent="."]
+
+[node name="0" type="Marker2D" parent="turrets"]
+position = Vector2(0, -80)
+
+[node name="1" type="Marker2D" parent="turrets"]
+position = Vector2(69.282, 40)
+rotation = 2.0944
+
+[node name="2" type="Marker2D" parent="turrets"]
+position = Vector2(-69, 40)
+rotation = 4.18879
+
+[node name="spikes" type="Area2D" parent="."]
+script = ExtResource("2_1fs6e")
+
+[node name="hurtbox" type="CollisionPolygon2D" parent="spikes"]
+polygon = PackedVector2Array(45, 26, 0, 13, -45, 26, -11, -7, 0, -50, 11, -7)
+
+[connection signal="timeout" from="shoot_timer" to="." method="_on_shoot_timer_timeout"]
+[connection signal="body_entered" from="spikes" to="spikes" method="_on_body_entered"]

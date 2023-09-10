@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://ckt27me3e6j6h"]
+
+[ext_resource type="Script" path="res://entity/misc/warning.gd" id="1_4v54n"]
+[ext_resource type="Theme" uid="uid://dwi00a30p6ts0" path="res://asset/theme/toolbar.tres" id="2_46cmm"]
+
+[node name="warning" type="Node2D"]
+z_index = 100
+script = ExtResource("1_4v54n")
+
+[node name="warning_label" type="Label" parent="."]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -144.0
+offset_top = -33.0
+offset_right = 144.0
+offset_bottom = 34.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_46cmm")
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 64
+text = "[MP LOW]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="timer" type="Timer" parent="."]
+wait_time = 0.2
+
+[connection signal="timeout" from="timer" to="." method="_on_timer_timeout"]

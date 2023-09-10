@@ -1,0 +1,40 @@
+[gd_scene load_steps=7 format=3 uid="uid://bf6qu7jghwn2d"]
+
+[ext_resource type="Script" path="res://entity/gizmo/switch.gd" id="1_35cae"]
+[ext_resource type="Texture2D" uid="uid://hlxd6svpliyq" path="res://asset/sprite/entity/switch_off.png" id="2_nf4c2"]
+[ext_resource type="Material" uid="uid://1du44ui3ob4a" path="res://asset/shader/material/invert.tres" id="3_jfkkb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gb6ht"]
+size = Vector2(96, 96)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f15ed"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ykv5"]
+bg_color = Color(1, 1, 1, 1)
+
+[node name="switch" type="Area2D" groups=["gizmo"]]
+z_index = -1
+script = ExtResource("1_35cae")
+
+[node name="sprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_nf4c2")
+
+[node name="hitbox" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_gb6ht")
+
+[node name="progress" type="ProgressBar" parent="."]
+z_index = -1
+material = ExtResource("3_jfkkb")
+offset_left = -40.0
+offset_top = -40.0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_styles/background = SubResource("StyleBoxEmpty_f15ed")
+theme_override_styles/fill = SubResource("StyleBoxFlat_8ykv5")
+max_value = 80.0
+step = 10.0
+fill_mode = 3
+show_percentage = false
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

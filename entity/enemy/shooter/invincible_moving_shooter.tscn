@@ -1,0 +1,45 @@
+[gd_scene load_steps=4 format=3 uid="uid://bc78i07ovu8do"]
+
+[ext_resource type="Script" path="res://entity/enemy/shooter/moving_shooter.gd" id="1_y8a51"]
+[ext_resource type="Script" path="res://entity/enemy/spikes.gd" id="2_7us3v"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cpm6h"]
+radius = 800.0
+
+[node name="invincible_moving_shooter" type="CharacterBody2D"]
+collision_layer = 5
+script = ExtResource("1_y8a51")
+pattern = Array[int]([2])
+
+[node name="detection_range" type="Area2D" parent="." groups=["gizmo"]]
+metadata/_edit_group_ = true
+
+[node name="hitbox" type="CollisionShape2D" parent="detection_range"]
+shape = SubResource("CircleShape2D_cpm6h")
+
+[node name="polygon" type="Polygon2D" parent="."]
+color = Color(1, 0, 0, 1)
+polygon = PackedVector2Array(-24, 24, 24, 24, 0, -24)
+
+[node name="hitbox" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(0, -24, -24, 24, 24, 24)
+
+[node name="shoot_timer" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[node name="turrets" type="Node2D" parent="."]
+
+[node name="0" type="Marker2D" parent="turrets"]
+position = Vector2(0, -56)
+
+[node name="spikes" type="Area2D" parent="."]
+script = ExtResource("2_7us3v")
+
+[node name="hurtbox" type="CollisionPolygon2D" parent="spikes"]
+polygon = PackedVector2Array(0, -26, 26, 25, -26, 25)
+
+[connection signal="body_entered" from="detection_range" to="." method="_on_detection_range_body_entered"]
+[connection signal="body_exited" from="detection_range" to="." method="_on_detection_range_body_exited"]
+[connection signal="timeout" from="shoot_timer" to="." method="_on_shoot_timer_timeout"]
+[connection signal="body_entered" from="spikes" to="spikes" method="_on_body_entered"]

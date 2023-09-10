@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cof0ebqhth07h"]
+
+[ext_resource type="Script" path="res://entity/enemy/brick.gd" id="1_ggbqo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hupqx"]
+size = Vector2(60, 60)
+
+[node name="brick" type="StaticBody2D" groups=["enemy"]]
+collision_layer = 5
+script = ExtResource("1_ggbqo")
+
+[node name="polygon" type="Polygon2D" parent="."]
+color = Color(0.501961, 0, 0, 1)
+polygon = PackedVector2Array(-30, -30, 30, -30, 30, 30, -30, 30)
+
+[node name="hitbox" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_hupqx")

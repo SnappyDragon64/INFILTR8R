@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://b0ruelrr7mdby"]
+
+[ext_resource type="Theme" uid="uid://dwi00a30p6ts0" path="res://asset/theme/toolbar.tres" id="1_0xdrj"]
+
+[node name="label" type="Label"]
+z_index = -1
+offset_left = -192.0
+offset_top = -64.0
+offset_right = 192.0
+offset_bottom = 70.0
+theme = ExtResource("1_0xdrj")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 64
+horizontal_alignment = 1
+vertical_alignment = 1

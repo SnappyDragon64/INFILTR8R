@@ -1,0 +1,38 @@
+[gd_scene load_steps=7 format=3 uid="uid://irexbaeixrbd"]
+
+[ext_resource type="Script" path="res://entity/gizmo/power_brick.gd" id="1_t7pyx"]
+[ext_resource type="Texture2D" uid="uid://s7ijmle4wnas" path="res://asset/sprite/entity/power_brick_off.png" id="1_wlmqu"]
+[ext_resource type="Material" uid="uid://1du44ui3ob4a" path="res://asset/shader/material/invert.tres" id="3_ksvep"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qph0b"]
+size = Vector2(64, 64)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lvh51"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jgbx6"]
+bg_color = Color(1, 1, 1, 1)
+
+[node name="power_brick" type="StaticBody2D" groups=["enemy"]]
+scale = Vector2(2, 2)
+collision_layer = 7
+script = ExtResource("1_t7pyx")
+
+[node name="hitbox" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_qph0b")
+
+[node name="sprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_wlmqu")
+
+[node name="progress" type="ProgressBar" parent="."]
+z_index = -1
+material = ExtResource("3_ksvep")
+offset_left = -24.0
+offset_top = -24.0
+offset_right = 24.0
+offset_bottom = 24.0
+theme_override_styles/background = SubResource("StyleBoxEmpty_lvh51")
+theme_override_styles/fill = SubResource("StyleBoxFlat_jgbx6")
+max_value = 8.0
+step = 1.0
+fill_mode = 3
+show_percentage = false

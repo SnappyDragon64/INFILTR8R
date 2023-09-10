@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://bjkc56oqtekk5"]
+
+[ext_resource type="Script" path="res://entity/gizmo/scaffold.gd" id="1_2mowu"]
+[ext_resource type="Texture2D" uid="uid://1iddvnemhfv" path="res://asset/sprite/entity/scaffold.png" id="2_qjsjb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mtism"]
+size = Vector2(64, 64)
+
+[node name="scaffold" type="StaticBody2D"]
+collision_layer = 7
+script = ExtResource("1_2mowu")
+
+[node name="sprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_qjsjb")
+
+[node name="hitbox" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_mtism")

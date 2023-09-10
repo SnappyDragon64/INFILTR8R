@@ -1,0 +1,34 @@
+[gd_scene load_steps=3 format=3 uid="uid://dsqqx2wuyd8c5"]
+
+[ext_resource type="Script" path="res://entity/enemy/shooter/rotating_shooter.gd" id="1_teomj"]
+[ext_resource type="Script" path="res://entity/enemy/spikes.gd" id="2_oxb2s"]
+
+[node name="invincible_rotating_shooter" type="StaticBody2D"]
+collision_layer = 7
+script = ExtResource("1_teomj")
+pattern = Array[int]([2])
+
+[node name="polygon" type="Polygon2D" parent="."]
+color = Color(1, 0, 0, 1)
+polygon = PackedVector2Array(-24, 24, 24, 24, 0, -24)
+
+[node name="hitbox" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(0, -24, -24, 24, 24, 24)
+
+[node name="shoot_timer" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[node name="turrets" type="Node2D" parent="."]
+
+[node name="0" type="Marker2D" parent="turrets"]
+position = Vector2(0, -56)
+
+[node name="spikes" type="Area2D" parent="."]
+script = ExtResource("2_oxb2s")
+
+[node name="hurtbox" type="CollisionPolygon2D" parent="spikes"]
+polygon = PackedVector2Array(0, -26, -26, 25, 26, 25)
+
+[connection signal="timeout" from="shoot_timer" to="." method="_on_shoot_timer_timeout"]
+[connection signal="body_entered" from="spikes" to="spikes" method="_on_body_entered"]

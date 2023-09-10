@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://di4ryfhl652rj"]
+
+[ext_resource type="Script" path="res://entity/gizmo/camera_anchor.gd" id="1_10lgi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a1c1y"]
+size = Vector2(128, 128)
+
+[node name="camera_anchor" type="Area2D" groups=["gizmo"]]
+script = ExtResource("1_10lgi")
+
+[node name="hitbox" type="CollisionShape2D" parent="."]
+scale = Vector2(1.00583, 1)
+shape = SubResource("RectangleShape2D_a1c1y")
+
+[node name="start" type="Marker2D" parent="."]
+
+[node name="end" type="Marker2D" parent="."]
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

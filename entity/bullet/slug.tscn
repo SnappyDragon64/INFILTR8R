@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://dhl6yf7f2ocny"]
+
+[ext_resource type="Script" path="res://entity/bullet/bullet.gd" id="1_3ky8y"]
+
+[node name="slug" type="Area2D" groups=["enemy_bullet"]]
+script = ExtResource("1_3ky8y")
+speed = 200.0
+will_hurt = "player"
+ignores = Array[String](["enemy_bullet", "gizmo"])
+
+[node name="polygon" type="Polygon2D" parent="."]
+z_index = -1
+z_as_relative = false
+color = Color(1, 1, 0, 1)
+polygon = PackedVector2Array(12, -24, 0, 24, -12, -24)
+
+[node name="hitbox" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(12, -24, 0, 24, -12, -24)
+
+[connection signal="area_entered" from="." to="." method="_on_hit"]
+[connection signal="body_entered" from="." to="." method="_on_hit"]

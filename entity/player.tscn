@@ -1,0 +1,69 @@
+[gd_scene load_steps=5 format=3 uid="uid://dr4xt8yd2ch3x"]
+
+[ext_resource type="Script" path="res://entity/player.gd" id="1_4rxmn"]
+[ext_resource type="PackedScene" uid="uid://cgw1j2qxbykgs" path="res://entity/weapon/laser.tscn" id="2_306yu"]
+[ext_resource type="PackedScene" uid="uid://ckt27me3e6j6h" path="res://entity/misc/warning.tscn" id="3_mo4pw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_urwkb"]
+size = Vector2(1, 1)
+
+[node name="player" type="CharacterBody2D" groups=["player"]]
+script = ExtResource("1_4rxmn")
+speed = 250
+
+[node name="polygon" type="Polygon2D" parent="."]
+position = Vector2(0, 28)
+polygon = PackedVector2Array(-32, -16, 0, 0, 32, -16, 0, -80)
+
+[node name="hitbox" type="CollisionPolygon2D" parent="."]
+position = Vector2(0, 28)
+polygon = PackedVector2Array(0, 0, 32, -16, 0, -80, -32, -16)
+
+[node name="audio_player" type="AudioStreamPlayer2D" parent="."]
+volume_db = -10.0
+
+[node name="audio_listener" type="AudioListener2D" parent="."]
+current = true
+
+[node name="shoot_cooldown" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
+[node name="hurt_cooldown" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[node name="mana_regeneration" type="Timer" parent="."]
+wait_time = 0.2
+
+[node name="dash_timer" type="Timer" parent="."]
+wait_time = 0.25
+one_shot = true
+
+[node name="dash_cooldown" type="Timer" parent="."]
+wait_time = 0.2
+
+[node name="turrets" type="Node2D" parent="."]
+
+[node name="0" type="Marker2D" parent="turrets"]
+position = Vector2(0, -84)
+
+[node name="heavy" type="Node2D" parent="."]
+
+[node name="laser" parent="heavy" instance=ExtResource("2_306yu")]
+
+[node name="camera_target" type="Area2D" parent="." groups=["camera_target"]]
+
+[node name="hitbox" type="CollisionShape2D" parent="camera_target"]
+shape = SubResource("RectangleShape2D_urwkb")
+
+[node name="warning" parent="." instance=ExtResource("3_mo4pw")]
+
+[node name="camera" type="Camera2D" parent="."]
+enabled = false
+
+[connection signal="timeout" from="shoot_cooldown" to="." method="_on_shoot_cooldown_timeout"]
+[connection signal="timeout" from="hurt_cooldown" to="." method="_on_hurt_cooldown_timeout"]
+[connection signal="timeout" from="mana_regeneration" to="." method="_on_mana_regeneration_timeout"]
+[connection signal="timeout" from="dash_timer" to="." method="_on_dash_timer_timeout"]
+[connection signal="timeout" from="dash_cooldown" to="." method="_on_dash_cooldown_timeout"]
