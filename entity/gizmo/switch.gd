@@ -12,9 +12,8 @@ var current = false
 var value = 0
 
 func _ready():
-	if is_disabled:
-		$sprite.set_texture(disabled_sprite)
-		Signals.event.connect(_handle_event)
+	Signals.event.connect(_handle_event)
+	_update()
 
 func _handle_event(incoming_event):
 	if incoming_event == unlock_event:
@@ -34,6 +33,19 @@ func _process(_delta):
 			on = true
 			$sprite.set_texture(on_sprite)
 			Signals.event.emit(event)
+
+func set_disabled(flag):
+	is_disabled = flag
+	_update()
+
+func _update():
+	if is_disabled:
+		$sprite.set_texture(disabled_sprite)
+	else:
+		if on:
+			$sprite.set_texture (on_sprite)
+		else:
+			$sprite.set_texture(off_sprite)
 
 func _on_body_entered(body):
 	if body.is_in_group('player'):

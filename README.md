@@ -20,11 +20,18 @@
 - Yellow enemy bullets: Can be destroyed by player attacks. Deal damage on hit.
 - Dark yellow enemy bullets: Cannot be destroyed by player attacks. Deal damage on hit. Can be avoided by using dash.
 - Green switches: Can be powered-up by interacting with them while standing on top of them. Can perform various actions or act as teleporters.
-    - Solid green switches: Disabled switches.
+	- Solid green switches: Disabled switches.
 - Purple power bricks: Can be powered-up by attacks. Performs an action when fully charged.
 - Blue and green scaffold: Can be removed by activating the corresponding switch or power bricks.
 
 ## Progress:
 - Core: Done
-- Levels: 2/8
+- Levels: 2/4
 - Boss: 0/1
+
+## Todo:
+- Make [REDACTED] accessible in 000 and 001.
+- Add camera anchors to 010.
+- 011
+- Boss
+- Wall masking.
