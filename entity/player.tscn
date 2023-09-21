@@ -60,6 +60,7 @@ shape = SubResource("RectangleShape2D_urwkb")
 [node name="warning" parent="." instance=ExtResource("3_mo4pw")]
 
 [node name="camera" type="Camera2D" parent="."]
+enabled = false
 
 [connection signal="timeout" from="shoot_cooldown" to="." method="_on_shoot_cooldown_timeout"]
 [connection signal="timeout" from="hurt_cooldown" to="." method="_on_hurt_cooldown_timeout"]

@@ -43,7 +43,7 @@ func _update():
 		$sprite.set_texture(disabled_sprite)
 	else:
 		if on:
-			$sprite.set_texture (on_sprite)
+			$sprite.set_texture(on_sprite)
 		else:
 			$sprite.set_texture(off_sprite)
 

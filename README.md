@@ -26,12 +26,5 @@
 
 ## Progress:
 - Core: Done
-- Levels: 2/4
+- Levels: 3/4
 - Boss: 0/1
-
-## Todo:
-- Make [REDACTED] accessible in 000 and 001.
-- Add camera anchors to 010.
-- 011
-- Boss
-- Wall masking.
