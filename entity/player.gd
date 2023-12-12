@@ -28,6 +28,8 @@ var controller_mode = false
 
 func _ready():
 	Signals.position_updated.emit(get_position())
+	Signals.update_health.emit(health, max_health)
+	Signals.update_mana.emit(mana, max_mana)
 	Signals.set_player_position.connect(set_position)
 	Signals.kill.connect(_kill)
 

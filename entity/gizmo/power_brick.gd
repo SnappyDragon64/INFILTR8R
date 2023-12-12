@@ -19,3 +19,9 @@ func hurt(damage):
 		on = true
 		$sprite.set_texture(on_sprite)
 		Signals.event.emit(event)
+
+func reset():
+	value = 0
+	$progress.set_value(0)
+	on = false
+	$sprite.set_texture(off_sprite)

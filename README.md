@@ -26,5 +26,5 @@
 
 ## Progress:
 - Core: Done
-- Levels: 3/4
+- Levels: 4/4
 - Boss: 0/1
