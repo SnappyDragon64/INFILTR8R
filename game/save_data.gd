@@ -1,11 +1,16 @@
 extends Node
 
-@onready var save_data = {
+@onready var save_data := {
 	'1': false,
 	'2': false,
 	'3': false,
 	'4': false,
 	'5': false,
+	'shiny1': false,
+	'shiny2': false,
+	'shiny3': false,
+	'shiny4': false,
+	'shiny5': false,
 }
 
 func _ready():
@@ -13,10 +18,15 @@ func _ready():
 
 func update(key, value):
 	save_data[str(key)] = value
+	if value:
+		var player = get_tree().get_first_node_in_group('player')
+		if player.health == player.max_health:
+			save_data['shiny' + str(key)] = true
+	
 	_save()
 
 func check(key):
-	return save_data[str(key)]
+	return save_data.get(str(key), false)
 
 func _save():
 	var save = FileAccess.open('user://hello.there', FileAccess.WRITE)

@@ -1,11 +1,17 @@
-[gd_scene load_steps=9 format=3 uid="uid://de82jnl422bip"]
+[gd_scene load_steps=12 format=3 uid="uid://de82jnl422bip"]
 
 [ext_resource type="Script" path="res://game/level.gd" id="1_5muey"]
+[ext_resource type="Shader" path="res://asset/shader/shift.gdshader" id="2_k8rra"]
 [ext_resource type="PackedScene" uid="uid://dtyofg8prc2qt" path="res://game/hud.tscn" id="2_kf7o0"]
 [ext_resource type="Shader" path="res://asset/shader/pixelate.gdshader" id="3_dsp34"]
+[ext_resource type="Script" path="res://game/shift.gd" id="3_t47se"]
 [ext_resource type="Shader" path="res://asset/shader/chromatic_aberration.gdshader" id="4_cabgy"]
 [ext_resource type="PackedScene" uid="uid://r1lncflk6w46" path="res://game/glitch_effect.tscn" id="5_brfv3"]
 [ext_resource type="PackedScene" uid="uid://16q0nudemu6g" path="res://game/cursor.tscn" id="6_2kl1s"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xanum"]
+shader = ExtResource("2_k8rra")
+shader_parameter/shift = 1.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_kbvnx"]
 shader = ExtResource("3_dsp34")
@@ -23,7 +29,19 @@ shader_parameter/b_displacement = Vector2(-3, 0)
 [node name="level" type="Node2D" parent="."]
 script = ExtResource("1_5muey")
 
+[node name="shift_layer" type="CanvasLayer" parent="."]
+
+[node name="shift" type="ColorRect" parent="shift_layer"]
+material = SubResource("ShaderMaterial_xanum")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_t47se")
+
 [node name="pixelate_layer" type="CanvasLayer" parent="."]
+layer = 2
 
 [node name="pixelate" type="ColorRect" parent="pixelate_layer"]
 material = SubResource("ShaderMaterial_kbvnx")
@@ -38,7 +56,7 @@ size_flags_vertical = 3
 metadata/_edit_use_anchors_ = true
 
 [node name="aberration_layer" type="CanvasLayer" parent="."]
-layer = 2
+layer = 3
 
 [node name="chromatic_aberration" type="ColorRect" parent="aberration_layer"]
 material = SubResource("ShaderMaterial_5k0ox")
@@ -49,12 +67,12 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="glitch_layer" type="CanvasLayer" parent="."]
-layer = 3
+layer = 4
 
 [node name="glitch_effect" parent="glitch_layer" instance=ExtResource("5_brfv3")]
 
 [node name="hud_layer" type="CanvasLayer" parent="."]
-layer = 4
+layer = 5
 
 [node name="hud" parent="hud_layer" instance=ExtResource("2_kf7o0")]
 
