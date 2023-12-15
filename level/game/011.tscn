@@ -478,9 +478,6 @@ position = Vector2(-1120, -800)
 position = Vector2(-1056, -704)
 rotation = 1.5708
 
-[node name="long_brick23" parent="." instance=ExtResource("4_pj2xd")]
-position = Vector2(-768, -672)
-
 [node name="rotating_shooter9" parent="." instance=ExtResource("10_y8hvl")]
 position = Vector2(-1152, -704)
 
@@ -488,10 +485,10 @@ position = Vector2(-1152, -704)
 position = Vector2(-768, -768)
 
 [node name="cactus22" parent="." instance=ExtResource("17_edgun")]
-position = Vector2(-800, -608)
+position = Vector2(-736, -672)
 
 [node name="cactus23" parent="." instance=ExtResource("17_edgun")]
-position = Vector2(-736, -608)
+position = Vector2(-672, -672)
 
 [node name="cactus24" parent="." instance=ExtResource("19_oiods")]
 position = Vector2(-512, -512)
@@ -517,10 +514,10 @@ rotation = 1.5708
 position = Vector2(-512, -896)
 
 [node name="brick19" parent="." instance=ExtResource("16_qrw4d")]
-position = Vector2(-928, -608)
+position = Vector2(-800, -608)
 
 [node name="brick20" parent="." instance=ExtResource("16_qrw4d")]
-position = Vector2(-864, -608)
+position = Vector2(-736, -608)
 
 [node name="brick21" parent="." instance=ExtResource("16_qrw4d")]
 position = Vector2(-608, -672)
@@ -605,7 +602,7 @@ position = Vector2(-672, -480)
 position = Vector2(-672, -544)
 
 [node name="brick36" parent="." instance=ExtResource("16_qrw4d")]
-position = Vector2(-608, -480)
+position = Vector2(-864, -608)
 
 [node name="invincible_shooter14" parent="." instance=ExtResource("8_s6vpk")]
 position = Vector2(-992, -3680)
