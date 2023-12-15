@@ -10,6 +10,7 @@
 position = Vector2(0, -320)
 speed = 2
 shoot_speed = 0.5
+health = 12
 
 [node name="holder2" type="Marker2D" parent="."]
 rotation = 3.14159
@@ -18,3 +19,4 @@ rotation = 3.14159
 position = Vector2(0, -320)
 speed = 2
 shoot_speed = 0.5
+health = 12

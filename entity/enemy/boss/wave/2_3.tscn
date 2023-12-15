@@ -11,6 +11,7 @@
 position = Vector2(0, -320)
 speed = 3
 shoot_speed = 0.6
+health = 12
 
 [node name="spawn_anim" parent="holder1/tristar" instance=ExtResource("2_480x3")]
 
@@ -18,34 +19,42 @@ shoot_speed = 0.6
 position = Vector2(0, -320)
 speed = 2
 shoot_speed = 0.6
+health = 12
 
 [node name="tristar3" parent="holder1" instance=ExtResource("1_16bdf")]
 position = Vector2(0, -320)
 rotation = 3.14159
 speed = 2
 shoot_speed = 0.6
+health = 12
 
 [node name="tristar4" parent="holder1" instance=ExtResource("1_16bdf")]
 position = Vector2(0, -320)
 speed = 2
+health = 12
 
 [node name="tristar5" parent="holder1" instance=ExtResource("1_16bdf")]
 position = Vector2(0, -320)
 rotation = 3.14159
 speed = 2
+health = 12
 
 [node name="tristar6" parent="holder1" instance=ExtResource("1_16bdf")]
 position = Vector2(0, -320)
 shoot_speed = 0.6
+health = 12
 
 [node name="tristar7" parent="holder1" instance=ExtResource("1_16bdf")]
 position = Vector2(0, -320)
 rotation = 3.14159
 shoot_speed = 0.6
+health = 12
 
 [node name="tristar8" parent="holder1" instance=ExtResource("1_16bdf")]
 position = Vector2(0, -320)
+health = 12
 
 [node name="tristar9" parent="holder1" instance=ExtResource("1_16bdf")]
 position = Vector2(0, -320)
 rotation = 3.14159
+health = 12

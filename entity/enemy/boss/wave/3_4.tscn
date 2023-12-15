@@ -13,6 +13,7 @@ position = Vector2(0, -320)
 speed = 2
 pattern = Array[int]([2, 2, 2, 3, 2, 2, 0, 3, 3])
 shoot_speed = 0.8
+health = 20
 
 [node name="spawn_anim" parent="holder1/shuriken" instance=ExtResource("2_lm43h")]
 
@@ -22,6 +23,7 @@ rotation = 1.5708
 speed = -2
 pattern = Array[int]([2, 2, 2, 3, 2, 2, 0, 3, 3])
 shoot_speed = 0.8
+health = 20
 
 [node name="tristar2" parent="holder1" instance=ExtResource("2_gjs36")]
 position = Vector2(0, -320)
@@ -29,12 +31,14 @@ rotation = 3.14159
 speed = -2
 pattern = Array[int]([2, 2, 2, 3, 2, 2, 0, 3, 3])
 shoot_speed = 0.8
+health = 20
 
 [node name="tristar3" parent="holder1" instance=ExtResource("2_gjs36")]
 position = Vector2(0, -320)
 speed = -2
 pattern = Array[int]([2, 2, 2, 3, 2, 2, 0, 3, 3])
 shoot_speed = 0.8
+health = 20
 
 [node name="tristar4" parent="holder1" instance=ExtResource("2_gjs36")]
 position = Vector2(0, -320)
@@ -42,6 +46,7 @@ rotation = 4.71239
 speed = -2
 pattern = Array[int]([2, 2, 2, 3, 2, 2, 0, 3, 3])
 shoot_speed = 0.8
+health = 20
 
 [node name="holder2" type="Marker2D" parent="."]
 rotation = 3.14159
@@ -51,6 +56,7 @@ position = Vector2(0, -320)
 speed = 2
 pattern = Array[int]([2, 2, 2, 3, 2, 2, 0, 3, 3])
 shoot_speed = 0.8
+health = 20
 
 [node name="spawn_anim" parent="holder2/shuriken" instance=ExtResource("2_lm43h")]
 
@@ -60,6 +66,7 @@ rotation = 1.5708
 speed = -2
 pattern = Array[int]([2, 2, 2, 3, 2, 2, 0, 3, 3])
 shoot_speed = 0.8
+health = 20
 
 [node name="tristar2" parent="holder2" instance=ExtResource("2_gjs36")]
 position = Vector2(0, -320)
@@ -67,12 +74,14 @@ rotation = 3.14159
 speed = -2
 pattern = Array[int]([2, 2, 2, 3, 2, 2, 0, 3, 3])
 shoot_speed = 0.8
+health = 20
 
 [node name="tristar3" parent="holder2" instance=ExtResource("2_gjs36")]
 position = Vector2(0, -320)
 speed = -2
 pattern = Array[int]([2, 2, 2, 3, 2, 2, 0, 3, 3])
 shoot_speed = 0.8
+health = 20
 
 [node name="tristar4" parent="holder2" instance=ExtResource("2_gjs36")]
 position = Vector2(0, -320)
@@ -80,3 +89,4 @@ rotation = 4.71239
 speed = -2
 pattern = Array[int]([2, 2, 2, 3, 2, 2, 0, 3, 3])
 shoot_speed = 0.8
+health = 20
