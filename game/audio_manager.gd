@@ -10,5 +10,6 @@ func _ready():
 	Signals.change_track.connect(_change_track)
 
 func _change_track(id):
-	set_stream(TRACKS[id])
-	play()
+	if id == 2:
+		set_stream(TRACKS[id])
+		play()
