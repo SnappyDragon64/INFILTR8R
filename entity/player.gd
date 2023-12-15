@@ -36,7 +36,9 @@ func _ready():
 	Signals.god_mode.connect(_on_god_mode)
 
 func _physics_process(_delta):
-	if not dashing and can_dash and Input.is_action_just_pressed('dash'):
+	var is_peeking = Input.is_action_pressed('peek')
+	
+	if not is_peeking and not dashing and can_dash and Input.is_action_just_pressed('dash'):
 		dashing = true
 		$dash_timer.start()
 		velocity = Vector2(0, -1).rotated(get_rotation()) * dash_speed
@@ -57,36 +59,37 @@ func _physics_process(_delta):
 		Signals.spawn.emit(bleed_instance)
 		bleed_instance.restart()
 	else:
-		velocity = Vector2.ZERO
-		if Input.is_action_pressed('move_right'):
-			velocity.x += 1 
-		if Input.is_action_pressed('move_left'):
-			velocity.x -= 1   
-		if Input.is_action_pressed('move_down'):
-			velocity.y += 1
-		if Input.is_action_pressed('move_up'):
-			velocity.y -= 1
-		velocity = velocity.normalized() * speed
-		
-		if Input.is_action_pressed('sneak'):
-			velocity *= sneak_multiplier
-		
-		move_and_slide()
-		Signals.position_updated.emit(get_position())
-		
-		if controller_mode:
-			var controller_direction = Input.get_vector('look_left', 'look_right', 'look_down', 'look_up')
+		if not is_peeking:
+			velocity = Vector2.ZERO
+			if Input.is_action_pressed('move_right'):
+				velocity.x += 1 
+			if Input.is_action_pressed('move_left'):
+				velocity.x -= 1   
+			if Input.is_action_pressed('move_down'):
+				velocity.y += 1
+			if Input.is_action_pressed('move_up'):
+				velocity.y -= 1
+			velocity = velocity.normalized() * speed
 			
-			if not controller_direction.is_zero_approx():
-				var angle = controller_direction.angle_to(Vector2.DOWN)
+			if Input.is_action_pressed('sneak'):
+				velocity *= sneak_multiplier
+			
+			move_and_slide()
+			Signals.position_updated.emit(get_position())
+			
+			if controller_mode:
+				var controller_direction = Input.get_vector('look_left', 'look_right', 'look_down', 'look_up')
+				
+				if not controller_direction.is_zero_approx():
+					var angle = controller_direction.angle_to(Vector2.DOWN)
+					set_rotation(angle)
+			else:
+				var direction = get_global_transform().origin - get_global_mouse_position()
+				var angle = direction.angle() - deg_to_rad(90)
 				set_rotation(angle)
-		else:
-			var direction = get_global_transform().origin - get_global_mouse_position()
-			var angle = direction.angle() - deg_to_rad(90)
-			set_rotation(angle)
 		
 		
-		if can_shoot:
+		if not is_peeking and can_shoot:
 			if Input.is_action_just_pressed('heavy'):
 				if mana >= heavy_cost:
 					play_audio(bowomp)
