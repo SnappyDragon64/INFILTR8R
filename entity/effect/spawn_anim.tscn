@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cpurdc10d2dfq"]
+
+[ext_resource type="Script" path="res://entity/effect/spawn_anim.gd" id="1_74g3x"]
+[ext_resource type="Material" uid="uid://1du44ui3ob4a" path="res://asset/shader/material/invert.tres" id="1_qy0mr"]
+
+[node name="spawn_anim" type="Node2D"]
+script = ExtResource("1_74g3x")
+metadata/_edit_group_ = true
+
+[node name="polygon" type="Polygon2D" parent="."]
+z_index = 1
+material = ExtResource("1_qy0mr")
+polygon = PackedVector2Array(0, -60, 52, 30, -52, 30)

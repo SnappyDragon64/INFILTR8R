@@ -1,0 +1,51 @@
+[gd_scene load_steps=3 format=3 uid="uid://3hp187fnedxv"]
+
+[ext_resource type="PackedScene" uid="uid://bj7lu63hd2uxq" path="res://entity/enemy/shooter/spinner/tristar.tscn" id="1_16bdf"]
+[ext_resource type="PackedScene" uid="uid://cpurdc10d2dfq" path="res://entity/effect/spawn_anim.tscn" id="2_480x3"]
+
+[node name="2_3" type="Node2D"]
+
+[node name="holder1" type="Marker2D" parent="."]
+
+[node name="tristar" parent="holder1" instance=ExtResource("1_16bdf")]
+position = Vector2(0, -320)
+speed = 3
+shoot_speed = 0.6
+
+[node name="spawn_anim" parent="holder1/tristar" instance=ExtResource("2_480x3")]
+
+[node name="tristar2" parent="holder1" instance=ExtResource("1_16bdf")]
+position = Vector2(0, -320)
+speed = 2
+shoot_speed = 0.6
+
+[node name="tristar3" parent="holder1" instance=ExtResource("1_16bdf")]
+position = Vector2(0, -320)
+rotation = 3.14159
+speed = 2
+shoot_speed = 0.6
+
+[node name="tristar4" parent="holder1" instance=ExtResource("1_16bdf")]
+position = Vector2(0, -320)
+speed = 2
+
+[node name="tristar5" parent="holder1" instance=ExtResource("1_16bdf")]
+position = Vector2(0, -320)
+rotation = 3.14159
+speed = 2
+
+[node name="tristar6" parent="holder1" instance=ExtResource("1_16bdf")]
+position = Vector2(0, -320)
+shoot_speed = 0.6
+
+[node name="tristar7" parent="holder1" instance=ExtResource("1_16bdf")]
+position = Vector2(0, -320)
+rotation = 3.14159
+shoot_speed = 0.6
+
+[node name="tristar8" parent="holder1" instance=ExtResource("1_16bdf")]
+position = Vector2(0, -320)
+
+[node name="tristar9" parent="holder1" instance=ExtResource("1_16bdf")]
+position = Vector2(0, -320)
+rotation = 3.14159

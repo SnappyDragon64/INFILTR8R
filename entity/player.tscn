@@ -43,6 +43,9 @@ one_shot = true
 [node name="dash_cooldown" type="Timer" parent="."]
 wait_time = 0.2
 
+[node name="god_mode_timer" type="Timer" parent="."]
+one_shot = true
+
 [node name="turrets" type="Node2D" parent="."]
 
 [node name="0" type="Marker2D" parent="turrets"]
@@ -67,3 +70,4 @@ enabled = false
 [connection signal="timeout" from="mana_regeneration" to="." method="_on_mana_regeneration_timeout"]
 [connection signal="timeout" from="dash_timer" to="." method="_on_dash_timer_timeout"]
 [connection signal="timeout" from="dash_cooldown" to="." method="_on_dash_cooldown_timeout"]
+[connection signal="timeout" from="god_mode_timer" to="." method="_on_god_mode_timer_timeout"]

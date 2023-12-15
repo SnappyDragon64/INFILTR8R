@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://bj84qtpc22f3w"]
+
+[ext_resource type="Script" path="res://entity/effect/explosion.gd" id="1_v3tuh"]
+
+[node name="explosion" type="Node2D"]
+scale = Vector2(1e-05, 1e-05)
+script = ExtResource("1_v3tuh")
+metadata/_edit_group_ = true
+
+[node name="polygon" type="Polygon2D" parent="."]
+z_index = 2
+polygon = PackedVector2Array(0, 60, 52, -30, -52, -30)

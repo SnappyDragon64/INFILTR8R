@@ -11,12 +11,16 @@ var tracking_flag = false
 func _ready():
 	Signals.lock_camera.connect(_lock_camera)
 	Signals.position_updated.connect(_on_update_position)
+	Signals.set_zoom.connect(_set_zoom)
 
 func _lock_camera(start, end):
 	x_min = min(start.x, end.x)
 	y_min = min(start.y, end.y)
 	x_max = max(start.x, end.x)
 	y_max = max(start.y, end.y)
+
+func _set_zoom(zoom_vector):
+	set_zoom(zoom_vector)
 
 func _process(_delta):
 	if tracking_flag:

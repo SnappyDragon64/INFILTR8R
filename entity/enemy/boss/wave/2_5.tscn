@@ -1,0 +1,93 @@
+[gd_scene load_steps=3 format=3 uid="uid://cqjaby8g7wqbd"]
+
+[ext_resource type="PackedScene" uid="uid://cjro518ay7p65" path="res://entity/enemy/shooter/shooter.tscn" id="1_fqo4f"]
+[ext_resource type="PackedScene" uid="uid://cpurdc10d2dfq" path="res://entity/effect/spawn_anim.tscn" id="2_0urim"]
+
+[node name="2_5" type="Node2D"]
+
+[node name="holder1" type="Marker2D" parent="."]
+rotation = 0.785398
+
+[node name="shooter" parent="holder1" instance=ExtResource("1_fqo4f")]
+position = Vector2(0, -320)
+pattern = Array[int]([3, 2, 2, 2, 2, 2, 2, 2])
+shoot_speed = 0.75
+health = 6
+
+[node name="spawn_anim" parent="holder1/shooter" instance=ExtResource("2_0urim")]
+
+[node name="holder2" type="Marker2D" parent="."]
+rotation = 1.5708
+
+[node name="shooter" parent="holder2" instance=ExtResource("1_fqo4f")]
+position = Vector2(0, -320)
+pattern = Array[int]([2, 3, 2, 2, 2, 2, 2, 2])
+shoot_speed = 0.75
+health = 6
+
+[node name="spawn_anim" parent="holder2/shooter" instance=ExtResource("2_0urim")]
+
+[node name="holder3" type="Marker2D" parent="."]
+rotation = 2.35619
+
+[node name="shooter" parent="holder3" instance=ExtResource("1_fqo4f")]
+position = Vector2(0, -320)
+pattern = Array[int]([2, 2, 3, 2, 2, 2, 2, 2])
+shoot_speed = 0.75
+health = 6
+
+[node name="spawn_anim" parent="holder3/shooter" instance=ExtResource("2_0urim")]
+
+[node name="holder4" type="Marker2D" parent="."]
+rotation = 3.14159
+
+[node name="shooter" parent="holder4" instance=ExtResource("1_fqo4f")]
+position = Vector2(0, -320)
+pattern = Array[int]([2, 2, 2, 3, 2, 2, 2, 2])
+shoot_speed = 0.75
+health = 6
+
+[node name="spawn_anim" parent="holder4/shooter" instance=ExtResource("2_0urim")]
+
+[node name="holder5" type="Marker2D" parent="."]
+rotation = 3.92699
+
+[node name="shooter" parent="holder5" instance=ExtResource("1_fqo4f")]
+position = Vector2(0, -320)
+pattern = Array[int]([2, 2, 2, 2, 3, 2, 2, 2])
+shoot_speed = 0.75
+health = 6
+
+[node name="spawn_anim" parent="holder5/shooter" instance=ExtResource("2_0urim")]
+
+[node name="holder6" type="Marker2D" parent="."]
+rotation = 4.71239
+
+[node name="shooter" parent="holder6" instance=ExtResource("1_fqo4f")]
+position = Vector2(0, -320)
+pattern = Array[int]([2, 2, 2, 2, 2, 3, 2, 2])
+shoot_speed = 0.75
+health = 6
+
+[node name="spawn_anim" parent="holder6/shooter" instance=ExtResource("2_0urim")]
+
+[node name="holder7" type="Marker2D" parent="."]
+rotation = 5.49779
+
+[node name="shooter" parent="holder7" instance=ExtResource("1_fqo4f")]
+position = Vector2(0, -320)
+pattern = Array[int]([2, 2, 2, 2, 2, 2, 3, 2])
+shoot_speed = 0.75
+health = 6
+
+[node name="spawn_anim" parent="holder7/shooter" instance=ExtResource("2_0urim")]
+
+[node name="holder8" type="Marker2D" parent="."]
+
+[node name="shooter" parent="holder8" instance=ExtResource("1_fqo4f")]
+position = Vector2(0, -320)
+pattern = Array[int]([2, 2, 2, 2, 2, 2, 2, 3])
+shoot_speed = 0.75
+health = 6
+
+[node name="spawn_anim" parent="holder8/shooter" instance=ExtResource("2_0urim")]

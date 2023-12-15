@@ -1,0 +1,53 @@
+[gd_scene load_steps=3 format=3 uid="uid://bhsolcrgsktjm"]
+
+[ext_resource type="PackedScene" uid="uid://cva1rtk1cdy7k" path="res://entity/enemy/shooter/rotating_shooter.tscn" id="1_xbg4c"]
+[ext_resource type="PackedScene" uid="uid://cpurdc10d2dfq" path="res://entity/effect/spawn_anim.tscn" id="2_6oedo"]
+
+[node name="1_2" type="Node2D"]
+
+[node name="holder1" type="Marker2D" parent="."]
+
+[node name="rotating_shooter" parent="holder1" instance=ExtResource("1_xbg4c")]
+position = Vector2(0, 320)
+
+[node name="spawn_anim" parent="holder1/rotating_shooter" instance=ExtResource("2_6oedo")]
+
+[node name="holder2" type="Marker2D" parent="."]
+rotation = 1.0472
+
+[node name="rotating_shooter" parent="holder2" instance=ExtResource("1_xbg4c")]
+position = Vector2(0, 320)
+
+[node name="spawn_anim" parent="holder2/rotating_shooter" instance=ExtResource("2_6oedo")]
+
+[node name="holder3" type="Marker2D" parent="."]
+rotation = 2.0944
+
+[node name="rotating_shooter" parent="holder3" instance=ExtResource("1_xbg4c")]
+position = Vector2(0, 320)
+
+[node name="spawn_anim" parent="holder3/rotating_shooter" instance=ExtResource("2_6oedo")]
+
+[node name="holder4" type="Marker2D" parent="."]
+rotation = 3.14159
+
+[node name="rotating_shooter" parent="holder4" instance=ExtResource("1_xbg4c")]
+position = Vector2(0, 320)
+
+[node name="spawn_anim" parent="holder4/rotating_shooter" instance=ExtResource("2_6oedo")]
+
+[node name="holder5" type="Marker2D" parent="."]
+rotation = 4.18879
+
+[node name="rotating_shooter" parent="holder5" instance=ExtResource("1_xbg4c")]
+position = Vector2(0, 320)
+
+[node name="spawn_anim" parent="holder5/rotating_shooter" instance=ExtResource("2_6oedo")]
+
+[node name="holder6" type="Marker2D" parent="."]
+rotation = 5.23599
+
+[node name="rotating_shooter" parent="holder6" instance=ExtResource("1_xbg4c")]
+position = Vector2(0, 320)
+
+[node name="spawn_anim" parent="holder6/rotating_shooter" instance=ExtResource("2_6oedo")]

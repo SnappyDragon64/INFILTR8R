@@ -1,0 +1,312 @@
+[gd_scene load_steps=4 format=3 uid="uid://d1hq0vcapwrpp"]
+
+[ext_resource type="PackedScene" uid="uid://cjro518ay7p65" path="res://entity/enemy/shooter/shooter.tscn" id="1_bm3mq"]
+[ext_resource type="PackedScene" uid="uid://cpurdc10d2dfq" path="res://entity/effect/spawn_anim.tscn" id="2_bekat"]
+[ext_resource type="PackedScene" uid="uid://cva1rtk1cdy7k" path="res://entity/enemy/shooter/rotating_shooter.tscn" id="3_i4vkt"]
+
+[node name="3_1" type="Node2D"]
+
+[node name="holder1" type="Marker2D" parent="."]
+
+[node name="shooter" parent="holder1" instance=ExtResource("1_bm3mq")]
+position = Vector2(0, -320)
+pattern = Array[int]([2, 2, 3])
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder1/shooter" instance=ExtResource("2_bekat")]
+
+[node name="rotating_shooter" parent="holder1" instance=ExtResource("3_i4vkt")]
+position = Vector2(0, 200)
+pattern = Array[int]([2, 2, 3])
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder1/rotating_shooter" instance=ExtResource("2_bekat")]
+
+[node name="holder2" type="Marker2D" parent="."]
+rotation = 0.349066
+
+[node name="shooter" parent="holder2" instance=ExtResource("1_bm3mq")]
+position = Vector2(0, -320)
+pattern = Array[int]([2, 2, 3])
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder2/shooter" instance=ExtResource("2_bekat")]
+
+[node name="rotating_shooter" parent="holder2" instance=ExtResource("3_i4vkt")]
+position = Vector2(0, 200)
+pattern = Array[int]([2, 2, 3])
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder2/rotating_shooter" instance=ExtResource("2_bekat")]
+
+[node name="holder3" type="Marker2D" parent="."]
+rotation = 0.698132
+
+[node name="shooter" parent="holder3" instance=ExtResource("1_bm3mq")]
+position = Vector2(0, -320)
+pattern = Array[int]([2, 2, 3])
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder3/shooter" instance=ExtResource("2_bekat")]
+
+[node name="rotating_shooter" parent="holder3" instance=ExtResource("3_i4vkt")]
+position = Vector2(0, 200)
+pattern = Array[int]([2, 2, 3])
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder3/rotating_shooter" instance=ExtResource("2_bekat")]
+
+[node name="holder4" type="Marker2D" parent="."]
+rotation = 1.0472
+
+[node name="shooter" parent="holder4" instance=ExtResource("1_bm3mq")]
+position = Vector2(0, -320)
+pattern = Array[int]([2, 2, 3])
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder4/shooter" instance=ExtResource("2_bekat")]
+
+[node name="rotating_shooter" parent="holder4" instance=ExtResource("3_i4vkt")]
+position = Vector2(0, 200)
+pattern = Array[int]([2, 2, 3])
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder4/rotating_shooter" instance=ExtResource("2_bekat")]
+
+[node name="holder5" type="Marker2D" parent="."]
+rotation = 1.39626
+
+[node name="shooter" parent="holder5" instance=ExtResource("1_bm3mq")]
+position = Vector2(0, -320)
+pattern = Array[int]([2, 2, 3])
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder5/shooter" instance=ExtResource("2_bekat")]
+
+[node name="rotating_shooter" parent="holder5" instance=ExtResource("3_i4vkt")]
+position = Vector2(0, 200)
+pattern = Array[int]([2, 2, 3])
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder5/rotating_shooter" instance=ExtResource("2_bekat")]
+
+[node name="holder6" type="Marker2D" parent="."]
+rotation = 1.74533
+
+[node name="shooter" parent="holder6" instance=ExtResource("1_bm3mq")]
+position = Vector2(0, -320)
+pattern = Array[int]([2, 2, 3])
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder6/shooter" instance=ExtResource("2_bekat")]
+
+[node name="rotating_shooter" parent="holder6" instance=ExtResource("3_i4vkt")]
+position = Vector2(0, 200)
+pattern = Array[int]([2, 2, 3])
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder6/rotating_shooter" instance=ExtResource("2_bekat")]
+
+[node name="holder7" type="Marker2D" parent="."]
+rotation = 2.0944
+
+[node name="shooter" parent="holder7" instance=ExtResource("1_bm3mq")]
+position = Vector2(0, -320)
+pattern = Array[int]([2, 2, 3])
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder7/shooter" instance=ExtResource("2_bekat")]
+
+[node name="rotating_shooter" parent="holder7" instance=ExtResource("3_i4vkt")]
+position = Vector2(0, 200)
+pattern = Array[int]([2, 2, 3])
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder7/rotating_shooter" instance=ExtResource("2_bekat")]
+
+[node name="holder8" type="Marker2D" parent="."]
+rotation = 2.44346
+
+[node name="shooter" parent="holder8" instance=ExtResource("1_bm3mq")]
+position = Vector2(0, -320)
+pattern = Array[int]([2, 2, 3])
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder8/shooter" instance=ExtResource("2_bekat")]
+
+[node name="rotating_shooter" parent="holder8" instance=ExtResource("3_i4vkt")]
+position = Vector2(0, 200)
+pattern = Array[int]([2, 2, 3])
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder8/rotating_shooter" instance=ExtResource("2_bekat")]
+
+[node name="holder9" type="Marker2D" parent="."]
+rotation = 2.79253
+
+[node name="shooter" parent="holder9" instance=ExtResource("1_bm3mq")]
+position = Vector2(0, -320)
+pattern = Array[int]([2, 2, 3])
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder9/shooter" instance=ExtResource("2_bekat")]
+
+[node name="rotating_shooter" parent="holder9" instance=ExtResource("3_i4vkt")]
+position = Vector2(0, 200)
+pattern = Array[int]([2, 2, 3])
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder9/rotating_shooter" instance=ExtResource("2_bekat")]
+
+[node name="holder10" type="Marker2D" parent="."]
+rotation = 3.14159
+
+[node name="shooter" parent="holder10" instance=ExtResource("1_bm3mq")]
+position = Vector2(0, -320)
+pattern = Array[int]([2, 2, 3])
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder10/shooter" instance=ExtResource("2_bekat")]
+
+[node name="rotating_shooter" parent="holder10" instance=ExtResource("3_i4vkt")]
+position = Vector2(0, 200)
+pattern = Array[int]([2, 2, 3])
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder10/rotating_shooter" instance=ExtResource("2_bekat")]
+
+[node name="holder11" type="Marker2D" parent="."]
+rotation = 3.49066
+
+[node name="shooter" parent="holder11" instance=ExtResource("1_bm3mq")]
+position = Vector2(0, -320)
+pattern = Array[int]([2, 2, 3])
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder11/shooter" instance=ExtResource("2_bekat")]
+
+[node name="rotating_shooter" parent="holder11" instance=ExtResource("3_i4vkt")]
+position = Vector2(0, 200)
+pattern = Array[int]([2, 2, 3])
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder11/rotating_shooter" instance=ExtResource("2_bekat")]
+
+[node name="holder12" type="Marker2D" parent="."]
+rotation = 3.83972
+
+[node name="shooter" parent="holder12" instance=ExtResource("1_bm3mq")]
+position = Vector2(0, -320)
+pattern = Array[int]([2, 2, 3])
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder12/shooter" instance=ExtResource("2_bekat")]
+
+[node name="rotating_shooter" parent="holder12" instance=ExtResource("3_i4vkt")]
+position = Vector2(0, 200)
+pattern = Array[int]([2, 2, 3])
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder12/rotating_shooter" instance=ExtResource("2_bekat")]
+
+[node name="holder13" type="Marker2D" parent="."]
+rotation = 4.18879
+
+[node name="shooter" parent="holder13" instance=ExtResource("1_bm3mq")]
+position = Vector2(0, -320)
+pattern = Array[int]([2, 2, 3])
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder13/shooter" instance=ExtResource("2_bekat")]
+
+[node name="rotating_shooter" parent="holder13" instance=ExtResource("3_i4vkt")]
+position = Vector2(0, 200)
+pattern = Array[int]([2, 2, 3])
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder13/rotating_shooter" instance=ExtResource("2_bekat")]
+
+[node name="holder14" type="Marker2D" parent="."]
+rotation = 4.53786
+
+[node name="shooter" parent="holder14" instance=ExtResource("1_bm3mq")]
+position = Vector2(0, -320)
+pattern = Array[int]([2, 2, 3])
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder14/shooter" instance=ExtResource("2_bekat")]
+
+[node name="rotating_shooter" parent="holder14" instance=ExtResource("3_i4vkt")]
+position = Vector2(0, 200)
+pattern = Array[int]([2, 2, 3])
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder14/rotating_shooter" instance=ExtResource("2_bekat")]
+
+[node name="holder15" type="Marker2D" parent="."]
+rotation = 4.88692
+
+[node name="shooter" parent="holder15" instance=ExtResource("1_bm3mq")]
+position = Vector2(0, -320)
+pattern = Array[int]([2, 2, 3])
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder15/shooter" instance=ExtResource("2_bekat")]
+
+[node name="rotating_shooter" parent="holder15" instance=ExtResource("3_i4vkt")]
+position = Vector2(0, 200)
+pattern = Array[int]([2, 2, 3])
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder15/rotating_shooter" instance=ExtResource("2_bekat")]
+
+[node name="holder16" type="Marker2D" parent="."]
+rotation = 5.23599
+
+[node name="shooter" parent="holder16" instance=ExtResource("1_bm3mq")]
+position = Vector2(0, -320)
+pattern = Array[int]([2, 2, 3])
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder16/shooter" instance=ExtResource("2_bekat")]
+
+[node name="rotating_shooter" parent="holder16" instance=ExtResource("3_i4vkt")]
+position = Vector2(0, 200)
+pattern = Array[int]([2, 2, 3])
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder16/rotating_shooter" instance=ExtResource("2_bekat")]
+
+[node name="holder17" type="Marker2D" parent="."]
+rotation = 5.58505
+
+[node name="shooter" parent="holder17" instance=ExtResource("1_bm3mq")]
+position = Vector2(0, -320)
+pattern = Array[int]([2, 2, 3])
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder17/shooter" instance=ExtResource("2_bekat")]
+
+[node name="rotating_shooter" parent="holder17" instance=ExtResource("3_i4vkt")]
+position = Vector2(0, 200)
+pattern = Array[int]([2, 2, 3])
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder17/rotating_shooter" instance=ExtResource("2_bekat")]
+
+[node name="holder18" type="Marker2D" parent="."]
+rotation = 5.93412
+
+[node name="shooter" parent="holder18" instance=ExtResource("1_bm3mq")]
+position = Vector2(0, -320)
+pattern = Array[int]([2, 2, 3])
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder18/shooter" instance=ExtResource("2_bekat")]
+
+[node name="rotating_shooter" parent="holder18" instance=ExtResource("3_i4vkt")]
+position = Vector2(0, 200)
+pattern = Array[int]([2, 2, 3])
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder18/rotating_shooter" instance=ExtResource("2_bekat")]

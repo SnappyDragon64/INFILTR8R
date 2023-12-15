@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dtyofg8prc2qt"]
+[gd_scene load_steps=4 format=3 uid="uid://dtyofg8prc2qt"]
 
 [ext_resource type="Script" path="res://game/hud.gd" id="1_fjjfb"]
 [ext_resource type="Theme" uid="uid://dwi00a30p6ts0" path="res://asset/theme/toolbar.tres" id="1_u76by"]
+[ext_resource type="AudioStream" uid="uid://b64aqvtt48aro" path="res://asset/audio/sfx_blast.mp3" id="3_1dg4m"]
 
 [node name="hud" type="Control"]
 process_mode = 3
@@ -103,6 +104,9 @@ one_shot = true
 [node name="reset_mp_value_color" type="Timer" parent="."]
 wait_time = 0.2
 one_shot = true
+
+[node name="audio_player" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_1dg4m")
 
 [connection signal="timeout" from="reset_hp_value_color" to="." method="_on_reset_hp_value_color_timeout"]
 [connection signal="timeout" from="reset_mp_value_color" to="." method="_on_reset_mp_value_color_timeout"]

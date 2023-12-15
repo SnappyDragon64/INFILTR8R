@@ -6,6 +6,7 @@ extends CharacterBody2D
 @onready var bowomp : Resource = preload('res://asset/audio/sfx_laser.mp3')
 @onready var whoosh : Resource = preload('res://asset/audio/sfx_dash.mp3')
 @onready var boop : Resource = preload('res://asset/audio/sfx_miss.mp3')
+@onready var pain : Resource = preload('res://asset/audio/sfx_hurt.mp3')
 
 @export var speed : int = 400
 @export var sneak_multiplier : float = 0.5
@@ -32,6 +33,7 @@ func _ready():
 	Signals.update_mana.emit(mana, max_mana)
 	Signals.set_player_position.connect(set_position)
 	Signals.kill.connect(_kill)
+	Signals.god_mode.connect(_on_god_mode)
 
 func _physics_process(_delta):
 	if not dashing and can_dash and Input.is_action_just_pressed('dash'):
@@ -44,8 +46,7 @@ func _physics_process(_delta):
 		
 		set_invincible(true)
 		$mana_regeneration.set_paused(true)
-		$audio_player.set_stream(whoosh)
-		$audio_player.play()
+		play_audio(whoosh)
 	
 	if dashing:
 		move_and_slide()
@@ -88,8 +89,7 @@ func _physics_process(_delta):
 		if can_shoot:
 			if Input.is_action_just_pressed('heavy'):
 				if mana >= heavy_cost:
-					$audio_player.set_stream(bowomp)
-					$audio_player.play()
+					play_audio(bowomp)
 					Signals.heavy.emit()
 					$shoot_cooldown.set_wait_time(0.2)
 					$shoot_cooldown.start()
@@ -98,13 +98,11 @@ func _physics_process(_delta):
 					Signals.update_mana.emit(mana, max_mana)
 				else:
 					Signals.mp_broke.emit()
-					$audio_player.set_stream(boop)
-					$audio_player.play()
+					play_audio(boop)
 			elif Input.is_action_pressed('shoot'):
 				if mana >= shoot_cost:
 					for child in $turrets.get_children():
-						$audio_player.set_stream(pew)
-						$audio_player.play()
+						play_audio(pew)
 						var bullet_instance = BulletRegistry.REGISTRY[BulletRegistry.BULLET_TYPE.BULLET].instantiate()
 						bullet_instance.set_global_transform(child.get_global_transform())
 						Signals.spawn.emit(bullet_instance)
@@ -125,6 +123,7 @@ func hurt(amount):
 		bleed_instance.set_global_transform(get_global_transform())
 		Signals.spawn.emit(bleed_instance)
 		bleed_instance.restart()
+		play_audio(pain)
 
 		if health == 0:
 			queue_free()
@@ -185,3 +184,17 @@ func _kill():
 	Signals.update_health.emit(0, max_health)
 	Signals.death.emit()
 	queue_free()
+
+func _on_god_mode(duration):
+	set_collision_layer_value(1, false)
+	set_collision_mask_value(1, false)
+	$god_mode_timer.set_wait_time(duration)
+	$god_mode_timer.start()
+
+func _on_god_mode_timer_timeout():
+	set_collision_layer_value(1, true)
+	set_collision_mask_value(1, true)
+
+func play_audio(sound):
+	$audio_player.set_stream(sound)
+	$audio_player.play()

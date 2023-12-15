@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://41f2gvp3k7fb"]
+
+[ext_resource type="PackedScene" uid="uid://d2buvwrmekohq" path="res://entity/enemy/shooter/spinner/shuriken.tscn" id="1_wouyv"]
+
+[node name="2_2" type="Node2D"]
+
+[node name="holder1" type="Marker2D" parent="."]
+
+[node name="shuriken" parent="holder1" instance=ExtResource("1_wouyv")]
+position = Vector2(0, -320)
+speed = 2
+shoot_speed = 0.5
+
+[node name="holder2" type="Marker2D" parent="."]
+rotation = 3.14159
+
+[node name="shuriken" parent="holder2" instance=ExtResource("1_wouyv")]
+position = Vector2(0, -320)
+speed = 2
+shoot_speed = 0.5

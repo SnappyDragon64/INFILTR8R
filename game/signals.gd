@@ -18,9 +18,17 @@ signal death()
 signal mp_broke()
 signal heavy()
 signal kill()
+signal god_mode(duration)
 
 # EVENT
 signal event(id)
 
 # CAMERA
 signal lock_camera(start, end)
+signal set_zoom(zoom_vector)
+
+# BOSS
+signal boss_position_updated(position)
+
+# AUDIO
+signal change_track(id)

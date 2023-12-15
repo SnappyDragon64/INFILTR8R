@@ -14,6 +14,7 @@ func _ready():
 
 func _change_level(scene, spawnpoint):
 	if scene != null:
+		Signals.change_track.emit(0)
 		for child in get_children():
 			child.queue_free()
 		

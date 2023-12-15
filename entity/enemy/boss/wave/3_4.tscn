@@ -1,0 +1,82 @@
+[gd_scene load_steps=4 format=3 uid="uid://hro15cefluea"]
+
+[ext_resource type="PackedScene" uid="uid://d2buvwrmekohq" path="res://entity/enemy/shooter/spinner/shuriken.tscn" id="1_veb5q"]
+[ext_resource type="PackedScene" uid="uid://bj7lu63hd2uxq" path="res://entity/enemy/shooter/spinner/tristar.tscn" id="2_gjs36"]
+[ext_resource type="PackedScene" uid="uid://cpurdc10d2dfq" path="res://entity/effect/spawn_anim.tscn" id="2_lm43h"]
+
+[node name="3_4" type="Node2D"]
+
+[node name="holder1" type="Marker2D" parent="."]
+
+[node name="shuriken" parent="holder1" instance=ExtResource("1_veb5q")]
+position = Vector2(0, -320)
+speed = 2
+pattern = Array[int]([2, 2, 2, 3, 2, 2, 0, 3, 3])
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder1/shuriken" instance=ExtResource("2_lm43h")]
+
+[node name="tristar" parent="holder1" instance=ExtResource("2_gjs36")]
+position = Vector2(0, -320)
+rotation = 1.5708
+speed = -2
+pattern = Array[int]([2, 2, 2, 3, 2, 2, 0, 3, 3])
+shoot_speed = 0.8
+
+[node name="tristar2" parent="holder1" instance=ExtResource("2_gjs36")]
+position = Vector2(0, -320)
+rotation = 3.14159
+speed = -2
+pattern = Array[int]([2, 2, 2, 3, 2, 2, 0, 3, 3])
+shoot_speed = 0.8
+
+[node name="tristar3" parent="holder1" instance=ExtResource("2_gjs36")]
+position = Vector2(0, -320)
+speed = -2
+pattern = Array[int]([2, 2, 2, 3, 2, 2, 0, 3, 3])
+shoot_speed = 0.8
+
+[node name="tristar4" parent="holder1" instance=ExtResource("2_gjs36")]
+position = Vector2(0, -320)
+rotation = 4.71239
+speed = -2
+pattern = Array[int]([2, 2, 2, 3, 2, 2, 0, 3, 3])
+shoot_speed = 0.8
+
+[node name="holder2" type="Marker2D" parent="."]
+rotation = 3.14159
+
+[node name="shuriken" parent="holder2" instance=ExtResource("1_veb5q")]
+position = Vector2(0, -320)
+speed = 2
+pattern = Array[int]([2, 2, 2, 3, 2, 2, 0, 3, 3])
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder2/shuriken" instance=ExtResource("2_lm43h")]
+
+[node name="tristar" parent="holder2" instance=ExtResource("2_gjs36")]
+position = Vector2(0, -320)
+rotation = 1.5708
+speed = -2
+pattern = Array[int]([2, 2, 2, 3, 2, 2, 0, 3, 3])
+shoot_speed = 0.8
+
+[node name="tristar2" parent="holder2" instance=ExtResource("2_gjs36")]
+position = Vector2(0, -320)
+rotation = 3.14159
+speed = -2
+pattern = Array[int]([2, 2, 2, 3, 2, 2, 0, 3, 3])
+shoot_speed = 0.8
+
+[node name="tristar3" parent="holder2" instance=ExtResource("2_gjs36")]
+position = Vector2(0, -320)
+speed = -2
+pattern = Array[int]([2, 2, 2, 3, 2, 2, 0, 3, 3])
+shoot_speed = 0.8
+
+[node name="tristar4" parent="holder2" instance=ExtResource("2_gjs36")]
+position = Vector2(0, -320)
+rotation = 4.71239
+speed = -2
+pattern = Array[int]([2, 2, 2, 3, 2, 2, 0, 3, 3])
+shoot_speed = 0.8

@@ -1,0 +1,401 @@
+[gd_scene load_steps=3 format=3 uid="uid://dlvoudy20p3jt"]
+
+[ext_resource type="PackedScene" uid="uid://u2p0qnkpk7bf" path="res://entity/enemy/shooter/spinner/needle.tscn" id="1_p20m2"]
+[ext_resource type="PackedScene" uid="uid://cpurdc10d2dfq" path="res://entity/effect/spawn_anim.tscn" id="2_2xnyv"]
+
+[node name="3_6" type="Node2D"]
+
+[node name="holder1" type="Marker2D" parent="."]
+
+[node name="needle" parent="holder1" instance=ExtResource("1_p20m2")]
+position = Vector2(0, -320)
+speed = 2
+pattern = Array[int]([2, 2, 2, 3])
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder1/needle" instance=ExtResource("2_2xnyv")]
+
+[node name="holder2" type="Marker2D" parent="."]
+rotation = 0.174533
+
+[node name="needle" parent="holder2" instance=ExtResource("1_p20m2")]
+position = Vector2(0, -320)
+speed = 2
+pattern = Array[int]([2, 2, 2, 3])
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder2/needle" instance=ExtResource("2_2xnyv")]
+
+[node name="holder3" type="Marker2D" parent="."]
+rotation = 0.349066
+
+[node name="needle" parent="holder3" instance=ExtResource("1_p20m2")]
+position = Vector2(0, -320)
+speed = 2
+pattern = Array[int]([2, 2, 2, 3])
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder3/needle" instance=ExtResource("2_2xnyv")]
+
+[node name="holder4" type="Marker2D" parent="."]
+rotation = 0.523599
+
+[node name="needle" parent="holder4" instance=ExtResource("1_p20m2")]
+position = Vector2(0, -320)
+speed = 2
+pattern = Array[int]([2, 2, 2, 3])
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder4/needle" instance=ExtResource("2_2xnyv")]
+
+[node name="holder5" type="Marker2D" parent="."]
+rotation = 0.698132
+
+[node name="needle" parent="holder5" instance=ExtResource("1_p20m2")]
+position = Vector2(0, -320)
+speed = 2
+pattern = Array[int]([2, 2, 2, 3])
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder5/needle" instance=ExtResource("2_2xnyv")]
+
+[node name="holder6" type="Marker2D" parent="."]
+rotation = 0.872665
+
+[node name="needle" parent="holder6" instance=ExtResource("1_p20m2")]
+position = Vector2(0, -320)
+speed = 2
+pattern = Array[int]([2, 2, 2, 3])
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder6/needle" instance=ExtResource("2_2xnyv")]
+
+[node name="holder7" type="Marker2D" parent="."]
+rotation = 1.0472
+
+[node name="needle" parent="holder7" instance=ExtResource("1_p20m2")]
+position = Vector2(0, -320)
+speed = 2
+pattern = Array[int]([2, 2, 2, 3])
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder7/needle" instance=ExtResource("2_2xnyv")]
+
+[node name="holder8" type="Marker2D" parent="."]
+rotation = 1.22173
+
+[node name="needle" parent="holder8" instance=ExtResource("1_p20m2")]
+position = Vector2(0, -320)
+speed = 2
+pattern = Array[int]([2, 2, 2, 3])
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder8/needle" instance=ExtResource("2_2xnyv")]
+
+[node name="holder9" type="Marker2D" parent="."]
+rotation = 1.39626
+
+[node name="needle" parent="holder9" instance=ExtResource("1_p20m2")]
+position = Vector2(0, -320)
+speed = 2
+pattern = Array[int]([2, 2, 2, 3])
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder9/needle" instance=ExtResource("2_2xnyv")]
+
+[node name="holder10" type="Marker2D" parent="."]
+rotation = 1.5708
+
+[node name="needle" parent="holder10" instance=ExtResource("1_p20m2")]
+position = Vector2(0, -320)
+speed = 2
+pattern = Array[int]([2, 2, 2, 3])
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder10/needle" instance=ExtResource("2_2xnyv")]
+
+[node name="holder11" type="Marker2D" parent="."]
+rotation = 1.74533
+
+[node name="needle" parent="holder11" instance=ExtResource("1_p20m2")]
+position = Vector2(0, -320)
+speed = 2
+pattern = Array[int]([2, 2, 2, 3])
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder11/needle" instance=ExtResource("2_2xnyv")]
+
+[node name="holder12" type="Marker2D" parent="."]
+rotation = 1.91986
+
+[node name="needle" parent="holder12" instance=ExtResource("1_p20m2")]
+position = Vector2(0, -320)
+speed = 2
+pattern = Array[int]([2, 2, 2, 3])
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder12/needle" instance=ExtResource("2_2xnyv")]
+
+[node name="holder13" type="Marker2D" parent="."]
+rotation = 2.0944
+
+[node name="needle" parent="holder13" instance=ExtResource("1_p20m2")]
+position = Vector2(0, -320)
+speed = 2
+pattern = Array[int]([2, 2, 2, 3])
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder13/needle" instance=ExtResource("2_2xnyv")]
+
+[node name="holder14" type="Marker2D" parent="."]
+rotation = 2.26893
+
+[node name="needle" parent="holder14" instance=ExtResource("1_p20m2")]
+position = Vector2(0, -320)
+speed = 2
+pattern = Array[int]([2, 2, 2, 3])
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder14/needle" instance=ExtResource("2_2xnyv")]
+
+[node name="holder15" type="Marker2D" parent="."]
+rotation = 2.44346
+
+[node name="needle" parent="holder15" instance=ExtResource("1_p20m2")]
+position = Vector2(0, -320)
+speed = 2
+pattern = Array[int]([2, 2, 2, 3])
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder15/needle" instance=ExtResource("2_2xnyv")]
+
+[node name="holder16" type="Marker2D" parent="."]
+rotation = 2.61799
+
+[node name="needle" parent="holder16" instance=ExtResource("1_p20m2")]
+position = Vector2(0, -320)
+speed = 2
+pattern = Array[int]([2, 2, 2, 3])
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder16/needle" instance=ExtResource("2_2xnyv")]
+
+[node name="holder17" type="Marker2D" parent="."]
+rotation = 2.79253
+
+[node name="needle" parent="holder17" instance=ExtResource("1_p20m2")]
+position = Vector2(0, -320)
+speed = 2
+pattern = Array[int]([2, 2, 2, 3])
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder17/needle" instance=ExtResource("2_2xnyv")]
+
+[node name="holder18" type="Marker2D" parent="."]
+rotation = 2.96706
+
+[node name="needle" parent="holder18" instance=ExtResource("1_p20m2")]
+position = Vector2(0, -320)
+speed = 2
+pattern = Array[int]([2, 2, 2, 3])
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder18/needle" instance=ExtResource("2_2xnyv")]
+
+[node name="holder19" type="Marker2D" parent="."]
+rotation = 3.14159
+
+[node name="needle" parent="holder19" instance=ExtResource("1_p20m2")]
+position = Vector2(0, -320)
+speed = -2
+pattern = Array[int]([2, 2, 2, 3])
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder19/needle" instance=ExtResource("2_2xnyv")]
+
+[node name="holder20" type="Marker2D" parent="."]
+rotation = 3.31613
+
+[node name="needle" parent="holder20" instance=ExtResource("1_p20m2")]
+position = Vector2(0, -320)
+speed = -2
+pattern = Array[int]([2, 2, 2, 3])
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder20/needle" instance=ExtResource("2_2xnyv")]
+
+[node name="holder21" type="Marker2D" parent="."]
+rotation = 3.49066
+
+[node name="needle" parent="holder21" instance=ExtResource("1_p20m2")]
+position = Vector2(0, -320)
+speed = -2
+pattern = Array[int]([2, 2, 2, 3])
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder21/needle" instance=ExtResource("2_2xnyv")]
+
+[node name="holder22" type="Marker2D" parent="."]
+rotation = 3.66519
+
+[node name="needle" parent="holder22" instance=ExtResource("1_p20m2")]
+position = Vector2(0, -320)
+speed = -2
+pattern = Array[int]([2, 2, 2, 3])
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder22/needle" instance=ExtResource("2_2xnyv")]
+
+[node name="holder23" type="Marker2D" parent="."]
+rotation = 3.83972
+
+[node name="needle" parent="holder23" instance=ExtResource("1_p20m2")]
+position = Vector2(0, -320)
+speed = -2
+pattern = Array[int]([2, 2, 2, 3])
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder23/needle" instance=ExtResource("2_2xnyv")]
+
+[node name="holder24" type="Marker2D" parent="."]
+rotation = 4.01426
+
+[node name="needle" parent="holder24" instance=ExtResource("1_p20m2")]
+position = Vector2(0, -320)
+speed = -2
+pattern = Array[int]([2, 2, 2, 3])
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder24/needle" instance=ExtResource("2_2xnyv")]
+
+[node name="holder25" type="Marker2D" parent="."]
+rotation = 4.18879
+
+[node name="needle" parent="holder25" instance=ExtResource("1_p20m2")]
+position = Vector2(0, -320)
+speed = -2
+pattern = Array[int]([2, 2, 2, 3])
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder25/needle" instance=ExtResource("2_2xnyv")]
+
+[node name="holder26" type="Marker2D" parent="."]
+rotation = 4.36332
+
+[node name="needle" parent="holder26" instance=ExtResource("1_p20m2")]
+position = Vector2(0, -320)
+speed = -2
+pattern = Array[int]([2, 2, 2, 3])
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder26/needle" instance=ExtResource("2_2xnyv")]
+
+[node name="holder27" type="Marker2D" parent="."]
+rotation = 4.53786
+
+[node name="needle" parent="holder27" instance=ExtResource("1_p20m2")]
+position = Vector2(0, -320)
+speed = -2
+pattern = Array[int]([2, 2, 2, 3])
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder27/needle" instance=ExtResource("2_2xnyv")]
+
+[node name="holder28" type="Marker2D" parent="."]
+rotation = 4.71239
+
+[node name="needle" parent="holder28" instance=ExtResource("1_p20m2")]
+position = Vector2(0, -320)
+speed = -2
+pattern = Array[int]([2, 2, 2, 3])
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder28/needle" instance=ExtResource("2_2xnyv")]
+
+[node name="holder29" type="Marker2D" parent="."]
+rotation = 4.88692
+
+[node name="needle" parent="holder29" instance=ExtResource("1_p20m2")]
+position = Vector2(0, -320)
+speed = -2
+pattern = Array[int]([2, 2, 2, 3])
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder29/needle" instance=ExtResource("2_2xnyv")]
+
+[node name="holder30" type="Marker2D" parent="."]
+rotation = 5.06145
+
+[node name="needle" parent="holder30" instance=ExtResource("1_p20m2")]
+position = Vector2(0, -320)
+speed = -2
+pattern = Array[int]([2, 2, 2, 3])
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder30/needle" instance=ExtResource("2_2xnyv")]
+
+[node name="holder31" type="Marker2D" parent="."]
+rotation = 5.23599
+
+[node name="needle" parent="holder31" instance=ExtResource("1_p20m2")]
+position = Vector2(0, -320)
+speed = -2
+pattern = Array[int]([2, 2, 2, 3])
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder31/needle" instance=ExtResource("2_2xnyv")]
+
+[node name="holder32" type="Marker2D" parent="."]
+rotation = 5.41052
+
+[node name="needle" parent="holder32" instance=ExtResource("1_p20m2")]
+position = Vector2(0, -320)
+speed = -2
+pattern = Array[int]([2, 2, 2, 3])
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder32/needle" instance=ExtResource("2_2xnyv")]
+
+[node name="holder33" type="Marker2D" parent="."]
+rotation = 5.58505
+
+[node name="needle" parent="holder33" instance=ExtResource("1_p20m2")]
+position = Vector2(0, -320)
+speed = -2
+pattern = Array[int]([2, 2, 2, 3])
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder33/needle" instance=ExtResource("2_2xnyv")]
+
+[node name="holder34" type="Marker2D" parent="."]
+rotation = 5.75959
+
+[node name="needle" parent="holder34" instance=ExtResource("1_p20m2")]
+position = Vector2(0, -320)
+speed = -2
+pattern = Array[int]([2, 2, 2, 3])
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder34/needle" instance=ExtResource("2_2xnyv")]
+
+[node name="holder35" type="Marker2D" parent="."]
+rotation = 5.93412
+
+[node name="needle" parent="holder35" instance=ExtResource("1_p20m2")]
+position = Vector2(0, -320)
+speed = -2
+pattern = Array[int]([2, 2, 2, 3])
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder35/needle" instance=ExtResource("2_2xnyv")]
+
+[node name="holder36" type="Marker2D" parent="."]
+rotation = 6.10865
+
+[node name="needle" parent="holder36" instance=ExtResource("1_p20m2")]
+position = Vector2(0, -320)
+speed = -2
+pattern = Array[int]([2, 2, 2, 3])
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder36/needle" instance=ExtResource("2_2xnyv")]

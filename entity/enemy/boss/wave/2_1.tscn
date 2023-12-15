@@ -1,0 +1,45 @@
+[gd_scene load_steps=3 format=3 uid="uid://naabdmqg4a8p"]
+
+[ext_resource type="PackedScene" uid="uid://u2p0qnkpk7bf" path="res://entity/enemy/shooter/spinner/needle.tscn" id="1_468oq"]
+[ext_resource type="PackedScene" uid="uid://cpurdc10d2dfq" path="res://entity/effect/spawn_anim.tscn" id="2_o8w0l"]
+
+[node name="2_1" type="Node2D"]
+
+[node name="holder1" type="Marker2D" parent="."]
+
+[node name="needle" parent="holder1" instance=ExtResource("1_468oq")]
+position = Vector2(0, -320)
+speed = 4
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder1/needle" instance=ExtResource("2_o8w0l")]
+
+[node name="holder2" type="Marker2D" parent="."]
+rotation = 1.5708
+
+[node name="needle" parent="holder2" instance=ExtResource("1_468oq")]
+position = Vector2(0, -320)
+speed = 4
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder2/needle" instance=ExtResource("2_o8w0l")]
+
+[node name="holder3" type="Marker2D" parent="."]
+rotation = 3.14159
+
+[node name="needle" parent="holder3" instance=ExtResource("1_468oq")]
+position = Vector2(0, -320)
+speed = 4
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder3/needle" instance=ExtResource("2_o8w0l")]
+
+[node name="holder4" type="Marker2D" parent="."]
+rotation = 4.71239
+
+[node name="needle" parent="holder4" instance=ExtResource("1_468oq")]
+position = Vector2(0, -320)
+speed = 4
+shoot_speed = 0.8
+
+[node name="spawn_anim" parent="holder4/needle" instance=ExtResource("2_o8w0l")]

@@ -17,6 +17,7 @@ func _process(_delta):
 		if dead:
 			dead = false
 			$notification_container/label.set_text('')
+			Signals.change_track.emit(0)
 			Signals.reload_level.emit()
 			_update_hp_label(1, 1)
 			_update_mp_label(1, 1)
@@ -33,6 +34,7 @@ func _process(_delta):
 func _handle_death():
 	$notification_container/label.set_text('[CONNECTION TERMINATED]')
 	$stat_container/hp_value.add_theme_color_override('font_color', Color('ff0000'))
+	Signals.change_track.emit(2)
 	dead = true
 
 func _update_lv_label(level, _spawnpoint):

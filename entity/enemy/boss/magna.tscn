@@ -1,0 +1,51 @@
+[gd_scene load_steps=3 format=3 uid="uid://d046gmb0k50c3"]
+
+[ext_resource type="Script" path="res://entity/enemy/boss/boss.gd" id="1_7ygfw"]
+[ext_resource type="Script" path="res://entity/enemy/spikes.gd" id="2_lxslt"]
+
+[node name="magna" type="StaticBody2D" groups=["boss"]]
+collision_layer = 7
+script = ExtResource("1_7ygfw")
+health = 40
+event = 2
+
+[node name="model" type="Node2D" parent="."]
+
+[node name="base" type="Polygon2D" parent="model"]
+color = Color(1, 0, 0, 1)
+polygon = PackedVector2Array(0, -192, -166, -96, -166, 96, 0, 192, 166, 96, 166, -96)
+
+[node name="eye" type="Polygon2D" parent="model"]
+z_as_relative = false
+color = Color(0.25098, 0.25098, 0.25098, 1)
+polygon = PackedVector2Array(0, 108, 104, -60, -104, -60)
+
+[node name="pupil" type="Polygon2D" parent="model"]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(0, -30, 26, 16, -26, 16)
+
+[node name="spikes" type="Area2D" parent="."]
+script = ExtResource("2_lxslt")
+
+[node name="hurtbox" type="CollisionPolygon2D" parent="spikes"]
+scale = Vector2(1.04, 1.04)
+polygon = PackedVector2Array(0, -192, -166, -96, -166, 96, 0, 192, 166, 96, 166, -96)
+
+[node name="hitbox" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(0, -192, -166, -96, -166, 96, 0, 192, 166, 96, 166, -96)
+
+[node name="carousel" type="Node2D" parent="."]
+
+[node name="wave_timer" type="Timer" parent="."]
+wait_time = 0.8
+one_shot = true
+autostart = true
+
+[node name="check_timer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
+[node name="audio_player" type="AudioStreamPlayer2D" parent="."]
+
+[connection signal="body_entered" from="spikes" to="spikes" method="_on_body_entered"]
+[connection signal="timeout" from="wave_timer" to="." method="_on_wave_timer_timeout"]

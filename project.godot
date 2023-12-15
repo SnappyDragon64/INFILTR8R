@@ -20,6 +20,7 @@ config/icon="res://icon.png"
 Signals="*res://game/signals.gd"
 BulletRegistry="*res://entity/bullet/bullet_registry.gd"
 SaveData="*res://game/save_data.gd"
+AudioManager="*res://game/audio_manager.gd"
 
 [display]
 
