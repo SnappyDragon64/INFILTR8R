@@ -13,3 +13,5 @@ func _change_track(id):
 	if id == 2:
 		set_stream(TRACKS[id])
 		play()
+	else:
+		stop()
