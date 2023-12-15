@@ -175,10 +175,13 @@ func set_invincible(flag):
 func _input(event):
 	if event is InputEventKey:
 		controller_mode = false
+		Signals.controller_mode.emit(false)
 	elif event is InputEventJoypadButton:
 		controller_mode = true
+		Signals.controller_mode.emit(true)
 	elif event is InputEventMouse:
 		controller_mode = false
+		Signals.controller_mode.emit(false)
 
 func _kill():
 	Signals.update_health.emit(0, max_health)

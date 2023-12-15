@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://de82jnl422bip"]
+[gd_scene load_steps=9 format=3 uid="uid://de82jnl422bip"]
 
 [ext_resource type="Script" path="res://game/level.gd" id="1_5muey"]
 [ext_resource type="PackedScene" uid="uid://dtyofg8prc2qt" path="res://game/hud.tscn" id="2_kf7o0"]
 [ext_resource type="Shader" path="res://asset/shader/pixelate.gdshader" id="3_dsp34"]
 [ext_resource type="Shader" path="res://asset/shader/chromatic_aberration.gdshader" id="4_cabgy"]
 [ext_resource type="PackedScene" uid="uid://r1lncflk6w46" path="res://game/glitch_effect.tscn" id="5_brfv3"]
+[ext_resource type="PackedScene" uid="uid://16q0nudemu6g" path="res://game/cursor.tscn" id="6_2kl1s"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_kbvnx"]
 shader = ExtResource("3_dsp34")
@@ -56,3 +57,5 @@ layer = 3
 layer = 4
 
 [node name="hud" parent="hud_layer" instance=ExtResource("2_kf7o0")]
+
+[node name="cursor" parent="." instance=ExtResource("6_2kl1s")]

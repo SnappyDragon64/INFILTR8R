@@ -19,6 +19,7 @@ signal mp_broke()
 signal heavy()
 signal kill()
 signal god_mode(duration)
+signal controller_mode(flag)
 
 # EVENT
 signal event(id)

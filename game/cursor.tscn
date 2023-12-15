@@ -1,0 +1,12 @@
+[gd_scene load_steps=4 format=3 uid="uid://16q0nudemu6g"]
+
+[ext_resource type="Material" uid="uid://1du44ui3ob4a" path="res://asset/shader/material/invert.tres" id="1_7bgvw"]
+[ext_resource type="Texture2D" uid="uid://bbgcmom7mumri" path="res://asset/sprite/misc/cursor.png" id="2_6cjpd"]
+[ext_resource type="Script" path="res://game/cursor.gd" id="3_46q4v"]
+
+[node name="cursor" type="Sprite2D"]
+z_index = 1000
+material = ExtResource("1_7bgvw")
+scale = Vector2(4, 4)
+texture = ExtResource("2_6cjpd")
+script = ExtResource("3_46q4v")
