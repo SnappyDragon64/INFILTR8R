@@ -733,7 +733,6 @@ position = Vector2(-1920, -2496)
 position = Vector2(-1920, -832)
 
 [node name="camera_anchor" type="Area2D" parent="." groups=["gizmo"]]
-visible = false
 script = ExtResource("22_vljg4")
 metadata/_edit_group_ = true
 
@@ -747,7 +746,6 @@ shape = SubResource("RectangleShape2D_a1c1y")
 [node name="end" type="Marker2D" parent="camera_anchor"]
 
 [node name="camera_anchor2" type="Area2D" parent="." groups=["gizmo"]]
-visible = false
 position = Vector2(-832, 832)
 script = ExtResource("22_vljg4")
 metadata/_edit_group_ = true
@@ -762,7 +760,6 @@ shape = SubResource("RectangleShape2D_a1c1y")
 [node name="end" type="Marker2D" parent="camera_anchor2"]
 
 [node name="camera_anchor3" type="Area2D" parent="." groups=["gizmo"]]
-visible = false
 position = Vector2(-832, 0)
 script = ExtResource("22_vljg4")
 metadata/_edit_group_ = true
@@ -777,7 +774,6 @@ shape = SubResource("RectangleShape2D_a1c1y")
 [node name="end" type="Marker2D" parent="camera_anchor3"]
 
 [node name="camera_anchor4" type="Area2D" parent="." groups=["gizmo"]]
-visible = false
 position = Vector2(-1664, 0)
 script = ExtResource("22_vljg4")
 metadata/_edit_group_ = true
@@ -792,7 +788,6 @@ shape = SubResource("RectangleShape2D_a1c1y")
 [node name="end" type="Marker2D" parent="camera_anchor4"]
 
 [node name="camera_anchor5" type="Area2D" parent="." groups=["gizmo"]]
-visible = false
 position = Vector2(-1664, -832)
 script = ExtResource("22_vljg4")
 metadata/_edit_group_ = true
@@ -807,7 +802,6 @@ shape = SubResource("RectangleShape2D_a1c1y")
 [node name="end" type="Marker2D" parent="camera_anchor5"]
 
 [node name="camera_anchor6" type="Area2D" parent="." groups=["gizmo"]]
-visible = false
 position = Vector2(-832, -832)
 script = ExtResource("22_vljg4")
 metadata/_edit_group_ = true
@@ -822,7 +816,6 @@ shape = SubResource("RectangleShape2D_a1c1y")
 [node name="end" type="Marker2D" parent="camera_anchor6"]
 
 [node name="camera_anchor7" type="Area2D" parent="." groups=["gizmo"]]
-visible = false
 position = Vector2(0, -832)
 script = ExtResource("22_vljg4")
 metadata/_edit_group_ = true
@@ -837,7 +830,6 @@ shape = SubResource("RectangleShape2D_a1c1y")
 [node name="end" type="Marker2D" parent="camera_anchor7"]
 
 [node name="camera_anchor8" type="Area2D" parent="." groups=["gizmo"]]
-visible = false
 position = Vector2(832, -832)
 script = ExtResource("22_vljg4")
 metadata/_edit_group_ = true
@@ -852,7 +844,6 @@ shape = SubResource("RectangleShape2D_a1c1y")
 [node name="end" type="Marker2D" parent="camera_anchor8"]
 
 [node name="camera_anchor9" type="Area2D" parent="." groups=["gizmo"]]
-visible = false
 position = Vector2(832, 0)
 script = ExtResource("22_vljg4")
 metadata/_edit_group_ = true
@@ -867,7 +858,6 @@ shape = SubResource("RectangleShape2D_a1c1y")
 [node name="end" type="Marker2D" parent="camera_anchor9"]
 
 [node name="camera_anchor10" type="Area2D" parent="." groups=["gizmo"]]
-visible = false
 position = Vector2(1664, 0)
 script = ExtResource("22_vljg4")
 metadata/_edit_group_ = true
@@ -882,7 +872,6 @@ shape = SubResource("RectangleShape2D_a1c1y")
 [node name="end" type="Marker2D" parent="camera_anchor10"]
 
 [node name="camera_anchor11" type="Area2D" parent="." groups=["gizmo"]]
-visible = false
 position = Vector2(1664, -832)
 script = ExtResource("22_vljg4")
 metadata/_edit_group_ = true
@@ -897,7 +886,6 @@ shape = SubResource("RectangleShape2D_a1c1y")
 [node name="end" type="Marker2D" parent="camera_anchor11"]
 
 [node name="camera_anchor12" type="Area2D" parent="." groups=["gizmo"]]
-visible = false
 position = Vector2(0, -2496)
 script = ExtResource("22_vljg4")
 metadata/_edit_group_ = true
@@ -912,7 +900,6 @@ shape = SubResource("RectangleShape2D_a1c1y")
 [node name="end" type="Marker2D" parent="camera_anchor12"]
 
 [node name="camera_anchor13" type="Area2D" parent="." groups=["gizmo"]]
-visible = false
 position = Vector2(-832, -2496)
 script = ExtResource("22_vljg4")
 metadata/_edit_group_ = true
@@ -927,7 +914,6 @@ shape = SubResource("RectangleShape2D_a1c1y")
 [node name="end" type="Marker2D" parent="camera_anchor13"]
 
 [node name="camera_anchor14" type="Area2D" parent="." groups=["gizmo"]]
-visible = false
 position = Vector2(-1664, -2496)
 script = ExtResource("22_vljg4")
 metadata/_edit_group_ = true
@@ -942,7 +928,6 @@ shape = SubResource("RectangleShape2D_a1c1y")
 [node name="end" type="Marker2D" parent="camera_anchor14"]
 
 [node name="camera_anchor15" type="Area2D" parent="." groups=["gizmo"]]
-visible = false
 position = Vector2(-1664, -3328)
 script = ExtResource("22_vljg4")
 metadata/_edit_group_ = true
@@ -957,7 +942,6 @@ shape = SubResource("RectangleShape2D_a1c1y")
 [node name="end" type="Marker2D" parent="camera_anchor15"]
 
 [node name="camera_anchor16" type="Area2D" parent="." groups=["gizmo"]]
-visible = false
 position = Vector2(-832, -3328)
 script = ExtResource("22_vljg4")
 metadata/_edit_group_ = true
@@ -972,7 +956,6 @@ shape = SubResource("RectangleShape2D_a1c1y")
 [node name="end" type="Marker2D" parent="camera_anchor16"]
 
 [node name="camera_anchor17" type="Area2D" parent="." groups=["gizmo"]]
-visible = false
 position = Vector2(0, -3328)
 script = ExtResource("22_vljg4")
 metadata/_edit_group_ = true
@@ -987,7 +970,6 @@ shape = SubResource("RectangleShape2D_a1c1y")
 [node name="end" type="Marker2D" parent="camera_anchor17"]
 
 [node name="camera_anchor18" type="Area2D" parent="." groups=["gizmo"]]
-visible = false
 position = Vector2(832, -3328)
 script = ExtResource("22_vljg4")
 metadata/_edit_group_ = true
@@ -1002,7 +984,6 @@ shape = SubResource("RectangleShape2D_a1c1y")
 [node name="end" type="Marker2D" parent="camera_anchor18"]
 
 [node name="camera_anchor19" type="Area2D" parent="." groups=["gizmo"]]
-visible = false
 position = Vector2(832, -2496)
 script = ExtResource("22_vljg4")
 metadata/_edit_group_ = true
@@ -1017,7 +998,6 @@ shape = SubResource("RectangleShape2D_a1c1y")
 [node name="end" type="Marker2D" parent="camera_anchor19"]
 
 [node name="camera_anchor20" type="Area2D" parent="." groups=["gizmo"]]
-visible = false
 position = Vector2(1664, -2496)
 script = ExtResource("22_vljg4")
 metadata/_edit_group_ = true
@@ -1032,7 +1012,6 @@ shape = SubResource("RectangleShape2D_a1c1y")
 [node name="end" type="Marker2D" parent="camera_anchor20"]
 
 [node name="camera_anchor21" type="Area2D" parent="." groups=["gizmo"]]
-visible = false
 position = Vector2(1664, -3328)
 script = ExtResource("22_vljg4")
 metadata/_edit_group_ = true
@@ -1047,7 +1026,6 @@ shape = SubResource("RectangleShape2D_a1c1y")
 [node name="end" type="Marker2D" parent="camera_anchor21"]
 
 [node name="camera_anchor22" type="Area2D" parent="." groups=["gizmo"]]
-visible = false
 position = Vector2(0, -1664)
 script = ExtResource("22_vljg4")
 metadata/_edit_group_ = true
@@ -1062,7 +1040,6 @@ shape = SubResource("RectangleShape2D_a1c1y")
 [node name="end" type="Marker2D" parent="camera_anchor22"]
 
 [node name="camera_anchor23" type="Area2D" parent="." groups=["gizmo"]]
-visible = false
 position = Vector2(-832, -1664)
 script = ExtResource("22_vljg4")
 metadata/_edit_group_ = true
@@ -1077,7 +1054,6 @@ shape = SubResource("RectangleShape2D_a1c1y")
 [node name="end" type="Marker2D" parent="camera_anchor23"]
 
 [node name="camera_anchor24" type="Area2D" parent="." groups=["gizmo"]]
-visible = false
 position = Vector2(-1664, -1664)
 script = ExtResource("22_vljg4")
 metadata/_edit_group_ = true
@@ -1092,7 +1068,6 @@ shape = SubResource("RectangleShape2D_a1c1y")
 [node name="end" type="Marker2D" parent="camera_anchor24"]
 
 [node name="camera_anchor25" type="Area2D" parent="." groups=["gizmo"]]
-visible = false
 position = Vector2(832, -1664)
 script = ExtResource("22_vljg4")
 metadata/_edit_group_ = true
@@ -1107,7 +1082,6 @@ shape = SubResource("RectangleShape2D_a1c1y")
 [node name="end" type="Marker2D" parent="camera_anchor25"]
 
 [node name="camera_anchor26" type="Area2D" parent="." groups=["gizmo"]]
-visible = false
 position = Vector2(1664, -1664)
 script = ExtResource("22_vljg4")
 metadata/_edit_group_ = true
@@ -1484,6 +1458,7 @@ position = Vector2(1504, -1664)
 rotation = 1.5708
 
 [connection signal="area_entered" from="camera_anchor" to="camera_anchor" method="_on_area_entered"]
+[connection signal="area_entered" from="camera_anchor2" to="." method="_on_hex_area_entered"]
 [connection signal="area_entered" from="camera_anchor2" to="camera_anchor2" method="_on_area_entered"]
 [connection signal="area_entered" from="camera_anchor3" to="camera_anchor3" method="_on_area_entered"]
 [connection signal="area_entered" from="camera_anchor4" to="camera_anchor4" method="_on_area_entered"]

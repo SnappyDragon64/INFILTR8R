@@ -1,6 +1,6 @@
 extends Camera2D
 
-@export var peek_speed = 4
+@export var peek_speed = 4.0
 
 var x_min = 0
 var x_max = 0

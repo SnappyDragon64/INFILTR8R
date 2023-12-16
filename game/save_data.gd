@@ -11,6 +11,11 @@ extends Node
 	'shiny3': false,
 	'shiny4': false,
 	'shiny5': false,
+	'hex0': true,
+	'hex1': false,
+	'hex2': false,
+	'hex3': false,
+	'hex4': false,
 }
 
 func _ready():

@@ -121,7 +121,7 @@ func hurt(amount):
 	if not invincible:
 		health -= amount
 		Signals.update_health.emit(health, max_health)
-
+		
 		var bleed_instance = bleed.instantiate()
 		bleed_instance.set_global_transform(get_global_transform())
 		Signals.spawn.emit(bleed_instance)

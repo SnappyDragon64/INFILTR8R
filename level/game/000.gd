@@ -9,3 +9,6 @@ func _handle_event(id):
 	elif id == 3:
 		SaveData.update(1, true)
 		Signals.change_level.emit(load('res://level/game/map.tscn'), 0)
+
+func _on_hex_area_entered(area):
+	SaveData.update('hex1', true)

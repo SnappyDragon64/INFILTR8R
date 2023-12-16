@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://dr4xt8yd2ch3x"]
+[gd_scene load_steps=6 format=3 uid="uid://dr4xt8yd2ch3x"]
 
 [ext_resource type="Script" path="res://entity/player.gd" id="1_4rxmn"]
 [ext_resource type="PackedScene" uid="uid://cgw1j2qxbykgs" path="res://entity/weapon/laser.tscn" id="2_306yu"]
+[ext_resource type="PackedScene" uid="uid://xex08xrotx1y" path="res://entity/misc/core.tscn" id="2_mv714"]
 [ext_resource type="PackedScene" uid="uid://ckt27me3e6j6h" path="res://entity/misc/warning.tscn" id="3_mo4pw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_urwkb"]
@@ -14,6 +15,8 @@ speed = 250
 [node name="polygon" type="Polygon2D" parent="."]
 position = Vector2(0, 28)
 polygon = PackedVector2Array(-32, -16, 0, 0, 32, -16, 0, -80)
+
+[node name="core" parent="." instance=ExtResource("2_mv714")]
 
 [node name="hitbox" type="CollisionPolygon2D" parent="."]
 position = Vector2(0, 28)

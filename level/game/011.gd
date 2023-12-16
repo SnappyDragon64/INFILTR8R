@@ -45,3 +45,6 @@ func check_puzzle():
 			$power_brick7.reset()
 			$power_brick8.reset()
 			puzzle_sequence.clear()
+
+func _on_hex_area_entered(area):
+	SaveData.update('hex4', true)

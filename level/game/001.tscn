@@ -548,4 +548,5 @@ position = Vector2(2000, 2000)
 [connection signal="area_entered" from="camera_anchor6" to="camera_anchor6" method="_on_area_entered"]
 [connection signal="area_entered" from="camera_anchor7" to="camera_anchor7" method="_on_area_entered"]
 [connection signal="area_entered" from="camera_anchor8" to="camera_anchor8" method="_on_area_entered"]
+[connection signal="area_entered" from="camera_anchor9" to="." method="_on_hex_area_entered"]
 [connection signal="area_entered" from="camera_anchor9" to="camera_anchor9" method="_on_area_entered"]

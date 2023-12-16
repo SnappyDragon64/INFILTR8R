@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://xex08xrotx1y"]
+
+[ext_resource type="Script" path="res://entity/misc/core.gd" id="1_8rhqj"]
+
+[node name="core" type="Node2D"]
+modulate = Color(0, 1, 1, 1)
+scale = Vector2(10, 10)
+script = ExtResource("1_8rhqj")
+
+[node name="0" type="Polygon2D" parent="."]
+polygon = PackedVector2Array(0, 0, 2, 0.75, 0, -3.25)
+
+[node name="1" type="Polygon2D" parent="."]
+polygon = PackedVector2Array(0, 0, -2, 0.75, 0, -3.25)
+
+[node name="2" type="Polygon2D" parent="."]
+polygon = PackedVector2Array(0, 0, -2, 0.75, 0, 1.75)
+
+[node name="3" type="Polygon2D" parent="."]
+polygon = PackedVector2Array(0, 0, 2, 0.75, 0, 1.75)

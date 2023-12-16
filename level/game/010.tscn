@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://b5gq2033ujmyx"]
+[gd_scene load_steps=23 format=3 uid="uid://b5gq2033ujmyx"]
 
 [ext_resource type="Script" path="res://level/game/010.gd" id="1_mgldy"]
 [ext_resource type="TileSet" uid="uid://dq8de0dncuy7c" path="res://tileset/node0.tres" id="2_jdn46"]
@@ -28,6 +28,9 @@ size = Vector2(128, 128)
 size = Vector2(128, 128)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l0dxb"]
+size = Vector2(128, 128)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4dpaw"]
 size = Vector2(128, 128)
 
 [node name="010" type="Node2D"]
@@ -788,6 +791,20 @@ position = Vector2(0, -320)
 [node name="end" type="Marker2D" parent="camera_anchor26"]
 position = Vector2(0, -320)
 
+[node name="camera_anchor27" type="Area2D" parent="." groups=["gizmo"]]
+position = Vector2(0, -4800)
+script = ExtResource("17_1bs5s")
+
+[node name="hitbox" type="CollisionShape2D" parent="camera_anchor27"]
+scale = Vector2(1.00583, 1)
+shape = SubResource("RectangleShape2D_4dpaw")
+
+[node name="start" type="Marker2D" parent="camera_anchor27"]
+position = Vector2(4000, 1600)
+
+[node name="end" type="Marker2D" parent="camera_anchor27"]
+position = Vector2(-4000, -400)
+
 [connection signal="area_entered" from="camera_anchor" to="camera_anchor" method="_on_area_entered"]
 [connection signal="area_entered" from="camera_anchor2" to="camera_anchor2" method="_on_area_entered"]
 [connection signal="area_entered" from="camera_anchor3" to="camera_anchor3" method="_on_area_entered"]
@@ -814,3 +831,5 @@ position = Vector2(0, -320)
 [connection signal="area_entered" from="camera_anchor24" to="camera_anchor24" method="_on_area_entered"]
 [connection signal="area_entered" from="camera_anchor25" to="camera_anchor25" method="_on_area_entered"]
 [connection signal="area_entered" from="camera_anchor26" to="camera_anchor26" method="_on_area_entered"]
+[connection signal="area_entered" from="camera_anchor27" to="." method="_on_hex_area_entered"]
+[connection signal="area_entered" from="camera_anchor27" to="camera_anchor27" method="_on_area_entered"]
