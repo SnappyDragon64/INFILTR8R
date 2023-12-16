@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://dsrjdx7owvdcb"]
+
+[ext_resource type="Material" uid="uid://1du44ui3ob4a" path="res://asset/shader/material/invert.tres" id="1_71dm4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vmvbx"]
+size = Vector2(256, 64)
+
+[node name="forcefield" type="Node2D"]
+
+[node name="polygon" type="Polygon2D" parent="."]
+material = ExtResource("1_71dm4")
+polygon = PackedVector2Array(-128, -32, -128, 32, 128, 32, 128, -32)
+
+[node name="bullet_block" type="Area2D" parent="."]
+
+[node name="hitbox" type="CollisionShape2D" parent="bullet_block"]
+shape = SubResource("RectangleShape2D_vmvbx")
+
+[node name="laser_block" type="StaticBody2D" parent="."]
+collision_layer = 2
+collision_mask = 0
+
+[node name="hitbox" type="CollisionShape2D" parent="laser_block"]
+shape = SubResource("RectangleShape2D_vmvbx")

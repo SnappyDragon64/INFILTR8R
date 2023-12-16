@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://dp0bveit58f55"]
+[gd_scene load_steps=27 format=3 uid="uid://dp0bveit58f55"]
 
 [ext_resource type="Script" path="res://level/game/011.gd" id="1_qyisc"]
 [ext_resource type="TileSet" uid="uid://dq8de0dncuy7c" path="res://tileset/node0.tres" id="2_b40xr"]
@@ -23,6 +23,8 @@
 [ext_resource type="PackedScene" uid="uid://bc34cxx0yn2ne" path="res://entity/enemy/shooter/spinner/invincible_tristar.tscn" id="21_jyi72"]
 [ext_resource type="Script" path="res://entity/gizmo/camera_anchor.gd" id="22_vljg4"]
 [ext_resource type="PackedScene" uid="uid://b0ruelrr7mdby" path="res://entity/gizmo/label.tscn" id="23_frw2s"]
+[ext_resource type="PackedScene" uid="uid://c6cn5spti3f3d" path="res://entity/gizmo/block.tscn" id="24_w5pkr"]
+[ext_resource type="PackedScene" uid="uid://dsrjdx7owvdcb" path="res://entity/gizmo/forcefield.tscn" id="25_mm0q4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a1c1y"]
 size = Vector2(763.548, 768)
@@ -49,110 +51,44 @@ layer_2/tile_data = PackedInt32Array(458737, 65536, 1, 458738, 65536, 1, 458739,
 [node name="0" type="Marker2D" parent="spawnpoints"]
 
 [node name="scaffold" parent="." instance=ExtResource("3_0ltid")]
+z_index = 1
 position = Vector2(1568, -2080)
 event = 4
 
 [node name="scaffold2" parent="." instance=ExtResource("3_0ltid")]
+z_index = 1
 position = Vector2(1632, -2080)
 event = 4
 
 [node name="scaffold3" parent="." instance=ExtResource("3_0ltid")]
+z_index = 1
 position = Vector2(1696, -2080)
 event = 4
 
 [node name="scaffold4" parent="." instance=ExtResource("3_0ltid")]
+z_index = 1
 position = Vector2(1760, -2080)
 event = 4
 
 [node name="scaffold5" parent="." instance=ExtResource("3_0ltid")]
+z_index = 1
 position = Vector2(736, -2912)
 event = 20
 
 [node name="scaffold6" parent="." instance=ExtResource("3_0ltid")]
+z_index = 1
 position = Vector2(800, -2912)
 event = 20
 
 [node name="scaffold7" parent="." instance=ExtResource("3_0ltid")]
+z_index = 1
 position = Vector2(864, -2912)
 event = 20
 
 [node name="scaffold8" parent="." instance=ExtResource("3_0ltid")]
+z_index = 1
 position = Vector2(928, -2912)
 event = 20
-
-[node name="long_brick" parent="." instance=ExtResource("4_pj2xd")]
-position = Vector2(0, -416)
-
-[node name="long_brick2" parent="." instance=ExtResource("4_pj2xd")]
-position = Vector2(-832, -416)
-
-[node name="long_brick3" parent="." instance=ExtResource("4_pj2xd")]
-position = Vector2(-1664, -416)
-
-[node name="long_brick4" parent="." instance=ExtResource("4_pj2xd")]
-position = Vector2(1664, -416)
-
-[node name="long_brick5" parent="." instance=ExtResource("4_pj2xd")]
-position = Vector2(832, -1248)
-
-[node name="long_brick7" parent="." instance=ExtResource("4_pj2xd")]
-position = Vector2(-1664, -1248)
-
-[node name="long_brick8" parent="." instance=ExtResource("4_pj2xd")]
-position = Vector2(-1664, -2080)
-
-[node name="long_brick9" parent="." instance=ExtResource("4_pj2xd")]
-position = Vector2(-832, -2080)
-
-[node name="long_brick10" parent="." instance=ExtResource("4_pj2xd")]
-position = Vector2(-1664, -2912)
-
-[node name="long_brick11" parent="." instance=ExtResource("4_pj2xd")]
-position = Vector2(0, -2912)
-
-[node name="long_brick12" parent="." instance=ExtResource("4_pj2xd")]
-position = Vector2(-1248, 0)
-rotation = 1.5708
-
-[node name="long_brick13" parent="." instance=ExtResource("4_pj2xd")]
-position = Vector2(1248, 0)
-rotation = 1.5708
-
-[node name="long_brick14" parent="." instance=ExtResource("4_pj2xd")]
-position = Vector2(416, -832)
-rotation = 1.5708
-
-[node name="long_brick15" parent="." instance=ExtResource("4_pj2xd")]
-position = Vector2(-1248, -3328)
-rotation = 1.5708
-
-[node name="long_brick16" parent="." instance=ExtResource("4_pj2xd")]
-position = Vector2(-416, -3328)
-rotation = 1.5708
-
-[node name="long_brick17" parent="." instance=ExtResource("4_pj2xd")]
-position = Vector2(1248, -3328)
-rotation = 1.5708
-
-[node name="long_brick18" parent="." instance=ExtResource("4_pj2xd")]
-position = Vector2(-416, -2496)
-rotation = 1.5708
-
-[node name="long_brick19" parent="." instance=ExtResource("4_pj2xd")]
-position = Vector2(1248, -2496)
-rotation = 1.5708
-
-[node name="long_brick20" parent="." instance=ExtResource("4_pj2xd")]
-position = Vector2(-416, -1664)
-rotation = 1.5708
-
-[node name="long_brick21" parent="." instance=ExtResource("4_pj2xd")]
-position = Vector2(416, -1664)
-rotation = 1.5708
-
-[node name="long_brick22" parent="." instance=ExtResource("4_pj2xd")]
-position = Vector2(1248, -1664)
-rotation = 1.5708
 
 [node name="switch" parent="." instance=ExtResource("5_tj373")]
 position = Vector2(0, 256)
@@ -271,25 +207,34 @@ position = Vector2(1888, -1440)
 position = Vector2(-1088, -1920)
 
 [node name="tristar2" parent="." instance=ExtResource("11_jvn5i")]
-position = Vector2(-576, -1408)
+position = Vector2(-1088, -1408)
 
 [node name="tristar3" parent="." instance=ExtResource("11_jvn5i")]
-position = Vector2(-256, -2752)
+position = Vector2(256, -2752)
 
 [node name="tristar4" parent="." instance=ExtResource("11_jvn5i")]
 position = Vector2(256, -2240)
 
 [node name="rotating_shooter7" parent="." instance=ExtResource("10_y8hvl")]
-position = Vector2(-1664, -1664)
+position = Vector2(-1920, -1408)
+
+[node name="rotating_shooter8" parent="." instance=ExtResource("10_y8hvl")]
+position = Vector2(-1408, -1408)
+
+[node name="rotating_shooter16" parent="." instance=ExtResource("10_y8hvl")]
+position = Vector2(-1920, -1920)
+
+[node name="rotating_shooter17" parent="." instance=ExtResource("10_y8hvl")]
+position = Vector2(-1408, -1920)
 
 [node name="shuriken" parent="." instance=ExtResource("12_iaugs")]
-position = Vector2(-1408, -3072)
+position = Vector2(-1920, -3072)
 
 [node name="shuriken2" parent="." instance=ExtResource("12_iaugs")]
 position = Vector2(-1920, -3584)
 
 [node name="shuriken3" parent="." instance=ExtResource("12_iaugs")]
-position = Vector2(-1408, -256)
+position = Vector2(-1408, 256)
 
 [node name="shuriken4" parent="." instance=ExtResource("12_iaugs")]
 position = Vector2(-1920, 256)
@@ -317,18 +262,22 @@ position = Vector2(-640, -2304)
 event = 2
 
 [node name="scaffold9" parent="." instance=ExtResource("3_0ltid")]
+z_index = 1
 position = Vector2(1568, -1248)
 event = 3
 
 [node name="scaffold10" parent="." instance=ExtResource("3_0ltid")]
+z_index = 1
 position = Vector2(1632, -1248)
 event = 3
 
 [node name="scaffold11" parent="." instance=ExtResource("3_0ltid")]
+z_index = 1
 position = Vector2(1696, -1248)
 event = 3
 
 [node name="scaffold12" parent="." instance=ExtResource("3_0ltid")]
+z_index = 1
 position = Vector2(1760, -1248)
 event = 3
 
@@ -401,13 +350,11 @@ position = Vector2(-224, -3360)
 
 [node name="big_brick" parent="." instance=ExtResource("18_8j2oa")]
 position = Vector2(-960, -832)
+health = 10
 event = 22
 
 [node name="cactus18" parent="." instance=ExtResource("17_edgun")]
 position = Vector2(-928, -736)
-
-[node name="cactus19" parent="." instance=ExtResource("17_edgun")]
-position = Vector2(-864, -800)
 
 [node name="brick11" parent="." instance=ExtResource("16_qrw4d")]
 position = Vector2(-992, -736)
@@ -420,13 +367,17 @@ position = Vector2(-704, -896)
 
 [node name="big_brick2" parent="." instance=ExtResource("18_8j2oa")]
 position = Vector2(-640, -768)
+health = 10
 event = 22
 
 [node name="big_brick3" parent="." instance=ExtResource("18_8j2oa")]
 position = Vector2(-832, -1152)
+health = 10
+event = 22
 
 [node name="big_brick4" parent="." instance=ExtResource("18_8j2oa")]
 position = Vector2(-1152, -512)
+health = 10
 event = 22
 
 [node name="cactus21" parent="." instance=ExtResource("19_oiods")]
@@ -453,9 +404,6 @@ position = Vector2(-1152, -704)
 
 [node name="rotating_shooter10" parent="." instance=ExtResource("10_y8hvl")]
 position = Vector2(-768, -768)
-
-[node name="cactus22" parent="." instance=ExtResource("17_edgun")]
-position = Vector2(-736, -672)
 
 [node name="cactus23" parent="." instance=ExtResource("17_edgun")]
 position = Vector2(-672, -672)
@@ -506,6 +454,7 @@ position = Vector2(-1152, -896)
 
 [node name="big_brick5" parent="." instance=ExtResource("18_8j2oa")]
 position = Vector2(-1152, -1152)
+health = 10
 event = 22
 
 [node name="cactus26" parent="." instance=ExtResource("19_oiods")]
@@ -514,20 +463,11 @@ position = Vector2(-1024, -1152)
 [node name="cactus27" parent="." instance=ExtResource("17_edgun")]
 position = Vector2(-736, -1056)
 
-[node name="cactus28" parent="." instance=ExtResource("17_edgun")]
-position = Vector2(-736, -1120)
-
 [node name="long_brick27" parent="." instance=ExtResource("4_pj2xd")]
 position = Vector2(-960, -1056)
 
 [node name="long_brick28" parent="." instance=ExtResource("4_pj2xd")]
 position = Vector2(-1088, -992)
-
-[node name="brick25" parent="." instance=ExtResource("16_qrw4d")]
-position = Vector2(-1056, -928)
-
-[node name="cactus29" parent="." instance=ExtResource("17_edgun")]
-position = Vector2(-992, -928)
 
 [node name="brick26" parent="." instance=ExtResource("16_qrw4d")]
 position = Vector2(-800, -1056)
@@ -593,111 +533,143 @@ pattern = Array[int]([2, 3, 3])
 
 [node name="big_brick6" parent="." instance=ExtResource("18_8j2oa")]
 position = Vector2(-1152, 320)
+health = 2
 
 [node name="big_brick7" parent="." instance=ExtResource("18_8j2oa")]
 position = Vector2(-1024, 320)
+health = 2
 
 [node name="big_brick8" parent="." instance=ExtResource("18_8j2oa")]
 position = Vector2(-896, 320)
+health = 2
 
 [node name="big_brick9" parent="." instance=ExtResource("18_8j2oa")]
 position = Vector2(-1152, 192)
+health = 2
 
 [node name="cactus32" parent="." instance=ExtResource("19_oiods")]
 position = Vector2(-1024, 192)
 
 [node name="big_brick10" parent="." instance=ExtResource("18_8j2oa")]
 position = Vector2(-1024, 64)
+health = 2
 
 [node name="big_brick11" parent="." instance=ExtResource("18_8j2oa")]
 position = Vector2(-1152, 64)
+health = 2
 
 [node name="big_brick12" parent="." instance=ExtResource("18_8j2oa")]
 position = Vector2(-896, 192)
+health = 2
 
 [node name="big_brick13" parent="." instance=ExtResource("18_8j2oa")]
 position = Vector2(-896, 64)
+health = 2
 
 [node name="big_brick14" parent="." instance=ExtResource("18_8j2oa")]
 position = Vector2(-1152, -64)
+health = 2
 
 [node name="big_brick15" parent="." instance=ExtResource("18_8j2oa")]
 position = Vector2(-1024, -64)
+health = 2
 
 [node name="big_brick16" parent="." instance=ExtResource("18_8j2oa")]
 position = Vector2(-896, -64)
+health = 2
 
 [node name="big_brick17" parent="." instance=ExtResource("18_8j2oa")]
 position = Vector2(-1152, -192)
+health = 2
 
 [node name="cactus33" parent="." instance=ExtResource("19_oiods")]
 position = Vector2(-1024, -192)
 
 [node name="big_brick18" parent="." instance=ExtResource("18_8j2oa")]
 position = Vector2(-1024, -320)
+health = 2
 
 [node name="big_brick19" parent="." instance=ExtResource("18_8j2oa")]
 position = Vector2(-1152, -320)
+health = 2
 
 [node name="big_brick20" parent="." instance=ExtResource("18_8j2oa")]
 position = Vector2(-896, -192)
+health = 2
 
 [node name="big_brick21" parent="." instance=ExtResource("18_8j2oa")]
 position = Vector2(-896, -320)
+health = 2
 
 [node name="big_brick22" parent="." instance=ExtResource("18_8j2oa")]
 position = Vector2(-768, 320)
+health = 2
 
 [node name="big_brick23" parent="." instance=ExtResource("18_8j2oa")]
 position = Vector2(-640, 320)
+health = 2
 
 [node name="big_brick24" parent="." instance=ExtResource("18_8j2oa")]
 position = Vector2(-512, 320)
+health = 2
 
 [node name="big_brick25" parent="." instance=ExtResource("18_8j2oa")]
 position = Vector2(-768, 192)
+health = 2
 
 [node name="cactus34" parent="." instance=ExtResource("19_oiods")]
 position = Vector2(-640, 192)
 
 [node name="big_brick26" parent="." instance=ExtResource("18_8j2oa")]
 position = Vector2(-640, 64)
+health = 2
 
 [node name="big_brick27" parent="." instance=ExtResource("18_8j2oa")]
 position = Vector2(-768, 64)
+health = 2
 
 [node name="big_brick28" parent="." instance=ExtResource("18_8j2oa")]
 position = Vector2(-512, 192)
+health = 2
 
 [node name="big_brick29" parent="." instance=ExtResource("18_8j2oa")]
 position = Vector2(-512, 64)
+health = 2
 
 [node name="big_brick30" parent="." instance=ExtResource("18_8j2oa")]
 position = Vector2(-768, -64)
+health = 2
 
 [node name="big_brick31" parent="." instance=ExtResource("18_8j2oa")]
 position = Vector2(-640, -64)
+health = 2
 
 [node name="big_brick32" parent="." instance=ExtResource("18_8j2oa")]
 position = Vector2(-512, -64)
+health = 2
 
 [node name="big_brick33" parent="." instance=ExtResource("18_8j2oa")]
 position = Vector2(-768, -192)
+health = 2
 
 [node name="cactus35" parent="." instance=ExtResource("19_oiods")]
 position = Vector2(-640, -192)
 
 [node name="big_brick34" parent="." instance=ExtResource("18_8j2oa")]
 position = Vector2(-640, -320)
+health = 2
 
 [node name="big_brick35" parent="." instance=ExtResource("18_8j2oa")]
 position = Vector2(-768, -320)
+health = 2
 
 [node name="big_brick36" parent="." instance=ExtResource("18_8j2oa")]
 position = Vector2(-512, -192)
+health = 2
 
 [node name="big_brick37" parent="." instance=ExtResource("18_8j2oa")]
 position = Vector2(-512, -320)
+health = 2
 
 [node name="switch4" parent="." instance=ExtResource("5_tj373")]
 position = Vector2(1920, -3328)
@@ -754,11 +726,11 @@ position = Vector2(1920, -3584)
 [node name="rotating_shooter15" parent="." instance=ExtResource("10_y8hvl")]
 position = Vector2(1920, -3072)
 
-[node name="invincible_needle5" parent="." instance=ExtResource("13_2fmcp")]
-position = Vector2(-1664, -2496)
+[node name="invincible_needle6" parent="." instance=ExtResource("13_2fmcp")]
+position = Vector2(-1920, -2496)
 
 [node name="tristar8" parent="." instance=ExtResource("21_jyi72")]
-position = Vector2(-1664, -832)
+position = Vector2(-1920, -832)
 
 [node name="camera_anchor" type="Area2D" parent="." groups=["gizmo"]]
 visible = false
@@ -1185,6 +1157,331 @@ position = Vector2(992, -96)
 
 [node name="cactus45" parent="." instance=ExtResource("17_edgun")]
 position = Vector2(1088, -96)
+
+[node name="scaffold13" parent="." instance=ExtResource("3_0ltid")]
+position = Vector2(-2016, -1376)
+event = 4
+
+[node name="scaffold14" parent="." instance=ExtResource("3_0ltid")]
+position = Vector2(-2016, -1440)
+event = 4
+
+[node name="scaffold23" parent="." instance=ExtResource("3_0ltid")]
+position = Vector2(-1824, -1376)
+event = 4
+
+[node name="scaffold24" parent="." instance=ExtResource("3_0ltid")]
+position = Vector2(-1824, -1440)
+event = 4
+
+[node name="scaffold15" parent="." instance=ExtResource("3_0ltid")]
+position = Vector2(-1952, -1504)
+event = 4
+
+[node name="scaffold16" parent="." instance=ExtResource("3_0ltid")]
+position = Vector2(-1888, -1504)
+event = 4
+
+[node name="scaffold17" parent="." instance=ExtResource("3_0ltid")]
+position = Vector2(-2016, -1312)
+event = 4
+
+[node name="scaffold18" parent="." instance=ExtResource("3_0ltid")]
+position = Vector2(-2016, -1504)
+event = 4
+
+[node name="scaffold19" parent="." instance=ExtResource("3_0ltid")]
+position = Vector2(-1824, -1504)
+event = 4
+
+[node name="scaffold20" parent="." instance=ExtResource("3_0ltid")]
+position = Vector2(-1952, -1312)
+event = 4
+
+[node name="scaffold21" parent="." instance=ExtResource("3_0ltid")]
+position = Vector2(-1888, -1312)
+event = 4
+
+[node name="scaffold22" parent="." instance=ExtResource("3_0ltid")]
+position = Vector2(-1824, -1312)
+event = 4
+
+[node name="scaffold25" parent="." instance=ExtResource("3_0ltid")]
+position = Vector2(-1504, -1376)
+event = 4
+
+[node name="scaffold26" parent="." instance=ExtResource("3_0ltid")]
+position = Vector2(-1504, -1440)
+event = 4
+
+[node name="scaffold27" parent="." instance=ExtResource("3_0ltid")]
+position = Vector2(-1312, -1376)
+event = 4
+
+[node name="scaffold28" parent="." instance=ExtResource("3_0ltid")]
+position = Vector2(-1312, -1440)
+event = 4
+
+[node name="scaffold29" parent="." instance=ExtResource("3_0ltid")]
+position = Vector2(-1440, -1504)
+event = 4
+
+[node name="scaffold30" parent="." instance=ExtResource("3_0ltid")]
+position = Vector2(-1376, -1504)
+event = 4
+
+[node name="scaffold31" parent="." instance=ExtResource("3_0ltid")]
+position = Vector2(-1504, -1312)
+event = 4
+
+[node name="scaffold32" parent="." instance=ExtResource("3_0ltid")]
+position = Vector2(-1504, -1504)
+event = 4
+
+[node name="scaffold33" parent="." instance=ExtResource("3_0ltid")]
+position = Vector2(-1312, -1504)
+event = 4
+
+[node name="scaffold34" parent="." instance=ExtResource("3_0ltid")]
+position = Vector2(-1440, -1312)
+event = 4
+
+[node name="scaffold35" parent="." instance=ExtResource("3_0ltid")]
+position = Vector2(-1376, -1312)
+event = 4
+
+[node name="scaffold36" parent="." instance=ExtResource("3_0ltid")]
+position = Vector2(-1312, -1312)
+event = 4
+
+[node name="scaffold37" parent="." instance=ExtResource("3_0ltid")]
+position = Vector2(-1504, -1888)
+event = 4
+
+[node name="scaffold38" parent="." instance=ExtResource("3_0ltid")]
+position = Vector2(-1504, -1952)
+event = 4
+
+[node name="scaffold39" parent="." instance=ExtResource("3_0ltid")]
+position = Vector2(-1312, -1888)
+event = 4
+
+[node name="scaffold40" parent="." instance=ExtResource("3_0ltid")]
+position = Vector2(-1312, -1952)
+event = 4
+
+[node name="scaffold41" parent="." instance=ExtResource("3_0ltid")]
+position = Vector2(-1440, -2016)
+event = 4
+
+[node name="scaffold42" parent="." instance=ExtResource("3_0ltid")]
+position = Vector2(-1376, -2016)
+event = 4
+
+[node name="scaffold43" parent="." instance=ExtResource("3_0ltid")]
+position = Vector2(-1504, -1824)
+event = 4
+
+[node name="scaffold44" parent="." instance=ExtResource("3_0ltid")]
+position = Vector2(-1504, -2016)
+event = 4
+
+[node name="scaffold45" parent="." instance=ExtResource("3_0ltid")]
+position = Vector2(-1312, -2016)
+event = 4
+
+[node name="scaffold46" parent="." instance=ExtResource("3_0ltid")]
+position = Vector2(-1440, -1824)
+event = 4
+
+[node name="scaffold47" parent="." instance=ExtResource("3_0ltid")]
+position = Vector2(-1376, -1824)
+event = 4
+
+[node name="scaffold48" parent="." instance=ExtResource("3_0ltid")]
+position = Vector2(-1312, -1824)
+event = 4
+
+[node name="scaffold49" parent="." instance=ExtResource("3_0ltid")]
+position = Vector2(-2016, -1888)
+event = 4
+
+[node name="scaffold50" parent="." instance=ExtResource("3_0ltid")]
+position = Vector2(-2016, -1952)
+event = 4
+
+[node name="scaffold51" parent="." instance=ExtResource("3_0ltid")]
+position = Vector2(-1824, -1888)
+event = 4
+
+[node name="scaffold52" parent="." instance=ExtResource("3_0ltid")]
+position = Vector2(-1824, -1952)
+event = 4
+
+[node name="scaffold53" parent="." instance=ExtResource("3_0ltid")]
+position = Vector2(-1952, -2016)
+event = 4
+
+[node name="scaffold54" parent="." instance=ExtResource("3_0ltid")]
+position = Vector2(-1888, -2016)
+event = 4
+
+[node name="scaffold55" parent="." instance=ExtResource("3_0ltid")]
+position = Vector2(-2016, -1824)
+event = 4
+
+[node name="scaffold56" parent="." instance=ExtResource("3_0ltid")]
+position = Vector2(-2016, -2016)
+event = 4
+
+[node name="scaffold57" parent="." instance=ExtResource("3_0ltid")]
+position = Vector2(-1824, -2016)
+event = 4
+
+[node name="scaffold58" parent="." instance=ExtResource("3_0ltid")]
+position = Vector2(-1952, -1824)
+event = 4
+
+[node name="scaffold59" parent="." instance=ExtResource("3_0ltid")]
+position = Vector2(-1888, -1824)
+event = 4
+
+[node name="scaffold60" parent="." instance=ExtResource("3_0ltid")]
+position = Vector2(-1824, -1824)
+event = 4
+
+[node name="shuriken6" parent="." instance=ExtResource("12_iaugs")]
+position = Vector2(-1920, -1664)
+
+[node name="shuriken7" parent="." instance=ExtResource("12_iaugs")]
+position = Vector2(-1408, -1664)
+
+[node name="block" parent="." instance=ExtResource("24_w5pkr")]
+position = Vector2(-864, -800)
+
+[node name="block2" parent="." instance=ExtResource("24_w5pkr")]
+position = Vector2(-736, -672)
+
+[node name="block3" parent="." instance=ExtResource("24_w5pkr")]
+position = Vector2(-736, -1120)
+
+[node name="block4" parent="." instance=ExtResource("24_w5pkr")]
+position = Vector2(-992, -928)
+
+[node name="cactus19" parent="." instance=ExtResource("17_edgun")]
+position = Vector2(-1056, -928)
+
+[node name="forcefield" parent="." instance=ExtResource("25_mm0q4")]
+position = Vector2(-1664, -416)
+
+[node name="forcefield9" parent="." instance=ExtResource("25_mm0q4")]
+position = Vector2(-832, -2080)
+
+[node name="forcefield8" parent="." instance=ExtResource("25_mm0q4")]
+position = Vector2(0, -2912)
+
+[node name="forcefield7" parent="." instance=ExtResource("25_mm0q4")]
+position = Vector2(-1664, -2912)
+
+[node name="forcefield6" parent="." instance=ExtResource("25_mm0q4")]
+position = Vector2(-1664, -2080)
+
+[node name="forcefield5" parent="." instance=ExtResource("25_mm0q4")]
+position = Vector2(-1664, -1248)
+
+[node name="forcefield4" parent="." instance=ExtResource("25_mm0q4")]
+position = Vector2(1664, -416)
+
+[node name="forcefield3" parent="." instance=ExtResource("25_mm0q4")]
+position = Vector2(0, -416)
+
+[node name="forcefield2" parent="." instance=ExtResource("25_mm0q4")]
+position = Vector2(-832, -416)
+
+[node name="forcefield10" parent="." instance=ExtResource("25_mm0q4")]
+position = Vector2(832, -1248)
+
+[node name="forcefield12" parent="." instance=ExtResource("25_mm0q4")]
+position = Vector2(832, -2912)
+
+[node name="forcefield11" parent="." instance=ExtResource("25_mm0q4")]
+position = Vector2(1664, -1248)
+
+[node name="forcefield13" parent="." instance=ExtResource("25_mm0q4")]
+position = Vector2(1664, -2080)
+
+[node name="forcefield14" parent="." instance=ExtResource("25_mm0q4")]
+position = Vector2(-1248, 0)
+rotation = 1.5708
+
+[node name="forcefield15" parent="." instance=ExtResource("25_mm0q4")]
+position = Vector2(1248, 0)
+rotation = 1.5708
+
+[node name="forcefield16" parent="." instance=ExtResource("25_mm0q4")]
+position = Vector2(416, -832)
+rotation = 1.5708
+
+[node name="forcefield17" parent="." instance=ExtResource("25_mm0q4")]
+position = Vector2(-416, -1664)
+rotation = 1.5708
+
+[node name="forcefield18" parent="." instance=ExtResource("25_mm0q4")]
+position = Vector2(416, -1664)
+rotation = 1.5708
+
+[node name="forcefield19" parent="." instance=ExtResource("25_mm0q4")]
+position = Vector2(1248, -1664)
+rotation = 1.5708
+
+[node name="forcefield20" parent="." instance=ExtResource("25_mm0q4")]
+position = Vector2(1248, -2496)
+rotation = 1.5708
+
+[node name="forcefield21" parent="." instance=ExtResource("25_mm0q4")]
+position = Vector2(-416, -2496)
+rotation = 1.5708
+
+[node name="forcefield22" parent="." instance=ExtResource("25_mm0q4")]
+position = Vector2(-1248, -3328)
+rotation = 1.5708
+
+[node name="forcefield23" parent="." instance=ExtResource("25_mm0q4")]
+position = Vector2(-416, -3328)
+rotation = 1.5708
+
+[node name="forcefield24" parent="." instance=ExtResource("25_mm0q4")]
+position = Vector2(1248, -3328)
+rotation = 1.5708
+
+[node name="long_brick" parent="." instance=ExtResource("4_pj2xd")]
+position = Vector2(832, -1504)
+
+[node name="long_brick2" parent="." instance=ExtResource("4_pj2xd")]
+position = Vector2(-672, -1664)
+rotation = 1.5708
+
+[node name="long_brick3" parent="." instance=ExtResource("4_pj2xd")]
+position = Vector2(-1504, -3328)
+rotation = 1.5708
+
+[node name="long_brick4" parent="." instance=ExtResource("4_pj2xd")]
+position = Vector2(-1664, -160)
+
+[node name="long_brick5" parent="." instance=ExtResource("4_pj2xd")]
+position = Vector2(-160, -2496)
+rotation = 1.5708
+
+[node name="long_brick7" parent="." instance=ExtResource("4_pj2xd")]
+position = Vector2(1504, -3328)
+rotation = 1.5708
+
+[node name="long_brick8" parent="." instance=ExtResource("4_pj2xd")]
+position = Vector2(1664, -2336)
+
+[node name="long_brick9" parent="." instance=ExtResource("4_pj2xd")]
+position = Vector2(1504, -1664)
+rotation = 1.5708
 
 [connection signal="area_entered" from="camera_anchor" to="camera_anchor" method="_on_area_entered"]
 [connection signal="area_entered" from="camera_anchor2" to="camera_anchor2" method="_on_area_entered"]

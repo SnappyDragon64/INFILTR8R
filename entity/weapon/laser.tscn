@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8shn7"]
 size = Vector2(40, 0)
 
-[node name="laser" type="Area2D" groups=["player_bullet"]]
+[node name="laser" type="Area2D" groups=["player_bullet", "special"]]
 position = Vector2(0, -84)
 script = ExtResource("1_qhdcp")
 

@@ -25,7 +25,7 @@ func _handle_event(id):
 	elif id == 22:
 		unlock_counter_2 += 1
 		
-		if unlock_counter_2 == 4:
+		if unlock_counter_2 == 5:
 			Signals.event.emit(23)
 
 func check_puzzle():

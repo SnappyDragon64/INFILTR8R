@@ -353,7 +353,7 @@ scale = Vector2(1.00583, 1)
 shape = SubResource("RectangleShape2D_os3e3")
 
 [node name="hitbox3" type="CollisionShape2D" parent="camera_anchor2"]
-position = Vector2(3.8147e-06, -1120)
+position = Vector2(0, -1216)
 scale = Vector2(1.00583, 1)
 shape = SubResource("RectangleShape2D_w68rj")
 
@@ -368,10 +368,10 @@ scale = Vector2(1.00583, 1)
 shape = SubResource("RectangleShape2D_os3e3")
 
 [node name="start" type="Marker2D" parent="camera_anchor2"]
-position = Vector2(0, -608)
+position = Vector2(0, -480)
 
 [node name="end" type="Marker2D" parent="camera_anchor2"]
-position = Vector2(0, -608)
+position = Vector2(0, -736)
 
 [node name="camera_anchor3" type="Area2D" parent="." groups=["gizmo"]]
 position = Vector2(-768, -1920)
@@ -449,7 +449,7 @@ position = Vector2(0, -2624)
 script = ExtResource("11_uhxq0")
 
 [node name="hitbox" type="CollisionShape2D" parent="camera_anchor7"]
-position = Vector2(0, 64)
+position = Vector2(0, -64)
 scale = Vector2(1.00583, 1)
 shape = SubResource("RectangleShape2D_ej5m0")
 
