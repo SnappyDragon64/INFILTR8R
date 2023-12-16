@@ -453,7 +453,7 @@ position = Vector2(-640, -768)
 event = 22
 
 [node name="big_brick3" parent="." instance=ExtResource("18_8j2oa")]
-position = Vector2(-832, -1088)
+position = Vector2(-832, -1152)
 
 [node name="big_brick4" parent="." instance=ExtResource("18_8j2oa")]
 position = Vector2(-1152, -512)
@@ -548,7 +548,7 @@ position = Vector2(-736, -1056)
 position = Vector2(-736, -1120)
 
 [node name="long_brick27" parent="." instance=ExtResource("4_pj2xd")]
-position = Vector2(-1088, -1056)
+position = Vector2(-960, -1056)
 
 [node name="long_brick28" parent="." instance=ExtResource("4_pj2xd")]
 position = Vector2(-1088, -992)
@@ -560,7 +560,7 @@ position = Vector2(-1056, -928)
 position = Vector2(-992, -928)
 
 [node name="brick26" parent="." instance=ExtResource("16_qrw4d")]
-position = Vector2(-928, -1056)
+position = Vector2(-800, -1056)
 
 [node name="brick27" parent="." instance=ExtResource("16_qrw4d")]
 position = Vector2(-736, -992)
@@ -573,9 +573,6 @@ position = Vector2(-800, -992)
 
 [node name="rotating_shooter12" parent="." instance=ExtResource("10_y8hvl")]
 position = Vector2(-896, -960)
-
-[node name="long_brick29" parent="." instance=ExtResource("4_pj2xd")]
-position = Vector2(-768, -1184)
 
 [node name="rotating_shooter13" parent="." instance=ExtResource("10_y8hvl")]
 position = Vector2(-640, -1088)
