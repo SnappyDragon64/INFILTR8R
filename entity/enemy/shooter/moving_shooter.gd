@@ -4,17 +4,12 @@ extends CharacterBody2D
 @export var shoot_speed : float = 1
 @export var speed : int = 100
 
-@onready var visibility_notifier : VisibleOnScreenNotifier2D
-
 var counter : int = 0
 var direction : float = 0.0
 
 var active = false
 
 func _ready():
-	visibility_notifier = VisibleOnScreenNotifier2D.new()
-	visibility_notifier.set_rect(Rect2(-1, -1, 2, 2))
-	add_child(visibility_notifier)
 	$shoot_timer.set_wait_time(shoot_speed)
 
 func _process(_delta):
@@ -27,7 +22,7 @@ func _process(_delta):
 	move_and_slide()
 
 func _on_shoot_timer_timeout():
-	if visibility_notifier.is_on_screen() and not pattern.is_empty():
+	if not pattern.is_empty():
 		var bullet_id = pattern[counter]
 		var bullet_preload = BulletRegistry.REGISTRY[bullet_id]
 		counter = (counter + 1) % pattern.size()
