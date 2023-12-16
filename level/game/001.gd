@@ -5,7 +5,7 @@ func _ready():
 
 func _handle_event(id):
 	if id == 1:
-		Signals.change_level.emit(load('res://level/game/map.tscn'), 1)
+		Signals.change_level.emit(load('res://level/game/map.tscn'), 0)
 	elif id == 4:
 		SaveData.update(2, true)
-		Signals.change_level.emit(load('res://level/game/map.tscn'), 1)
+		Signals.change_level.emit(load('res://level/game/map.tscn'), 0)

@@ -348,36 +348,6 @@ event = 7
 position = Vector2(1024, 192)
 event = 8
 
-[node name="brick" parent="." instance=ExtResource("16_qrw4d")]
-position = Vector2(736, -160)
-
-[node name="brick2" parent="." instance=ExtResource("16_qrw4d")]
-position = Vector2(992, 288)
-
-[node name="brick3" parent="." instance=ExtResource("16_qrw4d")]
-position = Vector2(1056, 288)
-
-[node name="brick4" parent="." instance=ExtResource("16_qrw4d")]
-position = Vector2(736, 224)
-
-[node name="brick5" parent="." instance=ExtResource("16_qrw4d")]
-position = Vector2(736, 96)
-
-[node name="brick6" parent="." instance=ExtResource("16_qrw4d")]
-position = Vector2(736, 160)
-
-[node name="brick7" parent="." instance=ExtResource("16_qrw4d")]
-position = Vector2(928, -160)
-
-[node name="brick8" parent="." instance=ExtResource("16_qrw4d")]
-position = Vector2(992, -96)
-
-[node name="brick9" parent="." instance=ExtResource("16_qrw4d")]
-position = Vector2(928, -96)
-
-[node name="brick10" parent="." instance=ExtResource("16_qrw4d")]
-position = Vector2(1056, -96)
-
 [node name="cactus" parent="." instance=ExtResource("17_edgun")]
 position = Vector2(-224, -3040)
 
@@ -1185,6 +1155,36 @@ offset_top = 768.0
 offset_right = -128.0
 offset_bottom = 904.0
 text = "72756265646f"
+
+[node name="cactus36" parent="." instance=ExtResource("17_edgun")]
+position = Vector2(1056, 288)
+
+[node name="cactus37" parent="." instance=ExtResource("17_edgun")]
+position = Vector2(1120, 224)
+
+[node name="cactus38" parent="." instance=ExtResource("17_edgun")]
+position = Vector2(544, 224)
+
+[node name="cactus39" parent="." instance=ExtResource("17_edgun")]
+position = Vector2(608, 288)
+
+[node name="cactus40" parent="." instance=ExtResource("17_edgun")]
+position = Vector2(672, 288)
+
+[node name="cactus41" parent="." instance=ExtResource("17_edgun")]
+position = Vector2(736, -224)
+
+[node name="cactus42" parent="." instance=ExtResource("17_edgun")]
+position = Vector2(928, -160)
+
+[node name="cactus43" parent="." instance=ExtResource("17_edgun")]
+position = Vector2(928, -96)
+
+[node name="cactus44" parent="." instance=ExtResource("17_edgun")]
+position = Vector2(992, -96)
+
+[node name="cactus45" parent="." instance=ExtResource("17_edgun")]
+position = Vector2(1088, -96)
 
 [connection signal="area_entered" from="camera_anchor" to="camera_anchor" method="_on_area_entered"]
 [connection signal="area_entered" from="camera_anchor2" to="camera_anchor2" method="_on_area_entered"]

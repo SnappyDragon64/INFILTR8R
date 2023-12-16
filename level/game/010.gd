@@ -5,7 +5,7 @@ func _ready():
 
 func _handle_event(id):
 	if id == 1:
-		Signals.change_level.emit(load('res://level/game/map.tscn'), 0)
+		Signals.change_level.emit(load('res://level/game/map.tscn'), 1)
 	elif id == 2:
 		$switch2.set_disabled(true)
 	elif id == 3:
@@ -16,4 +16,4 @@ func _handle_event(id):
 		$switch4.set_disabled(true)
 	elif id == 6:
 		SaveData.update(3, true)
-		Signals.change_level.emit(load('res://level/game/map.tscn'), 0)
+		Signals.change_level.emit(load('res://level/game/map.tscn'), 1)

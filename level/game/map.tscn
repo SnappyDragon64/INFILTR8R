@@ -56,13 +56,13 @@ position = Vector2(-512, 0)
 event = 2
 
 [node name="switch3" parent="." instance=ExtResource("3_iuane")]
-position = Vector2(-512, -512)
+position = Vector2(512, 0)
 event = 3
 is_disabled = true
 unlock_event = 11
 
 [node name="switch6" parent="." instance=ExtResource("3_iuane")]
-position = Vector2(512, 0)
+position = Vector2(-512, -512)
 event = 4
 is_disabled = true
 unlock_event = 12
@@ -107,17 +107,17 @@ offset_bottom = 131.0
 text = "000"
 
 [node name="label3" parent="." instance=ExtResource("4_vv2a1")]
-offset_left = -640.0
-offset_top = -448.0
-offset_right = -384.0
-offset_bottom = -381.0
-text = "001"
-
-[node name="label6" parent="." instance=ExtResource("4_vv2a1")]
 offset_left = 384.0
 offset_top = 64.0
 offset_right = 640.0
 offset_bottom = 131.0
+text = "001"
+
+[node name="label6" parent="." instance=ExtResource("4_vv2a1")]
+offset_left = -640.0
+offset_top = -448.0
+offset_right = -384.0
+offset_bottom = -381.0
 text = "010"
 
 [node name="label7" parent="." instance=ExtResource("4_vv2a1")]
