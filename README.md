@@ -10,7 +10,7 @@
 - Press [space] or [controller RT] to dash.
 - Hold [shift] or [controller X/Square] to sneak (move at half speed).
 - Press [tab] or [controller start] to pause/respawn.
-- Hold [ctrl] or [controller LT] to enable peeking, [WASD] to move camera.
+- Hold [middle click] or [controller LT] to enable peeking, [WASD] to move camera.
 - Press [F1] or [controller Y/Triangle] to swap themes. (Unlocked for completing each level with full HP)
 - Press [F2] or [controller B/Circle] to swap skins. (Unlocked by finding the secret in each non-boss fight level)
 
