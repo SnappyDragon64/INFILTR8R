@@ -9,6 +9,12 @@ var MAP = {
 	'shiny5': 0.5,
 }
 
+func _ready():
+	shift = int(SaveData.check('theme'))
+	var key = 'shiny' + str(shift)
+	var val = MAP.get(key, 0)
+	material.set_shader_parameter('shift', val)
+
 func _process(_delta):
 	if Input.is_action_just_pressed('shift'):
 		increment_shift()
@@ -24,6 +30,7 @@ func _process(_delta):
 			val = MAP[key]
 
 		material.set_shader_parameter('shift', val)
+		SaveData.update('theme', shift)
 
 func increment_shift():
 	shift += 1

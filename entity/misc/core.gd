@@ -10,6 +10,10 @@ var MAP = {
 }
 
 func _ready():
+	skin = int(SaveData.check('skin'))
+	var key = 'hex' + str(skin)
+	var val = MAP.get(key)
+	set_modulate(val)
 	SaveData.update('hex0', true)
 	Signals.hurt.connect(_on_hurt)
 
@@ -30,6 +34,7 @@ func _process(_delta):
 		
 		var val = MAP.get(key)
 		set_modulate(val)
+		SaveData.update('skin', skin)
 
 func increment_shift():
 	skin += 1

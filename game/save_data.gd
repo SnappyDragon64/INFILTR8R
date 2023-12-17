@@ -16,10 +16,17 @@ extends Node
 	'hex2': false,
 	'hex3': false,
 	'hex4': false,
+	'theme': 0,
+	'skin': 0
 }
 
 func _ready():
 	_load()
+	
+	if typeof(check('theme')) == TYPE_BOOL:
+		update('theme', 0)
+	if typeof(check('skin')) == TYPE_BOOL:
+		update('skin', 0)
 
 func update(key, value):
 	save_data[str(key)] = value
