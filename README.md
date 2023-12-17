@@ -10,8 +10,11 @@
 - Press [space] or [controller RT] to dash.
 - Hold [shift] or [controller X/Square] to sneak (move at half speed).
 - Press [tab] or [controller start] to pause/respawn.
+- Hold [ctrl] or [controller LT] to enable peeking, [WASD] to move camera.
+- Press [F1] or [controller Y/Triangle] to swap themes. (Unlocked for completing each level with full HP)
+- Press [F2] or [controller B/Circle] to swap skins. (Unlocked by finding the secret in each non-boss fight level)
 
-## Mechanics
+## Mechanics:
 - HP: Health. One hit reduces HP by 25%.
 - MP: Consumed for using bullets and lasers. Bullet cost: 5%. Laser cost: 40%. Regenerates automatically over time.
 - Dash: Makes player invincible for a short duration and pauses MP regeneration.
@@ -23,6 +26,7 @@
 	- Solid green switches: Disabled switches.
 - Purple power bricks: Can be powered-up by attacks. Performs an action when fully charged.
 - Blue and green scaffold: Can be removed by activating the corresponding switch or power bricks.
+- Forcefield: Prevents bullets and laser from passing through.
 
 ## Progress:
 - Core: Done
