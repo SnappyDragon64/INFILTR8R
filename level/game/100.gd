@@ -30,6 +30,7 @@ func _on_trigger_area_area_entered(_area):
 	power_brick.set_position($block_spawn.get_position())
 	power_brick.set_visible(false)
 	Signals.spawn.emit(power_brick)
+	Signals.update_spawnpoint.emit(1)
 	$boss_spawn_timer.start()
 
 func _on_boss_spawn_timer_timeout():

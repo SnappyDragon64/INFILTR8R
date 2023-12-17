@@ -5,6 +5,7 @@ signal set_recolor_mode(id)
 
 # LEVEL
 signal change_level(scene, spawnpoint)
+signal update_spawnpoint(spawnpoint)
 signal reload_level()
 signal spawn(object)
 

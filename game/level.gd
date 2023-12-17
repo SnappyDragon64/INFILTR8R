@@ -9,6 +9,7 @@ var current_spawnpoint = null
 
 func _ready():
 	Signals.change_level.connect(_change_level)
+	Signals.update_spawnpoint.connect(_update_spawnpoint)
 	Signals.spawn.connect(_spawn)
 	Signals.reload_level.connect(_reload_level)
 
@@ -46,3 +47,6 @@ func _spawn(object):
 
 func _reload_level():
 	_change_level(current_level, current_spawnpoint)
+
+func _update_spawnpoint(spawnpoint):
+	current_spawnpoint = spawnpoint
